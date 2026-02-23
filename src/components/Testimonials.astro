@@ -1,0 +1,118 @@
+---
+import { useTranslations } from '../i18n/translations';
+
+interface Props {
+  lang?: "fr" | "en";
+}
+
+const { lang = "fr" } = Astro.props;
+const t = useTranslations(lang);
+
+const testimonials = [
+  {
+    quote:
+      "Wow, Wow, Wow! I had the pleasure to stay at this place for just over 3 weeks during the Christmas and new year period. I have never felt more welcomed in a place whilst travelling - not just by the lovely family taking care of the farm whilst Benito was away - but also from all the locals in the little village with whom I made good friends. My Spanish improved significantly due to a full spanish immersion and I enjoyed teaching some English to Feli and Yula. The work is super varied and not one day the same. I planted trees, built a micro tunnel, sorted coffee beans, watered and deweeded the micro tunnels, picking the veg when it was ready to take to market, I learned how to fish (and prepare a fish to eat), I moved stones about to do some landscaping. Thank you so much for the best workaway experience I've had!",
+    author: "Eleanor",
+    location: "Jakarta",
+  },
+  {
+    quote:
+      "I've been working in the farm for only one week, too short! I really would like to come back as soon as possible. To enjoy this place, I advice you to stay at minimum one month. There is a lot of work. Thanks a lot for your welcoming benito! It was a really good experience for me and my 9 years old daughter. I worked in the forest with local people, I took care cocoa tree, I worked on the coffee: I selected the good and bad coffee beans. I felt free to chose the work which was the best for me. The exchanges was really interesting. And the place is nice, peaceful, zen... the cascades are so nice... It's definitely a place to visit.",
+    author: "Fabienne",
+    location: "Workaway",
+  },
+  {
+    quote:
+      "Where to start?! We spent the most amazing week with Gula and Benoit. We instantly felt at home on the farm, and loved chatting, playing card games and having communal meals together. The food was so delicious and cooked with a lot of love (and yuca!). Daily work activities ranged from sorting coffee beans when it was raining, weeding and mulching vegetable beds with grass, painting furniture, and moving things around the property such as rocks for landscaping. In the afternoons we went for swims at the waterfall or up the river and relaxed in the hammock. Benoit's energy is infectious and he always has a wide range of things that need help with on the farm. Would highly recommend visiting these guys to get a first hand experience of coffee and cacao farming in a beautiful area of Colombia. We miss this place every day!",
+    author: "Claire & Orlando",
+    location: "Workaway",
+  },
+  {
+    quote:
+      "I have stayed for a week at Benoit and Gula finca. Was a great experience and I totally recommend. My tasks were to take care of the animals in the morning & evening, to help around the house until the lunch, I helped at drying the coffee, make the foundation for micro tunnels, do ditches to evacuate the water, help at the coffee washing, cut with a machete the grass around the trees. Quite diverse. The work can be demanding, but you can take as many breaks as you want. And bonus, the vision regarding the project is quite nice, it is also about educate the locals and to be more sustainable.",
+    author: "Lucian",
+    location: "Workaway",
+  },
+  {
+    quote:
+      "Pasé una semana en esta granja, ¿qué puedo decir? Una experiencia fantástica, Benito y Gula me han hecho sentir como en casa desde el primer momento, hay muchos animales para todos los gustos, conejos, perros, gatos, gallinas y caballos. La finca es muy bonita y el trabajo es muy variado, sin duda no hay tiempo para aburrirse. Gula nos preparaba cada día unas comidas vegetarianas súper ricas y abundantes... He aprendido muchas cosas de la vida en la granja y he disfrutado de la tranquilidad de vivir en la naturaleza. Totalmente recomendable.",
+    author: "Manuel",
+    location: "Workaway",
+  },
+];
+---
+
+<section data-testid="testimonials-section" class="py-20 md:py-28 bg-white relative overflow-hidden">
+  <!-- Subtle decorative elements -->
+  <div class="absolute top-10 left-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
+  <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <span class="inline-block text-accent font-medium tracking-wider uppercase text-sm mb-3">
+        {t("testimonials.subtitle")}
+      </span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary">
+        {t("testimonials.title")}
+      </h2>
+      <div class="mt-4 mx-auto w-20 h-1 bg-accent rounded-full"></div>
+    </div>
+
+    <!-- Testimonials grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, i) => (
+        <div
+          class="group relative bg-cream/60 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1"
+          style="box-shadow: 0 2px 8px rgba(11,91,75,0.06); transition: box-shadow 0.3s ease, transform 0.3s ease;"
+          onmouseenter="this.style.boxShadow='0 12px 32px rgba(11,91,75,0.1)'"
+          onmouseleave="this.style.boxShadow='0 2px 8px rgba(11,91,75,0.06)'"
+        >
+          <!-- Decorative quote icon -->
+          <div class="mb-6">
+            <svg
+              class="w-10 h-10 text-accent/30 group-hover:text-accent/50 transition-colors duration-300"
+              viewBox="0 0 40 40"
+              fill="currentColor"
+            >
+              <path d="M10.8 17.6c-1.4 0-2.6-.5-3.6-1.4-1-.9-1.5-2.1-1.5-3.5 0-1.7.6-3.3 1.9-4.7C8.9 6.6 10.7 5.5 13 4.8l1.1 2.1c-1.5.5-2.7 1.2-3.5 2.1-.8.9-1.2 1.8-1.2 2.7 0 .3.1.5.2.7.4-.2.8-.3 1.3-.3 1.1 0 2 .4 2.8 1.1.7.7 1.1 1.6 1.1 2.7 0 1.1-.4 2-1.2 2.7-.8.7-1.7 1-2.8 1zm15 0c-1.4 0-2.6-.5-3.6-1.4-1-.9-1.5-2.1-1.5-3.5 0-1.7.6-3.3 1.9-4.7C23.9 6.6 25.7 5.5 28 4.8l1.1 2.1c-1.5.5-2.7 1.2-3.5 2.1-.8.9-1.2 1.8-1.2 2.7 0 .3.1.5.2.7.4-.2.8-.3 1.3-.3 1.1 0 2 .4 2.8 1.1.7.7 1.1 1.6 1.1 2.7 0 1.1-.4 2-1.2 2.7-.8.7-1.7 1-2.8 1z" />
+            </svg>
+          </div>
+
+          <!-- Quote text -->
+          <blockquote class="text-gray-700 leading-relaxed mb-8 text-[0.95rem] line-clamp-6">
+            {testimonial.quote}
+          </blockquote>
+
+          <!-- Author info -->
+          <div class="flex items-center gap-4 pt-6 border-t border-primary/[0.08]">
+            <!-- Avatar placeholder with initials -->
+            <div class:list={[
+              "w-11 h-11 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0",
+              i % 3 === 0 ? "bg-primary" : i % 3 === 1 ? "bg-accent" : "bg-earth",
+            ]}>
+              {testimonial.author.charAt(0)}
+            </div>
+            <div>
+              <p class="font-semibold text-primary text-sm">
+                {testimonial.author}
+              </p>
+              <p class="text-gray-500 text-xs flex items-center gap-1 mt-0.5">
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                {testimonial.location}
+              </p>
+            </div>
+          </div>
+
+          <!-- Subtle corner accent -->
+          <div class="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-accent/[0.05] transform rotate-45 translate-x-10 -translate-y-10 group-hover:bg-accent/[0.1] transition-colors duration-300"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

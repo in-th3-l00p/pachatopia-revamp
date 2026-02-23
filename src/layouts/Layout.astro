@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  lang?: "fr" | "en";
+}
+
+const { title, lang = "fr" } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Pachatopia - Cultivons la vie, inspirons l'humanité"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-gray-800 font-sans antialiased">
+    <slot />
+  </body>
+</html>

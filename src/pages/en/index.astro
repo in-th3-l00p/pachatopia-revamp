@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Metrics from "../../components/Metrics.astro";
+import Actions from "../../components/Actions.astro";
+import Objectives from "../../components/Objectives.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "en";
+---
+
+<Layout title="Pachatopia - Cultivating life, inspiring humanity" lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <About lang={lang} />
+    <Metrics lang={lang} />
+    <Actions lang={lang} />
+    <Objectives lang={lang} />
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

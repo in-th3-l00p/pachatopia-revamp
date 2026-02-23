@@ -1,0 +1,175 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import { useTranslations } from "../../i18n/translations";
+
+const lang = "en";
+const t = useTranslations(lang);
+---
+
+<Layout title={`${t("aboutPage.title")} - Pachatopia`} lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
+      <!-- Decorative leaf SVG top-right -->
+      <svg class="absolute top-0 right-0 w-64 h-64 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M160 20C160 20 140 60 100 80C60 100 20 100 20 100C20 100 60 80 80 40C100 0 160 20 160 20Z" fill="currentColor"/>
+        <path d="M180 60C180 60 150 100 110 110C70 120 30 110 30 110C30 110 70 100 90 60C110 20 180 60 180 60Z" fill="currentColor"/>
+        <path d="M140 140C140 140 120 170 80 180C40 190 10 170 10 170C10 170 50 160 70 130C90 100 140 140 140 140Z" fill="currentColor"/>
+      </svg>
+      <!-- Decorative organic shape bottom-left -->
+      <svg class="absolute bottom-0 left-0 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="140" rx="80" ry="60" transform="rotate(-20 60 140)" fill="currentColor"/>
+        <ellipse cx="100" cy="160" rx="60" ry="40" transform="rotate(10 100 160)" fill="currentColor"/>
+      </svg>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+          {t("aboutPage.title")}
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+          {t("aboutPage.tagline")}
+        </p>
+      </div>
+      <!-- Wave divider -->
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+            {t("aboutPage.vision.title")}
+          </h2>
+          <!-- Decorative leaf divider -->
+          <svg class="mx-auto mb-8 w-16 h-16 text-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 8C32 8 16 20 16 36C16 52 32 56 32 56C32 56 48 52 48 36C48 20 32 8 32 8Z" fill="currentColor" opacity="0.2"/>
+            <path d="M32 8C32 8 16 20 16 36C16 52 32 56 32 56C32 56 48 52 48 36C48 20 32 8 32 8Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M32 16V48" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M32 24L24 32" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M32 32L40 26" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M32 40L22 36" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            {t("aboutPage.vision.intro")}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Cards Grid -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Love Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-primary mb-4">
+                {t("aboutPage.values.love.title")}
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                {t("aboutPage.values.love.desc")}
+              </p>
+            </div>
+          </div>
+
+          <!-- Benevolence Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-primary mb-4">
+                {t("aboutPage.values.benevolence.title")}
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                {t("aboutPage.values.benevolence.desc")}
+              </p>
+            </div>
+          </div>
+
+          <!-- Altruism Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-primary mb-4">
+                {t("aboutPage.values.altruism.title")}
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                {t("aboutPage.values.altruism.desc")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="py-20 bg-white relative overflow-hidden">
+      <!-- Decorative leaves background -->
+      <svg class="absolute top-10 left-10 w-32 h-32 text-accent/5" viewBox="0 0 120 120" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 10C60 10 30 30 20 60C10 90 30 110 60 110C90 110 110 90 100 60C90 30 60 10 60 10Z"/>
+      </svg>
+      <svg class="absolute bottom-10 right-10 w-40 h-40 text-primary/5" viewBox="0 0 120 120" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90 10C90 10 110 50 90 80C70 110 30 110 20 80C10 50 40 20 90 10Z"/>
+      </svg>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-cream rounded-2xl p-10 md:p-14 border-l-4 border-accent">
+            <svg class="w-10 h-10 text-accent mb-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed italic">
+              {t("aboutPage.mission")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Association Description -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <!-- Decorative organic shape -->
+          <svg class="mx-auto mb-8 w-20 h-20 text-primary" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="8 4" opacity="0.3"/>
+            <path d="M40 16C40 16 24 28 24 44C24 52 32 60 40 60C48 60 56 52 56 44C56 28 40 16 40 16Z" fill="currentColor" opacity="0.15"/>
+            <path d="M40 16C40 16 24 28 24 44C24 52 32 60 40 60C48 60 56 52 56 44C56 28 40 16 40 16Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 24V52" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M40 32L32 40" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M40 40L48 34" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            {t("about.association")}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,216 @@
+---
+import { useTranslations } from '../i18n/translations';
+
+interface Props {
+  lang?: "fr" | "en";
+}
+
+const { lang = "fr" } = Astro.props;
+const t = useTranslations(lang);
+
+const objectives = [
+  { num: "01", key: "objectives.1" as const, icon: "leaf" },
+  { num: "02", key: "objectives.2" as const, icon: "compass" },
+  { num: "03", key: "objectives.3" as const, icon: "flower" },
+  { num: "04", key: "objectives.4" as const, icon: "hands" },
+  { num: "05", key: "objectives.5" as const, icon: "seedling" },
+  { num: "06", key: "objectives.6" as const, icon: "briefcase" },
+  { num: "07", key: "objectives.7" as const, icon: "globe" },
+];
+---
+
+<section data-testid="objectives-section" class="py-20 md:py-28 bg-cream relative overflow-hidden">
+  <!-- Subtle decorative background shapes -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-primary/[0.03] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-accent/[0.03] rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-14">
+      <span class="inline-block text-accent font-medium tracking-wider uppercase text-sm mb-3">
+        {t("objectives.subtitle")}
+      </span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary">
+        {t("objectives.title")}
+      </h2>
+      <div class="mt-4 mx-auto w-20 h-1 bg-accent rounded-full"></div>
+    </div>
+
+    <!-- Mobile: horizontal scrollable carousel -->
+    <div class="md:hidden -mx-4 px-4">
+      <div class="flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide">
+        {objectives.map((obj, i) => (
+          <div
+            class:list={[
+              "flex-shrink-0 w-[280px] snap-center rounded-2xl p-6 relative group transition-all duration-300",
+              i % 2 === 0 ? "bg-white" : "bg-primary/[0.04]",
+            ]}
+            style="box-shadow: 0 1px 3px rgba(11,91,75,0.08);"
+          >
+            <!-- Card number -->
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-4xl font-heading font-bold text-primary/15 leading-none">
+                {obj.num}
+              </span>
+              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                {obj.icon === "leaf" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-4-8-7.5-8-12a8 8 0 0116 0c0 4.5-4 8-8 12z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 13c2-2 4-3 4-3s2 1 4 3" />
+                  </svg>
+                )}
+                {obj.icon === "compass" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="9" />
+                    <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" fill="currentColor" opacity="0.3" />
+                    <polygon points="14.12,14.12 9.88,9.88 7.76,16.24" fill="currentColor" opacity="0.5" />
+                  </svg>
+                )}
+                {obj.icon === "flower" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 2a4 4 0 010 6 4 4 0 010-6z" />
+                    <path d="M12 16a4 4 0 010 6 4 4 0 010-6z" />
+                    <path d="M2 12a4 4 0 016 0 4 4 0 01-6 0z" />
+                    <path d="M16 12a4 4 0 016 0 4 4 0 01-6 0z" />
+                  </svg>
+                )}
+                {obj.icon === "hands" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l-2 2a3 3 0 000 4.24l1.76 1.76a3 3 0 004.24 0L15 15" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l2-2a3 3 0 000-4.24L17.24 5a3 3 0 00-4.24 0L9 9" />
+                  </svg>
+                )}
+                {obj.icon === "seedling" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 22V10" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 14s0-6 6-6" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 10s0-6-6-6" />
+                  </svg>
+                )}
+                {obj.icon === "briefcase" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="7" width="18" height="13" rx="2" />
+                    <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
+                    <path d="M3 12h18" />
+                  </svg>
+                )}
+                {obj.icon === "globe" && (
+                  <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18" />
+                    <path d="M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9 15.3 15.3 0 014-9z" />
+                  </svg>
+                )}
+              </div>
+            </div>
+            <!-- Objective text -->
+            <p class="text-gray-700 text-sm leading-relaxed">
+              {t(obj.key)}
+            </p>
+            <!-- Bottom accent bar -->
+            <div class="mt-5 w-8 h-0.5 bg-accent/40 rounded-full"></div>
+          </div>
+        ))}
+      </div>
+      <!-- Scroll indicator dots (visual hint) -->
+      <div class="flex justify-center gap-1.5 mt-2">
+        {objectives.map((_, i) => (
+          <div class:list={["w-1.5 h-1.5 rounded-full", i === 0 ? "bg-accent" : "bg-primary/20"]}></div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Desktop: grid layout -->
+    <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      {objectives.map((obj, i) => (
+        <div
+          class:list={[
+            "rounded-2xl p-6 relative group transition-all duration-300 hover:-translate-y-1",
+            i % 2 === 0 ? "bg-white" : "bg-primary/[0.04]",
+          ]}
+          style="box-shadow: 0 1px 3px rgba(11,91,75,0.08); transition: box-shadow 0.3s ease, transform 0.3s ease;"
+          onmouseenter="this.style.boxShadow='0 8px 25px rgba(11,91,75,0.12)'"
+          onmouseleave="this.style.boxShadow='0 1px 3px rgba(11,91,75,0.08)'"
+        >
+          <!-- Card number -->
+          <div class="flex items-start justify-between mb-4">
+            <span class="text-5xl font-heading font-bold text-primary/10 leading-none select-none">
+              {obj.num}
+            </span>
+            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors duration-300">
+              {obj.icon === "leaf" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-4-8-7.5-8-12a8 8 0 0116 0c0 4.5-4 8-8 12z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 13c2-2 4-3 4-3s2 1 4 3" />
+                </svg>
+              )}
+              {obj.icon === "compass" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="9" />
+                  <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" fill="currentColor" opacity="0.3" />
+                  <polygon points="14.12,14.12 9.88,9.88 7.76,16.24" fill="currentColor" opacity="0.5" />
+                </svg>
+              )}
+              {obj.icon === "flower" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 2a4 4 0 010 6 4 4 0 010-6z" />
+                  <path d="M12 16a4 4 0 010 6 4 4 0 010-6z" />
+                  <path d="M2 12a4 4 0 016 0 4 4 0 01-6 0z" />
+                  <path d="M16 12a4 4 0 016 0 4 4 0 01-6 0z" />
+                </svg>
+              )}
+              {obj.icon === "hands" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l-2 2a3 3 0 000 4.24l1.76 1.76a3 3 0 004.24 0L15 15" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l2-2a3 3 0 000-4.24L17.24 5a3 3 0 00-4.24 0L9 9" />
+                </svg>
+              )}
+              {obj.icon === "seedling" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 22V10" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 14s0-6 6-6" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 10s0-6-6-6" />
+                </svg>
+              )}
+              {obj.icon === "briefcase" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="7" width="18" height="13" rx="2" />
+                  <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
+                  <path d="M3 12h18" />
+                </svg>
+              )}
+              {obj.icon === "globe" && (
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18" />
+                  <path d="M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9 15.3 15.3 0 014-9z" />
+                </svg>
+              )}
+            </div>
+          </div>
+          <!-- Objective text -->
+          <p class="text-gray-700 text-sm leading-relaxed">
+            {t(obj.key)}
+          </p>
+          <!-- Bottom accent bar -->
+          <div class="mt-5 w-8 h-0.5 bg-accent/40 rounded-full group-hover:w-12 transition-all duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hide scrollbar for clean carousel appearance */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

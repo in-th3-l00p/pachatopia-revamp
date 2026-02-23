@@ -1,0 +1,100 @@
+---
+import { useTranslations } from '../i18n/translations';
+
+interface Props {
+  lang?: "fr" | "en";
+}
+
+const { lang = "fr" } = Astro.props;
+const t = useTranslations(lang);
+
+const metrics = [
+  {
+    value: "0+",
+    label: t("metrics.projects"),
+    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="10" width="5" height="11" rx="0.5"/>
+      <rect x="9.5" y="6" width="5" height="15" rx="0.5"/>
+      <rect x="16" y="3" width="5" height="18" rx="0.5"/>
+      <line x1="1" y1="21" x2="23" y2="21"/>
+    </svg>`,
+  },
+  {
+    value: "0+",
+    label: t("metrics.countries"),
+    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"/>
+      <ellipse cx="12" cy="12" rx="4" ry="10"/>
+      <path d="M2 12h20"/>
+      <path d="M4.5 6.5h15"/>
+      <path d="M4.5 17.5h15"/>
+    </svg>`,
+  },
+  {
+    value: "0+",
+    label: t("metrics.volunteers"),
+    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M20.5 14.5l-2 2.5L17 15.5"/>
+      <path d="M22 21v-2a4 4 0 00-3-3.87"/>
+      <path d="M16 3.13a4 4 0 010 7.75"/>
+    </svg>`,
+  },
+  {
+    value: "0+",
+    label: t("metrics.jobs"),
+    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="7" width="20" height="14" rx="2"/>
+      <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+      <line x1="12" y1="12" x2="12" y2="12.01"/>
+      <path d="M2 12h20"/>
+    </svg>`,
+  },
+];
+---
+
+<section
+  data-testid="metrics-section"
+  class="relative py-16 md:py-24 overflow-hidden"
+  style="background-color: #0b5b4b;"
+>
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <svg class="absolute top-0 left-0 w-full h-full opacity-[0.04]" viewBox="0 0 800 400" fill="none" preserveAspectRatio="xMidYMid slice">
+      <circle cx="100" cy="50" r="120" stroke="white" stroke-width="0.5"/>
+      <circle cx="700" cy="350" r="150" stroke="white" stroke-width="0.5"/>
+      <circle cx="400" cy="200" r="80" stroke="white" stroke-width="0.5"/>
+      <circle cx="600" cy="80" r="60" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="350" r="90" stroke="white" stroke-width="0.5"/>
+    </svg>
+    <!-- Diagonal accent line -->
+    <div class="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-white/[0.02]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
+      {metrics.map((metric) => (
+        <div class="group flex flex-col items-center text-center p-6 md:p-8 rounded-2xl transition-all duration-300 hover:bg-white/[0.08]">
+          <!-- Icon container -->
+          <div class="mb-4 md:mb-5 text-white/70 group-hover:text-accent transition-colors duration-300">
+            <Fragment set:html={metric.icon} />
+          </div>
+
+          <!-- Metric value -->
+          <div class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 md:mb-3 tracking-tight font-heading">
+            {metric.value}
+          </div>
+
+          <!-- Decorative divider -->
+          <div class="w-8 h-[2px] bg-accent/60 rounded-full mb-3 md:mb-4 group-hover:w-12 transition-all duration-300"></div>
+
+          <!-- Label -->
+          <div class="text-sm md:text-base text-white/80 font-medium leading-snug">
+            {metric.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

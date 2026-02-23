@@ -1,0 +1,349 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+} from "../i18n/translations";
+
+interface Props {
+  lang?: "fr" | "en";
+}
+
+const { lang = "fr" } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLang = lang === "fr" ? "en" : "fr";
+
+// Build the current path without the language prefix so we can switch languages
+const currentPath = Astro.url.pathname;
+const pathWithoutLang = currentPath.replace(/^\/en/, "") || "/";
+const switchLangPath = getLocalizedPath(pathWithoutLang, otherLang);
+
+// Navigation items linking to actual pages
+const navItems = [
+  { key: "nav.home" as const, href: getLocalizedPath("/", lang) },
+  { key: "nav.about" as const, href: getLocalizedPath("/a-propos-de-nous/", lang) },
+  { key: "nav.actions" as const, href: getLocalizedPath("/nos-actions/", lang) },
+  {
+    key: "nav.participate" as const,
+    href: getLocalizedPath("/comment-participer/", lang),
+  },
+  {
+    key: "nav.currency" as const,
+    href: getLocalizedPath("/notre-monnaie-ecologique/", lang),
+  },
+  { key: "nav.faq" as const, href: getLocalizedPath("/faq/", lang) },
+  { key: "nav.info" as const, href: getLocalizedPath("/informations/", lang) },
+  { key: "nav.contact" as const, href: getLocalizedPath("/contacts/", lang) },
+];
+---
+
+<header
+  data-testid="header"
+  id="main-header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary/95 backdrop-blur-sm"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Hamburger Button -->
+      <button
+        data-testid="mobile-menu-button"
+        id="sidebar-toggle"
+        type="button"
+        class="inline-flex items-center justify-center rounded-md p-2 text-white/85 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+        aria-expanded="false"
+        aria-controls="sidebar-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          id="hamburger-icon"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <a
+        href={getLocalizedPath("/", lang)}
+        class="group flex items-center gap-2 shrink-0"
+      >
+        <svg
+          class="h-8 w-8 text-green-300 transition-transform duration-300 group-hover:rotate-12"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M16 2C16 2 6 10 6 20C6 25.5228 10.4772 30 16 30C21.5228 30 26 25.5228 26 20C26 10 16 2 16 2Z"
+            fill="currentColor"
+            opacity="0.3"></path>
+          <path
+            d="M16 2C16 2 6 10 6 20C6 25.5228 10.4772 30 16 30C21.5228 30 26 25.5228 26 20C26 10 16 2 16 2Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M16 8V24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"></path>
+          <path
+            d="M16 14C13 14 10 16 10 19"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"></path>
+          <path
+            d="M16 18C19 18 22 20 22 23"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"></path>
+        </svg>
+        <span
+          class="text-xl font-bold tracking-tight text-white font-heading transition-colors duration-200 group-hover:text-green-200"
+        >
+          Pachatopia
+        </span>
+      </a>
+
+      <!-- Language Switcher -->
+      <a
+        data-testid="language-switcher"
+        href={switchLangPath}
+        class="flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1.5 text-sm font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+        aria-label={`Switch language to ${otherLang === "en" ? "English" : "Français"}`}
+      >
+        <svg
+          class="h-4 w-4 opacity-70"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M2 12h20"></path>
+          <path
+            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+          ></path>
+        </svg>
+        <span class={lang === "fr" ? "text-white" : "text-white/50"}>FR</span>
+        <span class="text-white/40">|</span>
+        <span class={lang === "en" ? "text-white" : "text-white/50"}>EN</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Sidebar Overlay -->
+<div
+  id="sidebar-overlay"
+  class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+  aria-hidden="true"
+></div>
+
+<!-- Sidebar Menu -->
+<aside
+  id="sidebar-menu"
+  class="fixed top-0 left-0 z-50 h-full w-72 bg-primary-dark transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+  aria-label="Main navigation"
+>
+  <!-- Sidebar Header -->
+  <div class="flex items-center justify-between px-5 py-4 border-b border-white/10">
+    <a
+      href={getLocalizedPath("/", lang)}
+      class="group flex items-center gap-2"
+    >
+      <svg
+        class="h-7 w-7 text-green-300"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M16 2C16 2 6 10 6 20C6 25.5228 10.4772 30 16 30C21.5228 30 26 25.5228 26 20C26 10 16 2 16 2Z"
+          fill="currentColor"
+          opacity="0.3"></path>
+        <path
+          d="M16 2C16 2 6 10 6 20C6 25.5228 10.4772 30 16 30C21.5228 30 26 25.5228 26 20C26 10 16 2 16 2Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M16 8V24"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"></path>
+      </svg>
+      <span class="text-lg font-bold text-white font-heading">Pachatopia</span>
+    </a>
+    <!-- Close Button -->
+    <button
+      id="sidebar-close"
+      type="button"
+      class="rounded-md p-2 text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+      aria-label="Close navigation menu"
+    >
+      <svg
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="px-3 py-4">
+    <ul class="flex flex-col gap-1">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="sidebar-nav-link block rounded-lg px-4 py-3 text-base font-medium text-white/85 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+            >
+              {t(item.key)}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Language switcher in sidebar -->
+    <div class="mt-4 border-t border-white/10 pt-4 px-4">
+      <a
+        href={switchLangPath}
+        class="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
+      >
+        <svg
+          class="h-4 w-4 opacity-70"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M2 12h20"></path>
+          <path
+            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+          ></path>
+        </svg>
+        {otherLang === "en" ? "Switch to English" : "Passer en Français"}
+      </a>
+    </div>
+  </nav>
+</aside>
+
+<!-- Spacer to offset fixed header -->
+<div class="h-16"></div>
+
+<script>
+  function initHeader() {
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+    const sidebarClose = document.getElementById("sidebar-close");
+    const sidebar = document.getElementById("sidebar-menu");
+    const overlay = document.getElementById("sidebar-overlay");
+    const header = document.getElementById("main-header");
+
+    if (!sidebarToggle || !sidebarClose || !sidebar || !overlay) {
+      return;
+    }
+
+    let isOpen = false;
+
+    function openSidebar() {
+      isOpen = true;
+      sidebar!.classList.remove("-translate-x-full");
+      sidebar!.classList.add("translate-x-0");
+      overlay!.classList.remove("opacity-0", "pointer-events-none");
+      overlay!.classList.add("opacity-100", "pointer-events-auto");
+      sidebarToggle!.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeSidebar() {
+      isOpen = false;
+      sidebar!.classList.remove("translate-x-0");
+      sidebar!.classList.add("-translate-x-full");
+      overlay!.classList.remove("opacity-100", "pointer-events-auto");
+      overlay!.classList.add("opacity-0", "pointer-events-none");
+      sidebarToggle!.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    // Toggle on hamburger click
+    sidebarToggle.addEventListener("click", () => {
+      isOpen ? closeSidebar() : openSidebar();
+    });
+
+    // Close on X button
+    sidebarClose.addEventListener("click", closeSidebar);
+
+    // Close on overlay click
+    overlay.addEventListener("click", closeSidebar);
+
+    // Close on nav link click
+    sidebar.querySelectorAll(".sidebar-nav-link").forEach((link) => {
+      link.addEventListener("click", closeSidebar);
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isOpen) {
+        closeSidebar();
+        sidebarToggle.focus();
+      }
+    });
+
+    // Header scroll effect
+    function handleScroll() {
+      if (header) {
+        if (window.scrollY > 10) {
+          header.classList.add("shadow-lg", "shadow-black/20");
+          header.classList.remove("bg-primary/95");
+          header.classList.add("bg-primary");
+        } else {
+          header.classList.remove("shadow-lg", "shadow-black/20");
+          header.classList.remove("bg-primary");
+          header.classList.add("bg-primary/95");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // Initialize on page load
+  document.addEventListener("astro:page-load", initHeader);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHeader);
+  } else {
+    initHeader();
+  }
+</script>
