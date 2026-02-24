@@ -14,16 +14,12 @@ const t = useTranslations(lang);
   <Header lang={lang} />
   <main>
     <!-- Hero Banner -->
-    <section class="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
-      <!-- Decorative shapes -->
-      <svg class="absolute top-0 right-0 w-72 h-72 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="140" cy="60" r="50" fill="currentColor"/>
-        <circle cx="100" cy="120" r="30" fill="currentColor"/>
-        <circle cx="160" cy="140" r="20" fill="currentColor"/>
-      </svg>
-      <svg class="absolute bottom-0 left-0 w-56 h-56 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 180C20 180 40 100 100 80C160 60 180 100 160 140C140 180 60 200 20 180Z" fill="currentColor"/>
-      </svg>
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <!-- Background image -->
+      <div class="absolute inset-0">
+        <img src="/images/farm-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
       <div class="container mx-auto px-6 text-center relative z-10">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
           {t("actionsPage.title")}
@@ -42,17 +38,12 @@ const t = useTranslations(lang);
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-3 flex justify-center">
-            <div class="w-28 h-28 bg-primary/10 rounded-full flex items-center justify-center">
-              <!-- Tree icon -->
-              <svg class="w-14 h-14 text-primary" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 6L16 28h8L14 42h10l-6 16h28l-6-16h10L40 28h8L32 6Z" fill="currentColor" opacity="0.2"/>
-                <path d="M32 6L16 28h8L14 42h10l-6 16h28l-6-16h10L40 28h8L32 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <rect x="29" y="52" width="6" height="10" rx="1" fill="currentColor" opacity="0.4"/>
-              </svg>
+          <div class="md:col-span-5 flex justify-center">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/reserve-naturelle.webp" alt="Natural reserve at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
             </div>
           </div>
-          <div class="md:col-span-9">
+          <div class="md:col-span-7">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               {t("actions.reserve.title")}
             </h2>
@@ -72,7 +63,7 @@ const t = useTranslations(lang);
     <section class="py-20 bg-cream">
       <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-9 md:order-1">
+          <div class="md:col-span-7 md:order-1">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               {t("actions.agriculture.title")}
             </h2>
@@ -84,17 +75,9 @@ const t = useTranslations(lang);
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
-          <div class="md:col-span-3 md:order-2 flex justify-center">
-            <div class="w-28 h-28 bg-accent/10 rounded-full flex items-center justify-center">
-              <!-- Plant/sprout icon -->
-              <svg class="w-14 h-14 text-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 58V30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M32 38C32 38 20 36 16 24C12 12 24 6 24 6C24 6 32 14 32 30" fill="currentColor" opacity="0.2"/>
-                <path d="M32 38C32 38 20 36 16 24C12 12 24 6 24 6C24 6 32 14 32 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M32 44C32 44 44 40 48 28C52 16 40 8 40 8C40 8 32 18 32 34" fill="currentColor" opacity="0.15"/>
-                <path d="M32 44C32 44 44 40 48 28C52 16 40 8 40 8C40 8 32 18 32 34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <ellipse cx="32" cy="60" rx="10" ry="3" fill="currentColor" opacity="0.1"/>
-              </svg>
+          <div class="md:col-span-5 md:order-2 flex justify-center">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/agriculture-durable.webp" alt="Victor et Felix - sustainable agriculture at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -105,19 +88,12 @@ const t = useTranslations(lang);
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-3 flex justify-center">
-            <div class="w-28 h-28 bg-primary/10 rounded-full flex items-center justify-center">
-              <!-- Box/package icon -->
-              <svg class="w-14 h-14 text-primary" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 8L8 20V44L32 56L56 44V20L32 8Z" fill="currentColor" opacity="0.15"/>
-                <path d="M32 8L8 20V44L32 56L56 44V20L32 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M8 20L32 32L56 20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M32 32V56" stroke="currentColor" stroke-width="2"/>
-                <path d="M20 14L44 26" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/>
-              </svg>
+          <div class="md:col-span-5 flex justify-center">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/production-cafe.webp" alt="Sustainable coffee culture at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
             </div>
           </div>
-          <div class="md:col-span-9">
+          <div class="md:col-span-7">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               {t("actions.production.title")}
             </h2>
@@ -137,7 +113,7 @@ const t = useTranslations(lang);
     <section class="py-20 bg-cream">
       <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-9 md:order-1">
+          <div class="md:col-span-7 md:order-1">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               {t("actions.aquaculture.title")}
             </h2>
@@ -149,18 +125,9 @@ const t = useTranslations(lang);
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
-          <div class="md:col-span-3 md:order-2 flex justify-center">
-            <div class="w-28 h-28 bg-accent/10 rounded-full flex items-center justify-center">
-              <!-- Fish icon -->
-              <svg class="w-14 h-14 text-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M48 32C48 32 40 16 24 16C8 16 4 32 4 32C4 32 8 48 24 48C40 48 48 32 48 32Z" fill="currentColor" opacity="0.2"/>
-                <path d="M48 32C48 32 40 16 24 16C8 16 4 32 4 32C4 32 8 48 24 48C40 48 48 32 48 32Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M52 16L48 32L52 48C52 48 60 40 60 32C60 24 52 16 52 16Z" fill="currentColor" opacity="0.15"/>
-                <path d="M52 16L48 32L52 48C52 48 60 40 60 32C60 24 52 16 52 16Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="16" cy="28" r="3" fill="currentColor"/>
-                <path d="M24 24C28 28 28 36 24 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M30 22C36 28 36 36 30 42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
+          <div class="md:col-span-5 md:order-2 flex justify-center">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/aquaculture.webp" alt="Sustainable aquaculture at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -169,16 +136,11 @@ const t = useTranslations(lang);
 
     <!-- Participation Call-Out -->
     <section class="py-20 bg-white relative overflow-hidden">
-      <!-- Decorative background shapes -->
-      <svg class="absolute top-0 left-0 w-40 h-40 text-accent/5" viewBox="0 0 160 160" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="60"/>
-        <circle cx="100" cy="80" r="40"/>
-      </svg>
-      <svg class="absolute bottom-0 right-0 w-48 h-48 text-primary/5" viewBox="0 0 160 160" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M80 10C80 10 140 40 140 100C140 140 100 160 80 150C60 160 20 140 20 100C20 40 80 10 80 10Z"/>
-      </svg>
       <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="/images/community.jpg" alt="Pachatopia community and volunteers" class="w-full h-auto object-cover" loading="lazy" />
+          </div>
           <div class="bg-cream rounded-2xl p-10 md:p-14 border-t-4 border-accent">
             <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">
               {t("actions.participate.title")}

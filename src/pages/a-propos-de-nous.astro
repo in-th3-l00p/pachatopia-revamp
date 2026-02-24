@@ -14,18 +14,12 @@ const t = useTranslations(lang);
   <Header lang={lang} />
   <main>
     <!-- Hero Banner -->
-    <section class="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
-      <!-- Decorative leaf SVG top-right -->
-      <svg class="absolute top-0 right-0 w-64 h-64 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M160 20C160 20 140 60 100 80C60 100 20 100 20 100C20 100 60 80 80 40C100 0 160 20 160 20Z" fill="currentColor"/>
-        <path d="M180 60C180 60 150 100 110 110C70 120 30 110 30 110C30 110 70 100 90 60C110 20 180 60 180 60Z" fill="currentColor"/>
-        <path d="M140 140C140 140 120 170 80 180C40 190 10 170 10 170C10 170 50 160 70 130C90 100 140 140 140 140Z" fill="currentColor"/>
-      </svg>
-      <!-- Decorative organic shape bottom-left -->
-      <svg class="absolute bottom-0 left-0 w-48 h-48 opacity-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="60" cy="140" rx="80" ry="60" transform="rotate(-20 60 140)" fill="currentColor"/>
-        <ellipse cx="100" cy="160" rx="60" ry="40" transform="rotate(10 100 160)" fill="currentColor"/>
-      </svg>
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <!-- Background image -->
+      <div class="absolute inset-0">
+        <img src="/images/community.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
       <div class="container mx-auto px-6 text-center relative z-10">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
           {t("aboutPage.title")}
@@ -148,22 +142,26 @@ const t = useTranslations(lang);
       </div>
     </section>
 
-    <!-- Association Description -->
+    <!-- Association Description with Image -->
     <section class="py-20 bg-cream">
       <div class="container mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center">
-          <!-- Decorative organic shape -->
-          <svg class="mx-auto mb-8 w-20 h-20 text-primary" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="8 4" opacity="0.3"/>
-            <path d="M40 16C40 16 24 28 24 44C24 52 32 60 40 60C48 60 56 52 56 44C56 28 40 16 40 16Z" fill="currentColor" opacity="0.15"/>
-            <path d="M40 16C40 16 24 28 24 44C24 52 32 60 40 60C48 60 56 52 56 44C56 28 40 16 40 16Z" stroke="currentColor" stroke-width="2"/>
-            <path d="M40 24V52" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M40 32L32 40" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M40 40L48 34" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            {t("about.association")}
-          </p>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="/images/about-market.webp" alt="Victor, Jenny et leur famille au marché de San Carlos" class="w-full h-auto object-cover" loading="lazy" />
+          </div>
+          <div>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              {t("about.association")}
+            </p>
+            <div class="flex flex-wrap gap-4 mt-8">
+              <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-colors">
+                Contact
+              </a>
+              <a href={lang === "en" ? "/en/comment-participer/" : "/comment-participer/"} class="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">
+                {t("nav.participate")}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

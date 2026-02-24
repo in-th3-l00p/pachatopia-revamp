@@ -10,8 +10,16 @@ const t = useTranslations(lang);
 ---
 
 <section data-testid="cta-section" class="relative py-24 md:py-32 overflow-hidden">
-  <!-- Nature gradient background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent"></div>
+  <!-- Background image with gradient overlay -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/production-cafe.webp"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary-light/85 to-accent/80"></div>
+  </div>
 
   <!-- Organic decorative SVG shapes -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
