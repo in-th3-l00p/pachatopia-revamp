@@ -160,11 +160,11 @@ const t = useTranslations(lang);
   <div class="hero-content relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
     <!-- Decorative top flourish -->
     <div class="hero-flourish flex items-center justify-center gap-3 mb-8">
-      <span class="block w-12 h-px bg-accent/40"></span>
-      <svg class="w-6 h-6 text-accent/60" viewBox="0 0 24 24" fill="currentColor">
+      <span class="block w-12 h-px bg-golden/50"></span>
+      <svg class="w-6 h-6 text-golden/70" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C12 2 18 7 18 13C18 17 15 20 12 20C9 20 6 17 6 13C6 7 12 2 12 2Z" />
       </svg>
-      <span class="block w-12 h-px bg-accent/40"></span>
+      <span class="block w-12 h-px bg-golden/50"></span>
     </div>
 
     <!-- Main heading -->
@@ -178,7 +178,7 @@ const t = useTranslations(lang);
     <!-- Tagline -->
     <p
       data-testid="hero-tagline"
-      class="hero-tagline text-xl sm:text-2xl md:text-3xl text-accent font-heading italic mb-8 tracking-wide"
+      class="hero-tagline text-xl sm:text-2xl md:text-3xl text-golden font-heading italic mb-8 tracking-wide"
     >
       {t("hero.tagline")}
     </p>
@@ -194,10 +194,9 @@ const t = useTranslations(lang);
     <div class="hero-buttons flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
       <a
         href={lang === "en" ? "/en/comment-participer/" : "/comment-participer/"}
-        class="hero-btn-primary group relative inline-flex items-center justify-center px-8 py-4 text-base sm:text-lg font-semibold text-primary bg-cream rounded-full overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(248,246,240,0.3)] hover:scale-[1.03] active:scale-[0.98]"
+        class="hero-btn-primary group relative inline-flex items-center justify-center px-8 py-4 text-base sm:text-lg font-semibold text-primary bg-golden rounded-full overflow-hidden transition-all duration-300 hover:bg-golden-dark hover:shadow-[0_8px_30px_rgba(255,197,90,0.35)] hover:scale-[1.03] active:scale-[0.98]"
       >
         <span class="relative z-10">{t("hero.cta.participate")}</span>
-        <span class="absolute inset-0 bg-accent/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span>
       </a>
       <a
         href={lang === "en" ? "/en/contacts/" : "/contacts/"}

@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0b5b4b;
+  --color-primary: #0A5B4B;
   --color-primary-light: #0d7a65;
-  --color-primary-dark: #094a3d;
+  --color-primary-dark: #084a3d;
   --color-accent: #2d9b83;
   --color-cream: #f8f6f0;
   --color-earth: #8b6f47;
   --color-earth-light: #a68b5b;
+  --color-golden: #FFC55A;
+  --color-golden-dark: #e6ad3e;
   --font-heading: "Georgia", serif;
 }
 
