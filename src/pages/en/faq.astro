@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
+import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
 
 const lang = "en";
@@ -55,14 +56,19 @@ const faqItems = [
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">❓ FAQ – Frequently Asked Questions</h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">FAQ – Frequently Asked Questions</h1>
         <p class="text-lg md:text-xl text-white/85">Essential answers about the Pachatopia project</p>
       </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="#f8f6f0"/>
+      </svg>
     </section>
 
     <!-- FAQ Accordion -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-4xl mx-auto px-6">
+    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-4">
           {faqItems.map((item, i) => (
             <details class="group bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
@@ -87,11 +93,12 @@ const faqItems = [
         </div>
 
         <div class="mt-12 text-center bg-white rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
-          <p class="text-lg text-gray-700 mb-6">👉 Can't find the answer to your question? Don't hesitate to contact us.</p>
+          <p class="text-lg text-gray-700 mb-6">Can't find the answer to your question? Don't hesitate to contact us.</p>
           <a href="/en/contacts/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Contact us</a>
         </div>
       </div>
     </section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>
