@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
 
 const lang = "fr";
@@ -16,10 +18,10 @@ const lang = "fr";
     <!-- Hero Banner -->
     <section class="relative text-white py-24 md:py-32 overflow-hidden">
       <div class="absolute inset-0">
-        <img src="/images/farm-hero.jpg" alt="Nos actions" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <img src="/images/farm-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Nos actions</h1>
         <p class="text-xl md:text-2xl text-white/90">Régénérer la Terre et construire un futur durable</p>
       </div>
@@ -29,56 +31,122 @@ const lang = "fr";
     </section>
 
     <!-- Intro -->
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <p class="text-lg text-gray-700 leading-relaxed">À Pachatopia, nous développons des initiatives concrètes pour restaurer les écosystèmes, soutenir les communautés locales et promouvoir un mode de vie respectueux du vivant. Nos actions s'articulent autour de plusieurs axes complémentaires.</p>
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">À Pachatopia, nous développons des initiatives concrètes pour restaurer les écosystèmes, soutenir les communautés locales et promouvoir un mode de vie respectueux du vivant. Nos actions s'articulent autour de plusieurs axes complémentaires.</p>
       </div>
     </section>
 
-    <!-- Action Articles -->
-    <section class="py-20 bg-cream">
-      <div class="max-w-5xl mx-auto px-6 space-y-14">
-        <article>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌳 Création de réserves naturelles</h2>
-          <p class="text-lg text-gray-700 leading-relaxed">La protection de la biodiversité est au cœur de notre engagement. Nous œuvrons à la création de réserves naturelles afin de préserver les forêts, la faune et la flore locales. Ces espaces contribuent également à la protection des sources d'eau douce et au maintien des équilibres écologiques.</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">En restaurant et en protégeant ces écosystèmes, nous participons aussi à la captation naturelle du carbone, contribuant ainsi à la lutte contre le changement climatique. Notre ambition est de transformer ces terres en refuges pour la biodiversité et en espaces d'apprentissage pour les générations futures.</p>
-        </article>
-
-        <article>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌱 Développer une agriculture régénératrice</h2>
-          <p class="text-lg text-gray-700 leading-relaxed">Nous développons progressivement un modèle agricole inspiré des écosystèmes naturels. Notre objectif est de mettre en place des systèmes agroforestiers diversifiés, où les cultures coexistent avec les arbres et la biodiversité.</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">Ce modèle permet d'améliorer la fertilité des sols, de réduire l'utilisation d'intrants chimiques, de favoriser la biodiversité et de produire des aliments de meilleure qualité.</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">Nous avançons dans cette transition pas à pas, en apprenant directement sur le terrain et en nous inspirant des pratiques agricoles traditionnelles et des connaissances agroécologiques.</p>
-        </article>
-
-        <article>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-4">☕ Valoriser les productions locales</h2>
-          <p class="text-lg text-gray-700 leading-relaxed">Nous cherchons à valoriser au maximum les ressources produites sur le territoire. Le café est aujourd'hui l'une de nos productions principales. Nous souhaitons développer progressivement une torréfaction locale, afin de créer une filière régionale plus autonome et plus durable.</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">Nous explorons également différentes façons de valoriser les sous-produits agricoles : transformation de la pulpe de café, fermentation et production d'engrais naturels, utilisation des déchets agricoles pour produire de l'énergie.</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">L'objectif est de développer une économie circulaire, où chaque ressource est utilisée de manière intelligente et durable.</p>
-        </article>
-
-        <article>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🐟 Développer une aquaculture durable</h2>
-          <p class="text-lg text-gray-700 leading-relaxed">La région de San Carlos est riche en ressources hydriques et possède un potentiel important pour la production piscicole. Nous souhaitons développer des systèmes d'aquaculture plus durables, capables de produire des aliments de qualité tout en limitant les impacts environnementaux.</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">En valorisant les déchets organiques et en intégrant différents systèmes de production, nous cherchons à transformer ces pratiques en modèles plus écologiques et plus efficaces.</p>
-        </article>
+    <!-- Action 1: Réserves naturelles (image left) -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-5">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/reserve-naturelle.webp" alt="Réserve naturelle Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+          <div class="md:col-span-7">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Création de réserves naturelles</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">La protection de la biodiversité est au cœur de notre engagement. Nous œuvrons à la création de réserves naturelles afin de préserver les forêts, la faune et la flore locales. Ces espaces contribuent également à la protection des sources d'eau douce et au maintien des équilibres écologiques.</p>
+            <p class="text-gray-600 leading-relaxed">En restaurant et en protégeant ces écosystèmes, nous participons aussi à la captation naturelle du carbone, contribuant ainsi à la lutte contre le changement climatique.</p>
+            <a href="/contacts/" class="inline-flex items-center gap-2 mt-6 text-golden-dark font-semibold hover:text-primary transition-colors">
+              En savoir plus
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Participate -->
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-heading font-bold text-primary mb-6">🤝 Participer à l'aventure Pachatopia</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia est un projet collectif. Chacun peut contribuer à cette initiative :</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en soutenant la plantation d'arbres</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en découvrant notre café</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en venant participer aux activités sur le terrain</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">• ou en soutenant financièrement nos actions.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">Ensemble, nous pouvons régénérer la Terre et construire un futur plus harmonieux.</p>
-        <a href="/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Soutenir Pachatopia</a>
+    <!-- Action 2: Agriculture régénératrice (image right) -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-7 md:order-1">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Développer une agriculture régénératrice</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">Nous développons progressivement un modèle agricole inspiré des écosystèmes naturels. Notre objectif est de mettre en place des systèmes agroforestiers diversifiés, où les cultures coexistent avec les arbres et la biodiversité.</p>
+            <p class="text-gray-600 leading-relaxed mb-4">Ce modèle permet d'améliorer la fertilité des sols, de réduire l'utilisation d'intrants chimiques, de favoriser la biodiversité et de produire des aliments de meilleure qualité.</p>
+            <p class="text-gray-600 leading-relaxed">Nous avançons dans cette transition pas à pas, en apprenant directement sur le terrain et en nous inspirant des pratiques agricoles traditionnelles et des connaissances agroécologiques.</p>
+          </div>
+          <div class="md:col-span-5 md:order-2">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/agriculture-durable.webp" alt="Agriculture durable Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Action 3: Productions locales (image left) -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-5">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/production-cafe.webp" alt="Production de café Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+          <div class="md:col-span-7">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Valoriser les productions locales</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">Nous cherchons à valoriser au maximum les ressources produites sur le territoire. Le café est aujourd'hui l'une de nos productions principales. Nous souhaitons développer progressivement une torréfaction locale, afin de créer une filière régionale plus autonome et plus durable.</p>
+            <p class="text-gray-600 leading-relaxed mb-4">Nous explorons également différentes façons de valoriser les sous-produits agricoles : transformation de la pulpe de café, fermentation et production d'engrais naturels.</p>
+            <p class="text-gray-600 leading-relaxed">L'objectif est de développer une économie circulaire, où chaque ressource est utilisée de manière intelligente et durable.</p>
+            <a href="/le-cafe/" class="inline-flex items-center gap-2 mt-6 text-golden-dark font-semibold hover:text-primary transition-colors">
+              Découvrir le café
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action 4: Aquaculture (image right) -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-7 md:order-1">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Développer une aquaculture durable</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">La région de San Carlos est riche en ressources hydriques et possède un potentiel important pour la production piscicole. Nous souhaitons développer des systèmes d'aquaculture plus durables, capables de produire des aliments de qualité tout en limitant les impacts environnementaux.</p>
+            <p class="text-gray-600 leading-relaxed">En valorisant les déchets organiques et en intégrant différents systèmes de production, nous cherchons à transformer ces pratiques en modèles plus écologiques et plus efficaces.</p>
+          </div>
+          <div class="md:col-span-5 md:order-2">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/aquaculture.webp" alt="Aquaculture durable Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Participate call-out -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="/images/community.jpg" alt="Communauté Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
+          </div>
+          <div class="bg-cream rounded-2xl p-10 md:p-14 border-t-4 border-golden">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">Participer à l'aventure</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia est un projet collectif. Chacun peut contribuer :</p>
+            <ul class="space-y-3 text-gray-700 mb-8">
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>En soutenant la plantation d'arbres</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>En découvrant notre café</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>En participant aux activités sur le terrain</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>En soutenant financièrement nos actions</li>
+            </ul>
+            <p class="text-primary font-medium italic mb-6">Ensemble, nous pouvons régénérer la Terre et construire un futur plus harmonieux.</p>
+            <a href="/comment-participer/" class="group inline-flex items-center gap-2 bg-golden text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25">
+              <span>Soutenir Pachatopia</span>
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

@@ -8,27 +8,27 @@ const lang = "en";
 const faqItems = [
   {
     q: "What is Pachatopia?",
-    a: "Pachatopia is an association carrying an ecological and human project located in the San Carlos region of Colombia. Our goal is to restore ecosystems, develop more nature-friendly agriculture, and create a place of exchange around Earth regeneration.",
+    a: "Pachatopia is an association carrying an ecological and human project located in the San Carlos region of Colombia. Our goal is to restore ecosystems, develop more nature-friendly agriculture, and create a place of exchange around Earth regeneration.\n\nThrough agroforestry, tree planting, natural reserve creation, and coffee production, we seek to demonstrate that it is possible to produce while regenerating soils, biodiversity, and landscapes.",
   },
   {
     q: "How can I support the project?",
-    a: "You can sponsor a coffee tree, support the natural reserve, buy Pachatopia coffee, make a donation, or become a project partner.",
+    a: "You can support Pachatopia in several ways:\n• Sponsor a coffee tree\n• Support the natural reserve\n• Buy Pachatopia coffee\n• Make a donation\n• Become a project partner",
   },
   {
     q: "Can I visit Pachatopia?",
-    a: "Yes. Pachatopia aims to become a welcoming place for people who want to discover nature and ecological regeneration projects. Eventually, it will be possible to stay on-site via a camping area, a hostel, and a dining area.",
+    a: "Yes. Pachatopia aims to become a welcoming place for people who want to discover nature and ecological regeneration projects.\n\nEventually, it will be possible to stay on-site via:\n• A camping area\n• A hostel\n• A dining area",
   },
   {
     q: "How can I volunteer?",
-    a: "We welcome volunteers for tree planting, agroforestry, coffee-related work, and plot maintenance. A small financial contribution is required. In return, we offer accommodation, one meal per day, and full immersion in the project.",
+    a: "We welcome volunteers for:\n• Tree planting\n• Agroforestry\n• Coffee-related work\n• Plot maintenance\n\nA small financial contribution is required. In return, we offer:\n• Accommodation\n• One meal per day\n• Full immersion in the project",
   },
   {
     q: "How can I buy Pachatopia coffee?",
-    a: "Pachatopia coffee can be ordered through our project support initiatives. Currently, we mainly ship to Colombia, France, and Switzerland.",
+    a: "Pachatopia coffee can be ordered through our project support initiatives.\n\nCurrently, we mainly ship to:\n• Colombia\n• France\n• Switzerland",
   },
   {
     q: "Is Pachatopia coffee organic?",
-    a: "Some of the plots we took over were previously cultivated with chemical inputs. We have stopped these practices and are now developing more natural methods: compost, natural preparations, crop diversification, and agroforestry.",
+    a: "Some of the plots we took over were previously cultivated with chemical inputs. We have stopped these practices and are now developing more natural methods:\n• Compost\n• Natural preparations\n• Crop diversification\n• Agroforestry\n\nWe are transitioning towards entirely organic and regenerative practices.",
   },
   {
     q: "Where is Pachatopia located?",
@@ -36,7 +36,7 @@ const faqItems = [
   },
   {
     q: "How are the Pachatopia lands organized?",
-    a: "We carry out GPS mapping of the different plots to create an identity card for each one. This allows us to better track crops, reforestation zones, coffee and cacao plots, and spaces dedicated to biodiversity.",
+    a: "We carry out GPS mapping of the different plots to create an identity card for each one. This allows us to better track:\n• Crops\n• Reforestation zones\n• Coffee and cacao plots\n• Spaces dedicated to biodiversity",
   },
 ];
 ---
@@ -79,7 +79,7 @@ const faqItems = [
               </summary>
               <div class="px-6 pb-6 md:px-8 md:pb-8">
                 <div class="pl-12 border-l-2 border-golden/30">
-                  <p class="text-gray-600 leading-relaxed">{item.a}</p>
+                  <p class="text-gray-600 leading-relaxed" style="white-space: pre-line;">{item.a}</p>
                 </div>
               </div>
             </details>

@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Hero from "../../components/Hero.astro";
+import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
 
 const lang = "en";
@@ -16,97 +17,220 @@ const lang = "en";
   <main>
     <Hero lang={lang} />
 
-    <section class="py-20 bg-cream">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">A land coming back to life</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-4">San Carlos is a region of extraordinary natural beauty, deeply marked by the history of Colombia's armed conflict.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-4">Today, both nature and local communities are rebuilding.</p>
-        <p class="text-lg text-gray-700 leading-relaxed">At Pachatopia, we believe caring for the Earth can also help rebuild human relationships. By planting trees, regenerating soils, and nurturing biodiversity, we humbly take part in this renewal.</p>
+    <!-- A land reborn -->
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <svg class="absolute -top-6 right-0 w-64 h-64 opacity-[0.06]" viewBox="0 0 200 200" fill="none">
+          <path d="M140 20C140 20 180 60 170 110C160 160 120 180 80 170C40 160 20 120 30 80C40 40 80 20 140 20Z" fill="#0A5B4B"/>
+        </svg>
       </div>
-    </section>
-
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">Our actions</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌳 Forest regeneration</h3>
-            <p class="text-gray-700">Natural reserve creation and reforestation programs to protect biodiversity and water sources.</p>
-          </article>
-          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌱 Agroforestry agriculture</h3>
-            <p class="text-gray-700">Developing nature-inspired farming systems that produce food while regenerating soils.</p>
-          </article>
-          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">☕ Pachatopia coffee</h3>
-            <p class="text-gray-700">Coffee grown in a living ecosystem, transitioning toward regenerative agroforestry.</p>
-          </article>
-          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌍 Hosting and sharing</h3>
-            <p class="text-gray-700">A place for exchange where visitors and volunteers can discover nature and join the project.</p>
-          </article>
-        </div>
-        <div class="text-center mt-10">
-          <a href="/en/nos-actions/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Discover our actions</a>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-8">A land reborn</h2>
+            <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+              <p>San Carlos is a region of great natural beauty, but one deeply marked by the history of the Colombian armed conflict.</p>
+              <p>Today, nature and communities are rebuilding.</p>
+              <p>At Pachatopia, we believe that caring for the Earth can also help rebuild the bonds between human beings.</p>
+              <p>By planting trees, regenerating soils and cultivating biodiversity, we humbly participate in this rebirth.</p>
+            </div>
+          </div>
+          <div class="relative flex items-center justify-center">
+            <div class="relative w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+              <img src="/images/farm-hero.jpg" alt="San Carlos landscape" class="w-full h-auto object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 bg-cream">
-      <div class="max-w-5xl mx-auto px-6 space-y-14">
-        <div>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-5">A living project</h2>
-          <p class="text-lg text-gray-700 leading-relaxed">Pachatopia is an evolving project. Every year we plant trees, restore new plots, and develop initiatives to strengthen biodiversity and territorial resilience. Step by step, a regenerative forest ecosystem is taking shape.</p>
+    <!-- Our actions -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Our actions</h2>
+          <div class="flex items-center justify-center gap-2 mb-6">
+            <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+            <svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 4-4 8-4s4 4 8 4a4.49 4.49 0 001.29-.34L17 8z"/>
+            </svg>
+            <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+          </div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">At Pachatopia, we develop several complementary initiatives to restore ecosystems and support local communities.</p>
         </div>
-
-        <div>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-5">The Pachatopia ecosystem</h2>
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is designed as a place where activities support one another.</p>
-          <p class="text-lg text-gray-700 leading-relaxed">🌳 natural reserve · ☕ coffee and cacao plots · 🌱 tree nursery · 🏕 hosting area for visitors · 🍽 local cuisine and regional products</p>
-          <p class="text-lg text-gray-700 leading-relaxed mt-4">A project that aims to show we can produce, protect, and share in harmony with nature.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10"/></svg>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Forest regeneration</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Creation of nature reserves and reforestation programs to protect biodiversity and water sources.</p>
+          </div>
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Agroforestry farming</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Development of nature-inspired agricultural systems to produce food while regenerating the soil.</p>
+          </div>
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-16 h-16 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 4C12 4 10 8 10 12C10 16 12 20 12 20"/><path stroke-linecap="round" stroke-linejoin="round" d="M17 12C19 12 21 10 21 8C21 6 19 4 17 4"/></svg>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Pachatopia coffee</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Coffee grown within a living ecosystem, in transition toward regenerative agroforestry.</p>
+          </div>
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Welcome and sharing</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">A place of exchange and connection where visitors and volunteers can discover nature and participate in the project.</p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="/en/nos-actions/" class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5">
+            <span>Discover our actions</span>
+            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-heading font-bold text-primary mb-5">Join the adventure</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is a collective adventure. Everyone can contribute to this regeneration movement.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌱 plant trees · ☕ discover project coffee · 🤝 volunteer · 🌍 support site development</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">Every action matters.</p>
-        <a href="/en/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Participate in the project</a>
-      </div>
-    </section>
-
-    <section class="py-20 bg-cream">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Our conviction</h2>
-        <p class="text-lg text-gray-700 leading-relaxed">🌱 regenerating the Earth can help regenerate human relationships<br/>🌳 planting trees is an act of hope<br/>🌍 every positive action can inspire wider change.</p>
-      </div>
-    </section>
-
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-heading font-bold text-primary mb-6">☕ Why choose Pachatopia coffee?</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">Our coffee is not just an agricultural product. It comes from a project that aims to regenerate land and build a more sustainable future.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌱 Agriculture transitioning to agroforestry</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌳 A regeneration project</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">🤝 A human project</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌍 A meaningful cup</p>
-        <p class="text-lg text-primary font-semibold italic mb-6">Every cup of coffee is a seed planted for the future.</p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/en/le-cafe/" class="inline-flex items-center justify-center px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">☕ Discover Pachatopia coffee</a>
-          <a href="/en/comment-participer/" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">🌳 Sponsor a coffee tree</a>
+    <!-- A living project -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-cream rounded-2xl p-10 md:p-14 border-l-4 border-accent">
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">A living project</h2>
+          <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <p>Pachatopia is an evolving project.</p>
+            <p>Every year, we plant trees, restore new plots and develop initiatives to strengthen biodiversity and territorial resilience.</p>
+            <p class="text-primary font-medium italic">Little by little, a forest and a regenerative ecosystem are taking shape.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 bg-cream">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-heading font-bold text-primary mb-6">An invitation</h2>
-        <p class="text-lg text-gray-700 leading-relaxed">Pachatopia is open to everyone who wants to contribute to a more harmonious future. Join us and help life grow again.</p>
+    <!-- The Pachatopia ecosystem -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">The Pachatopia ecosystem</h2>
+          <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">Pachatopia is designed as a place where different activities support each other.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary text-sm">Nature reserve</h3>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary text-sm">Coffee and cacao</h3>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary text-sm">Tree nursery</h3>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary text-sm">Visitor space</h3>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300 col-span-2 sm:col-span-1">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.126-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary text-sm">Local cuisine</h3>
+          </div>
+        </div>
+        <p class="text-center text-lg text-gray-600 mt-10 max-w-3xl mx-auto">A project that seeks to demonstrate that it is possible to produce, protect and share in harmony with nature.</p>
       </div>
     </section>
+
+    <!-- Join the adventure -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Join the adventure</h2>
+          <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700">Pachatopia is a collective adventure.<br/>Everyone can contribute to this dynamic of regeneration.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary mb-2">Plant trees</h3>
+          </div>
+          <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary mb-2">Discover the coffee</h3>
+          </div>
+          <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary mb-2">Volunteer</h3>
+          </div>
+          <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-primary mb-2">Support the project</h3>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="text-lg text-primary font-medium italic mb-8">Every action counts.</p>
+          <a href="/en/comment-participer/" class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5">
+            <span>Participate in the project</span>
+            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our conviction -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl p-10 md:p-14 border-l-4 border-golden">
+          <h2 class="text-3xl font-heading font-bold text-primary mb-8">Our conviction</h2>
+          <p class="text-lg text-gray-700 mb-6">We believe that:</p>
+          <div class="space-y-4">
+            <p class="flex items-start gap-3 text-lg text-gray-700">
+              <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+              </span>
+              Regenerating the Earth can help regenerate human relationships
+            </p>
+            <p class="flex items-start gap-3 text-lg text-gray-700">
+              <span class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+              </span>
+              Planting trees is an act of hope
+            </p>
+            <p class="flex items-start gap-3 text-lg text-gray-700">
+              <span class="w-8 h-8 rounded-full bg-golden/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747"/></svg>
+              </span>
+              Every positive action can inspire a broader change
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

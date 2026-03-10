@@ -286,14 +286,20 @@ export const translations = {
     "testimonials.title": "Mots de bénévoles",
     "testimonials.subtitle": "Ce que disent nos volontaires",
 
+    // Call to Action
+    "cta.title": "Rejoignez l'aventure Pachatopia",
+    "cta.text": "Ensemble, régénérons la Terre et construisons un futur plus harmonieux. Chaque geste compte.",
+    "cta.button": "Nous contacter",
+
     // Footer
     "footer.description": "Association pour la régénération écologique et la protection du vivant.",
     "footer.location": "San Carlos – Antioquia – Colombie",
-    "footer.links.discover": "Découvrir",
-    "footer.links.participate": "Participer",
-    "footer.links.support": "Soutenir",
-    "footer.links.contact": "Contact",
-    "footer.linksTitle": "Liens",
+    "footer.address": "Pachatopia Agua Bonita – San Carlos, Antioquia, Colombie",
+    "footer.quicklinks": "Liens rapides",
+    "footer.newsletter.title": "Newsletter",
+    "footer.newsletter.text": "Restez informé de nos avancées et de nos projets.",
+    "footer.newsletter.placeholder": "Votre adresse email",
+    "footer.newsletter.button": "S'inscrire",
     "footer.rights": "Tous droits réservés",
   },
   en: {
@@ -576,14 +582,20 @@ export const translations = {
     "testimonials.title": "Volunteer Testimonials",
     "testimonials.subtitle": "What our volunteers say",
 
+    // Call to Action
+    "cta.title": "Join the Pachatopia adventure",
+    "cta.text": "Together, let's regenerate the Earth and build a more harmonious future. Every action counts.",
+    "cta.button": "Contact us",
+
     // Footer
     "footer.description": "Association for ecological regeneration and protection of life.",
     "footer.location": "San Carlos – Antioquia – Colombia",
-    "footer.links.discover": "Discover",
-    "footer.links.participate": "Participate",
-    "footer.links.support": "Support",
-    "footer.links.contact": "Contact",
-    "footer.linksTitle": "Links",
+    "footer.address": "Pachatopia Agua Bonita – San Carlos, Antioquia, Colombia",
+    "footer.quicklinks": "Quick links",
+    "footer.newsletter.title": "Newsletter",
+    "footer.newsletter.text": "Stay informed about our progress and projects.",
+    "footer.newsletter.placeholder": "Your email address",
+    "footer.newsletter.button": "Subscribe",
     "footer.rights": "All rights reserved",
   },
 } as const;
