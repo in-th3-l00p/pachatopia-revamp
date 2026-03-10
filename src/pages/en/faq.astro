@@ -1,25 +1,49 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
-import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
-import { useTranslations } from "../../i18n/translations";
 
 const lang = "en";
-const t = useTranslations(lang);
 
 const faqItems = [
-  { q: t("faqPage.q1"), a: t("faqPage.a1") },
-  { q: t("faqPage.q2"), a: t("faqPage.a2") },
-  { q: t("faqPage.q3"), a: t("faqPage.a3") },
-  { q: t("faqPage.q4"), a: t("faqPage.a4") },
-  { q: t("faqPage.q5"), a: t("faqPage.a5") },
+  {
+    q: "What is Pachatopia?",
+    a: "Pachatopia is an association carrying an ecological and human project located in the San Carlos region of Colombia. Our goal is to restore ecosystems, develop more nature-friendly agriculture, and create a place of exchange around Earth regeneration.",
+  },
+  {
+    q: "How can I support the project?",
+    a: "You can sponsor a coffee tree, support the natural reserve, buy Pachatopia coffee, make a donation, or become a project partner.",
+  },
+  {
+    q: "Can I visit Pachatopia?",
+    a: "Yes. Pachatopia aims to become a welcoming place for people who want to discover nature and ecological regeneration projects. Eventually, it will be possible to stay on-site via a camping area, a hostel, and a dining area.",
+  },
+  {
+    q: "How can I volunteer?",
+    a: "We welcome volunteers for tree planting, agroforestry, coffee-related work, and plot maintenance. A small financial contribution is required. In return, we offer accommodation, one meal per day, and full immersion in the project.",
+  },
+  {
+    q: "How can I buy Pachatopia coffee?",
+    a: "Pachatopia coffee can be ordered through our project support initiatives. Currently, we mainly ship to Colombia, France, and Switzerland.",
+  },
+  {
+    q: "Is Pachatopia coffee organic?",
+    a: "Some of the plots we took over were previously cultivated with chemical inputs. We have stopped these practices and are now developing more natural methods: compost, natural preparations, crop diversification, and agroforestry.",
+  },
+  {
+    q: "Where is Pachatopia located?",
+    a: "Pachatopia is located in the San Carlos region, Antioquia department in Colombia, a mountainous region rich in biodiversity and engaged in a dynamic of reconstruction and regeneration.",
+  },
+  {
+    q: "How are the Pachatopia lands organized?",
+    a: "We carry out GPS mapping of the different plots to create an identity card for each one. This allows us to better track crops, reforestation zones, coffee and cacao plots, and spaces dedicated to biodiversity.",
+  },
 ];
 ---
 
 <Layout
-  title={`${t("faqPage.title")} - Pachatopia`}
-  description="Frequently asked questions about Pachatopia: how to participate, our sustainable agriculture projects, ecological currency, and our mission in Colombia."
+  title="FAQ - Pachatopia"
+  description="Frequently asked questions about Pachatopia: support, visits, volunteering, coffee, location, and land organization."
   lang={lang}
 >
   <Header lang={lang} />
@@ -27,38 +51,25 @@ const faqItems = [
     <!-- Hero Banner -->
     <section class="relative text-white py-24 md:py-32 overflow-hidden">
       <div class="absolute inset-0">
-        <img src="/images/community.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <img src="/images/community.jpg" alt="FAQ Pachatopia" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-4">
-          {t("faqPage.title")}
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
-          {t("faqPage.subtitle")}
-        </p>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">❓ FAQ – Frequently Asked Questions</h1>
+        <p class="text-lg md:text-xl text-white/85">Essential answers about the Pachatopia project</p>
       </div>
     </section>
 
-    <!-- FAQ Accordion Section -->
-    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
-      <!-- Subtle decorative elements -->
-      <div class="absolute top-10 left-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
-      <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
-
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FAQ Accordion -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-6">
         <div class="space-y-4">
           {faqItems.map((item, i) => (
-            <details class="group bg-white rounded-2xl overflow-hidden transition-all duration-300" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
+            <details class="group bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
               <summary class="flex items-center justify-between cursor-pointer px-6 py-5 md:px-8 md:py-6 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-4">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-golden/15 text-golden-dark flex items-center justify-center text-sm font-semibold">
-                    {i + 1}
-                  </span>
-                  <h3 class="text-primary font-semibold text-base md:text-lg text-left leading-snug pr-4">
-                    {item.q}
-                  </h3>
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-golden/15 text-golden-dark flex items-center justify-center text-sm font-semibold">{i + 1}</span>
+                  <h3 class="text-primary font-semibold text-base md:text-lg text-left leading-snug pr-4">{item.q}</h3>
                 </div>
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-cream flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
                   <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -68,18 +79,19 @@ const faqItems = [
               </summary>
               <div class="px-6 pb-6 md:px-8 md:pb-8">
                 <div class="pl-12 border-l-2 border-golden/30">
-                  <p class="text-gray-600 leading-relaxed">
-                    {item.a}
-                  </p>
+                  <p class="text-gray-600 leading-relaxed">{item.a}</p>
                 </div>
               </div>
             </details>
           ))}
         </div>
+
+        <div class="mt-12 text-center bg-white rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
+          <p class="text-lg text-gray-700 mb-6">👉 Can't find the answer to your question? Don't hesitate to contact us.</p>
+          <a href="/en/contacts/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Contact us</a>
+        </div>
       </div>
     </section>
-
-    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

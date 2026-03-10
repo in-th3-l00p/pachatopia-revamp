@@ -1,179 +1,84 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Testimonials from "../components/Testimonials.astro";
-import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
-import { useTranslations } from "../i18n/translations";
 
 const lang = "fr";
-const t = useTranslations(lang);
 ---
 
 <Layout
-  title={`${t("actionsPage.title")} - Pachatopia`}
-  description="Nos projets : création de réserves naturelles, agriculture durable, aquaculture responsable et valorisation des productions locales en Colombie."
+  title="Nos actions - Pachatopia"
+  description="Régénérer la Terre et construire un futur durable : réserves naturelles, agriculture régénératrice, valorisation locale, aquaculture durable et participation collective."
   lang={lang}
 >
   <Header lang={lang} />
   <main>
     <!-- Hero Banner -->
     <section class="relative text-white py-24 md:py-32 overflow-hidden">
-      <!-- Background image -->
       <div class="absolute inset-0">
-        <img src="/images/farm-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <img src="/images/farm-hero.jpg" alt="Nos actions" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-      <div class="container mx-auto px-6 text-center relative z-10">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-          {t("actionsPage.title")}
-        </h1>
-        <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-          {t("actionsPage.subtitle")}
-        </p>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Nos actions</h1>
+        <p class="text-xl md:text-2xl text-white/90">Régénérer la Terre et construire un futur durable</p>
       </div>
-      <!-- Wave divider -->
       <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
       </svg>
     </section>
 
-    <!-- Action 1: Natural Reserve -->
+    <!-- Intro -->
     <section class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-5 flex justify-center">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/images/reserve-naturelle.webp" alt="Natural reserve at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-          <div class="md:col-span-7">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              {t("actions.reserve.title")}
-            </h2>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              {t("actionsPage.reserve.detail")}
-            </p>
-            <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 text-golden-dark font-semibold hover:text-primary transition-colors">
-              Contact
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-          </div>
-        </div>
+      <div class="max-w-5xl mx-auto px-6">
+        <p class="text-lg text-gray-700 leading-relaxed">À Pachatopia, nous développons des initiatives concrètes pour restaurer les écosystèmes, soutenir les communautés locales et promouvoir un mode de vie respectueux du vivant. Nos actions s'articulent autour de plusieurs axes complémentaires.</p>
       </div>
     </section>
 
-    <!-- Action 2: Sustainable Agriculture -->
+    <!-- Action Articles -->
     <section class="py-20 bg-cream">
-      <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-7 md:order-1">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              {t("actions.agriculture.title")}
-            </h2>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              {t("actionsPage.agriculture.detail")}
-            </p>
-            <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 text-golden-dark font-semibold hover:text-primary transition-colors">
-              Contact
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-          </div>
-          <div class="md:col-span-5 md:order-2 flex justify-center">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/images/agriculture-durable.webp" alt="Victor et Felix - sustainable agriculture at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-        </div>
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌳 Création de réserves naturelles</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">La protection de la biodiversité est au cœur de notre engagement. Nous œuvrons à la création de réserves naturelles afin de préserver les forêts, la faune et la flore locales. Ces espaces contribuent également à la protection des sources d'eau douce et au maintien des équilibres écologiques.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">En restaurant et en protégeant ces écosystèmes, nous participons aussi à la captation naturelle du carbone, contribuant ainsi à la lutte contre le changement climatique. Notre ambition est de transformer ces terres en refuges pour la biodiversité et en espaces d'apprentissage pour les générations futures.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌱 Développer une agriculture régénératrice</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Nous développons progressivement un modèle agricole inspiré des écosystèmes naturels. Notre objectif est de mettre en place des systèmes agroforestiers diversifiés, où les cultures coexistent avec les arbres et la biodiversité.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Ce modèle permet d'améliorer la fertilité des sols, de réduire l'utilisation d'intrants chimiques, de favoriser la biodiversité et de produire des aliments de meilleure qualité.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Nous avançons dans cette transition pas à pas, en apprenant directement sur le terrain et en nous inspirant des pratiques agricoles traditionnelles et des connaissances agroécologiques.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">☕ Valoriser les productions locales</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Nous cherchons à valoriser au maximum les ressources produites sur le territoire. Le café est aujourd'hui l'une de nos productions principales. Nous souhaitons développer progressivement une torréfaction locale, afin de créer une filière régionale plus autonome et plus durable.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Nous explorons également différentes façons de valoriser les sous-produits agricoles : transformation de la pulpe de café, fermentation et production d'engrais naturels, utilisation des déchets agricoles pour produire de l'énergie.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">L'objectif est de développer une économie circulaire, où chaque ressource est utilisée de manière intelligente et durable.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🐟 Développer une aquaculture durable</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">La région de San Carlos est riche en ressources hydriques et possède un potentiel important pour la production piscicole. Nous souhaitons développer des systèmes d'aquaculture plus durables, capables de produire des aliments de qualité tout en limitant les impacts environnementaux.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">En valorisant les déchets organiques et en intégrant différents systèmes de production, nous cherchons à transformer ces pratiques en modèles plus écologiques et plus efficaces.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Action 3: Production Enhancement -->
+    <!-- Participate -->
     <section class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-5 flex justify-center">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/images/production-cafe.webp" alt="Sustainable coffee culture at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-          <div class="md:col-span-7">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              {t("actions.production.title")}
-            </h2>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              {t("actionsPage.production.detail")}
-            </p>
-            <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 text-golden-dark font-semibold hover:text-primary transition-colors">
-              Contact
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-          </div>
-        </div>
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">🤝 Participer à l'aventure Pachatopia</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia est un projet collectif. Chacun peut contribuer à cette initiative :</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en soutenant la plantation d'arbres</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en découvrant notre café</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en venant participer aux activités sur le terrain</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">• ou en soutenant financièrement nos actions.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Ensemble, nous pouvons régénérer la Terre et construire un futur plus harmonieux.</p>
+        <a href="/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Soutenir Pachatopia</a>
       </div>
     </section>
-
-    <!-- Action 4: Sustainable Aquaculture -->
-    <section class="py-20 bg-cream">
-      <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-7 md:order-1">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              {t("actions.aquaculture.title")}
-            </h2>
-            <p class="text-gray-600 leading-relaxed mb-6">
-              {t("actionsPage.aquaculture.detail")}
-            </p>
-            <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 text-golden-dark font-semibold hover:text-primary transition-colors">
-              Contact
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-          </div>
-          <div class="md:col-span-5 md:order-2 flex justify-center">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/images/aquaculture.webp" alt="Sustainable aquaculture at Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Participation Call-Out -->
-    <section class="py-20 bg-white relative overflow-hidden">
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div class="overflow-hidden rounded-2xl shadow-lg">
-            <img src="/images/community.jpg" alt="Pachatopia community and volunteers" class="w-full h-auto object-cover" loading="lazy" />
-          </div>
-          <div class="bg-cream rounded-2xl p-10 md:p-14 border-t-4 border-golden">
-            <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">
-              {t("actions.participate.title")}
-            </h2>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-              {t("actionsPage.participate.text")}
-            </p>
-            <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 text-golden-dark font-semibold hover:text-primary transition-colors">
-              Contact
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Association Statement -->
-    <section class="py-12 bg-cream">
-      <div class="container mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center">
-          <p class="text-lg text-primary font-medium italic">
-            {t("actionsPage.association")}
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <Testimonials lang={lang} />
-    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

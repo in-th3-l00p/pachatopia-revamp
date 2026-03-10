@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const lang = "fr";
+---
+
+<Layout
+  title="Expérience - Venir sur place"
+  description="Séjourner à Pachatopia : immersion nature, prévente de séjours, volontariat, activités agroforestières, et découverte du territoire."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/contacts-hero.webp" alt="Séjourner à Pachatopia" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Séjourner à Pachatopia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Une expérience au cœur de la nature</p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>Au cœur des montagnes de San Carlos en Colombie, Pachatopia souhaite devenir un lieu d'accueil pour les voyageurs, les volontaires et toutes les personnes désireuses de découvrir un mode de vie plus proche de la nature.</p>
+        <p>Notre projet est en pleine évolution. Nous travaillons actuellement à la création d'un espace d'accueil qui permettra de partager cette aventure avec des visiteurs du monde entier.</p>
+        <p>À terme, Pachatopia proposera différents types d'hébergement : 🌿 une auberge de jeunesse · 🏕 une zone de camping · 🏡 des logements de type éco-lodges ou Airbnb.</p>
+      </div>
+    </section>
+
+    <!-- Details -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Prévente de séjours</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Pour nous aider à développer ces infrastructures, nous proposons dès aujourd'hui des préventes de séjours à Pachatopia. En réservant votre séjour à l'avance, vous contribuez directement au développement du projet : construction des hébergements, amélioration des infrastructures et plantation d'arbres.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Ces préventes permettent de soutenir la création d'un lieu qui accueillera à l'avenir des visiteurs souhaitant découvrir la forêt et les réserves naturelles, les plantations de café, les systèmes agroforestiers et la biodiversité exceptionnelle de la région.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Expériences proposées</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">🌱 plantation d'arbres · ☕ découverte du café et de sa transformation · 🌳 initiation à l'agroforesterie · 🚶 randonnées dans la forêt et les montagnes · 🍽 découverte de la cuisine locale.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Chaque séjour est une occasion de se reconnecter à la nature et de contribuer à un projet porteur de sens.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Restaurant et produits locaux</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Nous travaillons également à l'ouverture d'un restaurant à Pachatopia, où seront proposés des plats préparés avec les produits cultivés sur place et ceux des agriculteurs de la région.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Ce lieu permettra de valoriser les produits agricoles locaux, le café du projet, et une cuisine simple, saine et inspirée du territoire.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Soutenir le projet en venant</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">En réservant un séjour à Pachatopia, vous ne venez pas seulement passer quelques jours dans un lieu exceptionnel. Vous participez à la création d'un projet qui cherche à régénérer les écosystèmes, soutenir les communautés locales et promouvoir une relation plus harmonieuse avec la nature.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Volunteering -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6" id="volontariat">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Participer / volontariat</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">Idée de prévente de séjours :</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌿 Séjour Découverte (3 jours) — visite du projet, forêt, café.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌱 Immersion Agroforestière (1 semaine) — participation aux plantations et ateliers.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">☕ Expérience Café (3–5 jours) — récolte et transformation du café.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌍 Retraite Nature (1 semaine) — connexion à la nature, marche, permaculture.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">Les visiteurs deviennent des soutiens financiers, des ambassadeurs du projet et de futurs clients du café.</p>
+        <a href="/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Participer au projet</a>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

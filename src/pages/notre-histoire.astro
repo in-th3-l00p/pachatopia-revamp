@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const lang = "fr";
+---
+
+<Layout
+  title="Notre histoire - Pachatopia"
+  description="De la guerre à la régénération : l'histoire de Pachatopia à San Carlos, Colombie."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/farm-hero.jpg" alt="Notre histoire" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Notre histoire</h1>
+        <p class="text-xl md:text-2xl text-white/90">De la guerre à la régénération</p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Story -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>Au cœur des montagnes verdoyantes de San Carlos, dans le département d'Antioquia en Colombie, la nature est d'une richesse exceptionnelle. Pourtant, ce territoire a aussi été profondément marqué par l'histoire du conflit armé colombien à la fin des années 1990 et au début des années 2000.</p>
+        <p>Pendant plusieurs années, les habitants de la région ont vécu la violence, les déplacements et les divisions. De nombreuses familles ont dû quitter leurs terres, et les paysages comme les communautés ont porté les cicatrices de cette période difficile.</p>
+        <p>Aujourd'hui, San Carlos est engagé dans un processus de reconstruction. Les habitants reviennent, les villages se reconstruisent, et peu à peu la vie reprend sa place.</p>
+        <p>C'est dans ce contexte qu'est né Pachatopia.</p>
+        <p>Notre projet est né d'une conviction simple : en régénérant la Terre, nous pouvons aussi contribuer à régénérer les relations humaines.</p>
+        <p>Sur ces terres, nous travaillons avec des habitants de la région – certains ayant vécu la guerre de près, d'autres l'ayant subie – pour transformer un territoire marqué par le conflit en un espace de coopération, de biodiversité et d'espoir.</p>
+        <p>À travers l'agroforesterie, la restauration des sols et la création de réserves naturelles, nous cherchons à faire renaître des écosystèmes vivants. Les arbres repoussent, les sols se régénèrent, la biodiversité revient.</p>
+        <p>Mais cette transformation est aussi humaine.</p>
+        <p>Travailler la terre ensemble, planter des arbres, cultiver le café et prendre soin de la forêt deviennent des moyens de reconstruire la confiance et d'imaginer un futur commun.</p>
+        <p>À Pachatopia, nous croyons que la paix se cultive aussi, comme un jardin. Elle naît des gestes simples : planter, protéger, coopérer et transmettre.</p>
+        <p>Notre ambition est de contribuer à faire de ces terres un lieu où la nature se régénère et où les communautés peuvent avancer ensemble vers un avenir plus harmonieux.</p>
+      </div>
+    </section>
+
+    <!-- Invitation -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Une invitation à participer</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia est un projet collectif. Chacun peut contribuer à cette régénération :</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en soutenant la plantation d'arbres</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en parrainant un caféier</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• en découvrant notre café agroforestier</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">• ou en venant partager cette expérience sur place.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Ensemble, nous pouvons transformer ces terres en un espace de biodiversité, de résilience et de paix.</p>
+        <p class="text-xl text-primary font-semibold italic">Là où la forêt repousse, l'espoir repousse aussi.</p>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

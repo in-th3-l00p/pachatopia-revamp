@@ -1,25 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
-import { useTranslations } from "../i18n/translations";
 
 const lang = "fr";
-const t = useTranslations(lang);
 
 const faqItems = [
-  { q: t("faqPage.q1"), a: t("faqPage.a1") },
-  { q: t("faqPage.q2"), a: t("faqPage.a2") },
-  { q: t("faqPage.q3"), a: t("faqPage.a3") },
-  { q: t("faqPage.q4"), a: t("faqPage.a4") },
-  { q: t("faqPage.q5"), a: t("faqPage.a5") },
+  {
+    q: "Qu'est-ce que Pachatopia ?",
+    a: "Pachatopia est une association porteuse d'un projet écologique et humain situé dans la région de San Carlos, en Colombie. Notre objectif est de restaurer les écosystèmes, développer une agriculture plus respectueuse de la nature et créer un lieu d'échange autour de la régénération de la Terre.",
+  },
+  {
+    q: "Comment soutenir le projet ?",
+    a: "Vous pouvez parrainer un caféier, soutenir la réserve naturelle, acheter le café Pachatopia, faire un don ou devenir partenaire du projet.",
+  },
+  {
+    q: "Peut-on visiter Pachatopia ?",
+    a: "Oui. Pachatopia souhaite devenir un lieu d'accueil pour les personnes qui souhaitent découvrir la nature et les projets de régénération écologique. À terme, il sera possible de séjourner sur place via une zone de camping, une auberge de jeunesse et un espace de restauration.",
+  },
+  {
+    q: "Comment devenir volontaire ?",
+    a: "Nous accueillons des volontaires pour la plantation d'arbres, l'agroforesterie, le travail autour du café, et l'entretien des parcelles. Une petite participation financière est demandée. En échange, nous proposons le logement, un repas par jour et une immersion dans le projet.",
+  },
+  {
+    q: "Comment acheter le café Pachatopia ?",
+    a: "Le café Pachatopia peut être commandé via nos initiatives de soutien au projet. Pour le moment, nous expédions principalement vers la Colombie, la France et la Suisse.",
+  },
+  {
+    q: "Le café Pachatopia est-il biologique ?",
+    a: "Certaines parcelles reprises étaient précédemment cultivées avec des intrants chimiques. Nous avons arrêté ces pratiques et développons désormais des méthodes plus naturelles : compost, préparations naturelles, diversification des cultures et agroforesterie.",
+  },
+  {
+    q: "Où se trouve Pachatopia ?",
+    a: "Pachatopia se situe dans la région de San Carlos, département d'Antioquia en Colombie, une région montagneuse riche en biodiversité et engagée dans une dynamique de reconstruction et de régénération.",
+  },
+  {
+    q: "Comment sont organisées les terres de Pachatopia ?",
+    a: "Nous réalisons un repérage GPS des différentes parcelles afin de créer une fiche d'identité pour chacune. Cela permet de mieux suivre les cultures, les zones de reforestation, les parcelles de café et de cacao, et les espaces dédiés à la biodiversité.",
+  },
 ];
 ---
 
 <Layout
-  title={`${t("faqPage.title")} - Pachatopia`}
-  description="Questions fréquentes sur Pachatopia : comment participer, nos projets d'agriculture durable, la monnaie écologique et notre mission en Colombie."
+  title="FAQ - Pachatopia"
+  description="Questions fréquentes sur Pachatopia : soutien, visite, volontariat, café, localisation et organisation des terres."
   lang={lang}
 >
   <Header lang={lang} />
@@ -27,38 +51,25 @@ const faqItems = [
     <!-- Hero Banner -->
     <section class="relative text-white py-24 md:py-32 overflow-hidden">
       <div class="absolute inset-0">
-        <img src="/images/community.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <img src="/images/community.jpg" alt="FAQ Pachatopia" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-4">
-          {t("faqPage.title")}
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
-          {t("faqPage.subtitle")}
-        </p>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">❓ FAQ – Questions fréquentes</h1>
+        <p class="text-lg md:text-xl text-white/85">Les réponses essentielles sur le projet Pachatopia</p>
       </div>
     </section>
 
-    <!-- FAQ Accordion Section -->
-    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
-      <!-- Subtle decorative elements -->
-      <div class="absolute top-10 left-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
-      <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
-
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FAQ Accordion -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-6">
         <div class="space-y-4">
           {faqItems.map((item, i) => (
-            <details class="group bg-white rounded-2xl overflow-hidden transition-all duration-300" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
+            <details class="group bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
               <summary class="flex items-center justify-between cursor-pointer px-6 py-5 md:px-8 md:py-6 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-4">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-golden/15 text-golden-dark flex items-center justify-center text-sm font-semibold">
-                    {i + 1}
-                  </span>
-                  <h3 class="text-primary font-semibold text-base md:text-lg text-left leading-snug pr-4">
-                    {item.q}
-                  </h3>
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-golden/15 text-golden-dark flex items-center justify-center text-sm font-semibold">{i + 1}</span>
+                  <h3 class="text-primary font-semibold text-base md:text-lg text-left leading-snug pr-4">{item.q}</h3>
                 </div>
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-cream flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
                   <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -68,18 +79,19 @@ const faqItems = [
               </summary>
               <div class="px-6 pb-6 md:px-8 md:pb-8">
                 <div class="pl-12 border-l-2 border-golden/30">
-                  <p class="text-gray-600 leading-relaxed">
-                    {item.a}
-                  </p>
+                  <p class="text-gray-600 leading-relaxed">{item.a}</p>
                 </div>
               </div>
             </details>
           ))}
         </div>
+
+        <div class="mt-12 text-center bg-white rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
+          <p class="text-lg text-gray-700 mb-6">👉 Vous ne trouvez pas la réponse à votre question ? N'hésitez pas à nous contacter.</p>
+          <a href="/contacts/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Nous contacter</a>
+        </div>
       </div>
     </section>
-
-    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

@@ -2,31 +2,110 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Metrics from "../components/Metrics.astro";
-import Actions from "../components/Actions.astro";
-import Objectives from "../components/Objectives.astro";
-import Testimonials from "../components/Testimonials.astro";
-import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
 
 const lang = "fr";
 ---
 
 <Layout
-  title="Pachatopia - Cultivons la vie, inspirons l'humanité"
-  description="Pachatopia est une association pour l'agriculture durable, la création de réserves naturelles et un mode de vie éco-responsable en Colombie et en Europe. Rejoignez notre communauté de bénévoles."
+  title="Pachatopia - Là où la Terre se régénère"
+  description="Projet de régénération écologique et humaine à San Carlos en Colombie : forêts, sols, agroforesterie, café, accueil et volontariat."
   lang={lang}
 >
   <Header lang={lang} />
   <main>
     <Hero lang={lang} />
-    <About lang={lang} />
-    <Metrics lang={lang} />
-    <Actions lang={lang} />
-    <Objectives lang={lang} />
-    <Testimonials lang={lang} />
-    <CallToAction lang={lang} />
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Une terre qui renaît</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">San Carlos est une région d'une grande beauté naturelle, mais qui a été profondément marquée par l'histoire du conflit armé colombien.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Aujourd'hui, la nature et les communautés se reconstruisent.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">À Pachatopia, nous croyons que prendre soin de la Terre peut aussi contribuer à reconstruire les liens entre les êtres humains. En plantant des arbres, en régénérant les sols et en cultivant la biodiversité, nous participons humblement à cette renaissance.</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">Nos actions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="bg-cream rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02]">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌳 Régénération des forêts</h3>
+            <p class="text-gray-700">Création de réserves naturelles et programmes de reforestation pour protéger la biodiversité et les sources d'eau.</p>
+          </article>
+          <article class="bg-cream rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02]">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌱 Agriculture agroforestière</h3>
+            <p class="text-gray-700">Développement de systèmes agricoles inspirés de la nature pour produire des aliments tout en régénérant les sols.</p>
+          </article>
+          <article class="bg-cream rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02]">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">☕ Café Pachatopia</h3>
+            <p class="text-gray-700">Un café cultivé dans un écosystème vivant, en transition vers l'agroforesterie régénérative.</p>
+          </article>
+          <article class="bg-cream rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.02]">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌍 Accueil et partage</h3>
+            <p class="text-gray-700">Un lieu d'échange et de rencontre où visiteurs et volontaires peuvent découvrir la nature et participer au projet.</p>
+          </article>
+        </div>
+        <div class="text-center mt-10">
+          <a href="/nos-actions/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Découvrir nos actions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-5">Un projet vivant</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Pachatopia est un projet en évolution. Chaque année, nous plantons des arbres, restaurons de nouvelles parcelles et développons des initiatives pour renforcer la biodiversité et la résilience du territoire. Petit à petit, une forêt et un écosystème régénératif prennent forme.</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-5">L'écosystème Pachatopia</h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia est conçu comme un lieu où différentes activités se soutiennent mutuellement.</p>
+          <p class="text-lg text-gray-700 leading-relaxed">🌳 réserve naturelle · ☕ parcelles de café et cacao · 🌱 pépinière d'arbres · 🏕 espace d'accueil pour visiteurs · 🍽 cuisine locale et produits du territoire</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Un projet qui cherche à démontrer qu'il est possible de produire, protéger et partager en harmonie avec la nature.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-5">Participer à l'aventure</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia est une aventure collective. Chacun peut contribuer à cette dynamique de régénération.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌱 planter des arbres · ☕ découvrir le café du projet · 🤝 participer comme volontaire · 🌍 soutenir le développement du lieu</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Chaque geste compte.</p>
+        <a href="/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Participer au projet</a>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Notre conviction</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">🌱 régénérer la Terre peut aider à régénérer les relations humaines<br/>🌳 planter des arbres est un acte d'espoir<br/>🌍 chaque action positive peut inspirer un changement plus vaste.</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">☕ Pourquoi choisir le café Pachatopia ?</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">Notre café n'est pas seulement un produit agricole. C'est le fruit d'un projet qui cherche à régénérer la terre et à construire un avenir plus durable.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌱 Une agriculture en transition vers l'agroforesterie</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌳 Un projet de régénération</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🤝 Un projet humain</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌍 Une tasse qui a du sens</p>
+        <p class="text-lg text-primary font-semibold italic mb-6">Chaque tasse de café est une graine plantée pour l'avenir.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/le-cafe/" class="inline-flex items-center justify-center px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">☕ Découvrir le café Pachatopia</a>
+          <a href="/comment-participer/" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">🌳 Parrainer un caféier</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Une invitation</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Pachatopia est un projet ouvert à toutes celles et ceux qui souhaitent contribuer à un futur plus harmonieux. Rejoignez-nous pour faire repousser la vie.</p>
+      </div>
+    </section>
   </main>
   <Footer lang={lang} />
 </Layout>

@@ -1,18 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
-import Testimonials from "../../components/Testimonials.astro";
-import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
-import { useTranslations } from "../../i18n/translations";
 
 const lang = "en";
-const t = useTranslations(lang);
 ---
 
 <Layout
-  title="How to Participate - Pachatopia"
-  description="Sponsor a forest, coffee, or cocoa farm, contribute to ecological habitat, or make a donation. Discover how to support Pachatopia's sustainable projects."
+  title="Support Pachatopia"
+  description="Together, let's bring life back: tree planting, coffee tree sponsorship, natural reserve support, and partnerships."
   lang={lang}
 >
   <Header lang={lang} />
@@ -20,217 +16,75 @@ const t = useTranslations(lang);
     <!-- Hero Banner -->
     <section class="relative text-white py-24 md:py-36 overflow-hidden">
       <div class="absolute inset-0">
-        <img src="/images/aquaculture.webp" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <img src="/images/community.jpg" alt="Support Pachatopia" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6">
-          {t("participatePage.title")}
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
-          {t("participatePage.tagline")}
-        </p>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">🌱 Support Pachatopia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Together, let's bring life back</p>
       </div>
     </section>
 
-    <!-- Support Section -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-            {t("participatePage.support.title")}
-          </h2>
-          <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            {t("participatePage.support.text")}
-          </p>
-        </div>
+    <!-- How you can help -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <p class="text-lg text-gray-700 leading-relaxed mb-12">Pachatopia is an ecological and human regeneration project. By supporting our initiative, you participate in soil restoration, tree planting, and the development of nature-friendly agriculture. Every contribution, big or small, helps this vision grow.</p>
 
-        <!-- Sponsorship / Participation Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-10">How you can help</h2>
 
-          <!-- Card 1: Forest Sponsorship -->
-          <div
-            class="group relative bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
-            style="box-shadow: 0 2px 8px rgba(11,91,75,0.06); transition: box-shadow 0.3s ease, transform 0.3s ease;"
-            onmouseenter="this.style.boxShadow='0 16px 40px rgba(11,91,75,0.12)'"
-            onmouseleave="this.style.boxShadow='0 2px 8px rgba(11,91,75,0.06)'"
-          >
-            <!-- Price Badge -->
-            <div class="absolute top-4 right-4 bg-golden text-primary text-sm font-bold px-3 py-1 rounded-full">
-              {t("participatePage.forest.price")}
-            </div>
-            <!-- Icon -->
-            <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors duration-300">
-              <svg class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17c-1.5-1-3-2.5-3-5a6 6 0 0112 0c0 2.5-1.5 4-3 5" />
-              </svg>
-            </div>
-            <!-- Title -->
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">
-              {t("participatePage.forest.title")}
-            </h3>
-            <!-- Description -->
-            <p class="text-gray-600 leading-relaxed text-sm">
-              {t("participatePage.forest.desc")}
-            </p>
-            <!-- Corner accent -->
-            <div class="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-primary/[0.04] transform rotate-45 translate-x-10 -translate-y-10 group-hover:bg-primary/[0.08] transition-colors duration-300"></div>
-            </div>
-          </div>
-
-          <!-- Card 2: Coffee Sponsorship -->
-          <div
-            class="group relative bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
-            style="box-shadow: 0 2px 8px rgba(11,91,75,0.06); transition: box-shadow 0.3s ease, transform 0.3s ease;"
-            onmouseenter="this.style.boxShadow='0 16px 40px rgba(11,91,75,0.12)'"
-            onmouseleave="this.style.boxShadow='0 2px 8px rgba(11,91,75,0.06)'"
-          >
-            <!-- Price Badge -->
-            <div class="absolute top-4 right-4 bg-golden text-primary text-sm font-bold px-3 py-1 rounded-full">
-              {t("participatePage.coffee.price")}
-            </div>
-            <!-- Icon: Coffee bean -->
-            <div class="w-14 h-14 rounded-xl bg-earth/10 flex items-center justify-center mb-6 group-hover:bg-earth/15 transition-colors duration-300">
-              <svg class="w-7 h-7 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4C12 4 10 8 10 12C10 16 12 20 12 20" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 12C19 12 21 10 21 8C21 6 19 4 17 4" />
-              </svg>
-            </div>
-            <!-- Title -->
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">
-              {t("participatePage.coffee.title")}
-            </h3>
-            <!-- Description -->
-            <p class="text-gray-600 leading-relaxed text-sm">
-              {t("participatePage.coffee.desc")}
-            </p>
-            <!-- Corner accent -->
-            <div class="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-earth/[0.04] transform rotate-45 translate-x-10 -translate-y-10 group-hover:bg-earth/[0.08] transition-colors duration-300"></div>
-            </div>
-          </div>
-
-          <!-- Card 3: Cocoa Sponsorship -->
-          <div
-            class="group relative bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
-            style="box-shadow: 0 2px 8px rgba(11,91,75,0.06); transition: box-shadow 0.3s ease, transform 0.3s ease;"
-            onmouseenter="this.style.boxShadow='0 16px 40px rgba(11,91,75,0.12)'"
-            onmouseleave="this.style.boxShadow='0 2px 8px rgba(11,91,75,0.06)'"
-          >
-            <!-- Price Badge -->
-            <div class="absolute top-4 right-4 bg-golden text-primary text-sm font-bold px-3 py-1 rounded-full">
-              {t("participatePage.cocoa.price")}
-            </div>
-            <!-- Icon: Cocoa -->
-            <div class="w-14 h-14 rounded-xl bg-earth/10 flex items-center justify-center mb-6 group-hover:bg-earth/15 transition-colors duration-300">
-              <svg class="w-7 h-7 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3C8 3 5 7 5 12C5 17 8 21 12 21C16 21 19 17 19 12C19 7 16 3 12 3Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3C12 3 9 7 9 12C9 17 12 21 12 21" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3C12 3 15 7 15 12C15 17 12 21 12 21" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 9H18.5" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 15H18.5" />
-              </svg>
-            </div>
-            <!-- Title -->
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">
-              {t("participatePage.cocoa.title")}
-            </h3>
-            <!-- Description -->
-            <p class="text-gray-600 leading-relaxed text-sm">
-              {t("participatePage.cocoa.desc")}
-            </p>
-            <!-- Corner accent -->
-            <div class="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-earth/[0.04] transform rotate-45 translate-x-10 -translate-y-10 group-hover:bg-earth/[0.08] transition-colors duration-300"></div>
-            </div>
-          </div>
-
-          <!-- Card 4: Ecological Habitat -->
-          <div
-            class="group relative bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
-            style="box-shadow: 0 2px 8px rgba(11,91,75,0.06); transition: box-shadow 0.3s ease, transform 0.3s ease;"
-            onmouseenter="this.style.boxShadow='0 16px 40px rgba(11,91,75,0.12)'"
-            onmouseleave="this.style.boxShadow='0 2px 8px rgba(11,91,75,0.06)'"
-          >
-            <!-- Icon: House/Leaf -->
-            <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/15 transition-colors duration-300">
-              <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 10v10a1 1 0 001 1h12a1 1 0 001-1V10" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c0 0-3-3-3-6s3-6 3-6 3 3 3 6-3 6-3 6z" />
-              </svg>
-            </div>
-            <!-- Title -->
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">
-              {t("participatePage.habitat.title")}
-            </h3>
-            <!-- Description -->
-            <p class="text-gray-600 leading-relaxed text-sm">
-              {t("participatePage.habitat.desc")}
-            </p>
-            <!-- Corner accent -->
-            <div class="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-accent/[0.04] transform rotate-45 translate-x-10 -translate-y-10 group-hover:bg-accent/[0.08] transition-colors duration-300"></div>
-            </div>
-          </div>
-
-          <!-- Card 5: Free Donation -->
-          <div
-            class="group relative bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
-            style="box-shadow: 0 2px 8px rgba(11,91,75,0.06); transition: box-shadow 0.3s ease, transform 0.3s ease;"
-            onmouseenter="this.style.boxShadow='0 16px 40px rgba(11,91,75,0.12)'"
-            onmouseleave="this.style.boxShadow='0 2px 8px rgba(11,91,75,0.06)'"
-          >
-            <!-- Icon: Heart -->
-            <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors duration-300">
-              <svg class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-              </svg>
-            </div>
-            <!-- Title -->
-            <h3 class="text-xl font-heading font-bold text-primary mb-3">
-              {t("participatePage.donation.title")}
-            </h3>
-            <!-- Description -->
-            <p class="text-gray-600 leading-relaxed text-sm">
-              {t("participatePage.donation.desc")}
-            </p>
-            <!-- Corner accent -->
-            <div class="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-2xl">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-primary/[0.04] transform rotate-45 translate-x-10 -translate-y-10 group-hover:bg-primary/[0.08] transition-colors duration-300"></div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Get Involved CTA -->
-        <div class="text-center mt-16">
-          <a
-            href="/en/contacts"
-            class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5 active:translate-y-0"
-          >
-            <span>{t("participatePage.getInvolved")}</span>
-            <svg
-              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-heading font-bold text-primary mb-4">🌳 Plant trees</h3>
+            <p class="text-gray-700 leading-relaxed">Trees are at the heart of our project. They regenerate soils, promote biodiversity, and participate in ecosystem restoration.</p>
+          </article>
+          <article class="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-heading font-bold text-primary mb-4">☕ Sponsor a coffee tree</h3>
+            <p class="text-gray-700 leading-relaxed">Our coffee is grown in an agroforestry system that protects biodiversity and improves soil fertility.</p>
+            <p class="text-gray-700 leading-relaxed mt-3">Sponsoring a coffee tree helps support local farmers, restore soils, and develop sustainable agriculture.</p>
+          </article>
+          <article class="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-heading font-bold text-primary mb-4">🌍 Support the natural reserve</h3>
+            <p class="text-gray-700 leading-relaxed">A portion of the land is dedicated to nature protection and ecosystem regeneration. Your support helps preserve these spaces for future generations.</p>
+          </article>
+          <article class="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-heading font-bold text-primary mb-4">🤝 Become a partner</h3>
+            <p class="text-gray-700 leading-relaxed">Businesses, organizations, or individuals can support Pachatopia by becoming project partners.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <Testimonials lang={lang} />
-    <CallToAction lang={lang} />
+    <!-- Coffee Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-8">
+        <h2 class="text-3xl font-heading font-bold text-primary">☕ Our coffee</h2>
+        <h3 class="text-2xl font-heading font-bold text-primary">A coffee that regenerates the Earth</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">Pachatopia coffee is grown at the heart of a living ecosystem. Rather than producing in intensive monocultures, we grow our coffee within a regenerative agroforestry system, surrounded by trees, plants, and biodiversity.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">This model helps regenerate soils, promote biodiversity, protect water, and support local communities. Every cup of coffee becomes a gesture for the Earth.</p>
+
+        <h3 class="text-2xl font-heading font-bold text-primary">A meaningful coffee</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">When you choose Pachatopia coffee, you are not just supporting an agricultural product. You are participating in the restoration of living ecosystems, the rebuilding of a territory marked by history, and the promotion of nature-friendly agriculture.</p>
+
+        <p class="text-lg text-primary font-semibold italic">Every cup of coffee is a seed planted for the future.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/en/le-cafe/" class="inline-flex items-center justify-center px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">☕ Discover Pachatopia coffee</a>
+          <a href="/en/comment-participer/" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">🌳 Sponsor a coffee tree</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Charter -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-6">
+        <h2 class="text-3xl font-heading font-bold text-primary">🌿 The Pachatopia Charter</h2>
+        <p class="text-lg text-gray-700">🌱 Regenerate the Earth</p>
+        <p class="text-lg text-gray-700">🤝 Cultivate cooperation</p>
+        <p class="text-lg text-gray-700">🕊 Work for peace</p>
+        <p class="text-lg text-gray-700">🌍 Respect the living world</p>
+        <p class="text-lg text-gray-700">🌳 Pass on to future generations</p>
+        <p class="text-lg text-gray-700 leading-relaxed">Pachatopia is a human and ecological adventure open to all. Every tree planted, every gesture of support, and every person involved helps this vision grow. Together, let's bring life back.</p>
+      </div>
+    </section>
   </main>
   <Footer lang={lang} />
 </Layout>

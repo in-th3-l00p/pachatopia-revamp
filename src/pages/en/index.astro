@@ -2,31 +2,111 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Hero from "../../components/Hero.astro";
-import About from "../../components/About.astro";
-import Metrics from "../../components/Metrics.astro";
-import Actions from "../../components/Actions.astro";
-import Objectives from "../../components/Objectives.astro";
-import Testimonials from "../../components/Testimonials.astro";
-import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
 
 const lang = "en";
 ---
 
 <Layout
-  title="Pachatopia - Cultivating life, inspiring humanity"
-  description="Pachatopia is a non-profit association for sustainable agriculture, natural reserve creation, and eco-responsible living in Colombia and Europe. Join our volunteer community."
+  title="Pachatopia - Where the Earth regenerates"
+  description="Ecological and human regeneration project in San Carlos, Colombia: forests, soils, agroforestry, coffee, hosting and volunteering."
   lang={lang}
 >
   <Header lang={lang} />
   <main>
     <Hero lang={lang} />
-    <About lang={lang} />
-    <Metrics lang={lang} />
-    <Actions lang={lang} />
-    <Objectives lang={lang} />
-    <Testimonials lang={lang} />
-    <CallToAction lang={lang} />
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">A land coming back to life</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">San Carlos is a region of extraordinary natural beauty, deeply marked by the history of Colombia's armed conflict.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Today, both nature and local communities are rebuilding.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">At Pachatopia, we believe caring for the Earth can also help rebuild human relationships. By planting trees, regenerating soils, and nurturing biodiversity, we humbly take part in this renewal.</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">Our actions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌳 Forest regeneration</h3>
+            <p class="text-gray-700">Natural reserve creation and reforestation programs to protect biodiversity and water sources.</p>
+          </article>
+          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌱 Agroforestry agriculture</h3>
+            <p class="text-gray-700">Developing nature-inspired farming systems that produce food while regenerating soils.</p>
+          </article>
+          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">☕ Pachatopia coffee</h3>
+            <p class="text-gray-700">Coffee grown in a living ecosystem, transitioning toward regenerative agroforestry.</p>
+          </article>
+          <article class="bg-cream rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">🌍 Hosting and sharing</h3>
+            <p class="text-gray-700">A place for exchange where visitors and volunteers can discover nature and join the project.</p>
+          </article>
+        </div>
+        <div class="text-center mt-10">
+          <a href="/en/nos-actions/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Discover our actions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-5">A living project</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Pachatopia is an evolving project. Every year we plant trees, restore new plots, and develop initiatives to strengthen biodiversity and territorial resilience. Step by step, a regenerative forest ecosystem is taking shape.</p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-5">The Pachatopia ecosystem</h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is designed as a place where activities support one another.</p>
+          <p class="text-lg text-gray-700 leading-relaxed">🌳 natural reserve · ☕ coffee and cacao plots · 🌱 tree nursery · 🏕 hosting area for visitors · 🍽 local cuisine and regional products</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">A project that aims to show we can produce, protect, and share in harmony with nature.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-5">Join the adventure</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is a collective adventure. Everyone can contribute to this regeneration movement.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌱 plant trees · ☕ discover project coffee · 🤝 volunteer · 🌍 support site development</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Every action matters.</p>
+        <a href="/en/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Participate in the project</a>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Our conviction</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">🌱 regenerating the Earth can help regenerate human relationships<br/>🌳 planting trees is an act of hope<br/>🌍 every positive action can inspire wider change.</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">☕ Why choose Pachatopia coffee?</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">Our coffee is not just an agricultural product. It comes from a project that aims to regenerate land and build a more sustainable future.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌱 Agriculture transitioning to agroforestry</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌳 A regeneration project</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🤝 A human project</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌍 A meaningful cup</p>
+        <p class="text-lg text-primary font-semibold italic mb-6">Every cup of coffee is a seed planted for the future.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/en/le-cafe/" class="inline-flex items-center justify-center px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">☕ Discover Pachatopia coffee</a>
+          <a href="/en/comment-participer/" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">🌳 Sponsor a coffee tree</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">An invitation</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Pachatopia is open to everyone who wants to contribute to a more harmonious future. Join us and help life grow again.</p>
+      </div>
+    </section>
   </main>
   <Footer lang={lang} />
 </Layout>

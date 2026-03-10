@@ -8,22 +8,24 @@ export const defaultLang = "fr";
 export const translations = {
   fr: {
     // Nav
-    "nav.home": "Page d'accueil",
-    "nav.about": "A propos de nous",
+    "nav.home": "Accueil",
+    "nav.vision": "Vision",
+    "nav.history": "Notre histoire",
     "nav.actions": "Nos actions",
-    "nav.participate": "Comment participer",
-    "nav.currency": "Notre monnaie écologique",
+    "nav.coffee": "Le café",
+    "nav.support": "Soutenir Pachatopia",
+    "nav.experience": "Expérience",
+    "nav.volunteer": "Participer / volontariat",
     "nav.faq": "FAQ",
-    "nav.info": "Informations de l'association",
     "nav.contact": "Contacts",
 
     // Hero
-    "hero.welcome": "Bienvenue à Pachatopia",
-    "hero.tagline": "Cultivons la vie, inspirons l'humanité.",
+    "hero.welcome": "Pachatopia",
+    "hero.tagline": "Là où la Terre se régénère et où la paix peut repousser.",
     "hero.description":
-      "Chez Pachatopia, inspirée par la sagesse des Amérindiens et leur respect profond pour la Pachamama, la Terre mère, notre association œuvre pour un modèle agricole et un mode de vie valorisant la nature.",
-    "hero.cta.participate": "Comment participer",
-    "hero.cta.contact": "Contacts",
+      "Au cœur des montagnes de San Carlos en Colombie, Pachatopia est un projet de régénération écologique et humaine. Nous restaurons les sols, plantons des arbres et développons une agriculture inspirée des écosystèmes naturels. Un lieu où la nature, les humains et l'espoir grandissent ensemble.",
+    "hero.cta.discover": "Découvrir le projet",
+    "hero.cta.support": "Soutenir Pachatopia",
 
     // About (homepage section)
     "about.title": "Chez Pachatopia",
@@ -285,40 +287,35 @@ export const translations = {
     "testimonials.subtitle": "Ce que disent nos volontaires",
 
     // Footer
-    "footer.address": "17 route du Moulin 74 160 Présilly, France",
-    "footer.newsletter.title": "Abonnez-vous à la newsletter",
-    "footer.newsletter.text":
-      "Inscrivez\u2013vous à notre newsletter pour suivre les projets de pachatopia",
-    "footer.newsletter.placeholder": "Email",
-    "footer.newsletter.button": "Je m'abonne",
+    "footer.description": "Association pour la régénération écologique et la protection du vivant.",
+    "footer.location": "San Carlos – Antioquia – Colombie",
+    "footer.links.discover": "Découvrir",
+    "footer.links.participate": "Participer",
+    "footer.links.support": "Soutenir",
+    "footer.links.contact": "Contact",
+    "footer.linksTitle": "Liens",
     "footer.rights": "Tous droits réservés",
-    "footer.project": "Réalisé dans le cadre du projet WACADEMY.ES",
-    "footer.quicklinks": "Liens rapides",
-
-    // CTA
-    "cta.title": "Impliquez-vous dès aujourd'hui",
-    "cta.text":
-      "Ensemble, cultivons la vie et inspirons l'humanité. Rejoignez notre communauté de volontaires passionnés.",
-    "cta.button": "Contacts",
   },
   en: {
     // Nav
     "nav.home": "Home",
-    "nav.about": "About Us",
-    "nav.actions": "Our Actions",
-    "nav.participate": "How to Participate",
-    "nav.currency": "Our Ecological Currency",
+    "nav.vision": "Vision",
+    "nav.history": "Our story",
+    "nav.actions": "Our actions",
+    "nav.coffee": "Coffee",
+    "nav.support": "Support Pachatopia",
+    "nav.experience": "Experience",
+    "nav.volunteer": "Participate / Volunteer",
     "nav.faq": "FAQ",
-    "nav.info": "Association Information",
     "nav.contact": "Contact",
 
     // Hero
-    "hero.welcome": "Welcome to Pachatopia",
-    "hero.tagline": "Cultivating life, inspiring humanity.",
+    "hero.welcome": "Pachatopia",
+    "hero.tagline": "Where the Earth regenerates and peace can grow again.",
     "hero.description":
-      "At Pachatopia, inspired by the wisdom of Indigenous peoples and their deep respect for Pachamama, Mother Earth, our association works toward an agricultural model and a way of life that values nature.",
-    "hero.cta.participate": "How to Participate",
-    "hero.cta.contact": "Contact",
+      "In the mountains of San Carlos, Colombia, Pachatopia is an ecological and human regeneration project. We restore soils, plant trees, and develop agriculture inspired by natural ecosystems. A place where nature, people, and hope grow together.",
+    "hero.cta.discover": "Discover the project",
+    "hero.cta.support": "Support Pachatopia",
 
     // About (homepage section)
     "about.title": "At Pachatopia",
@@ -580,21 +577,14 @@ export const translations = {
     "testimonials.subtitle": "What our volunteers say",
 
     // Footer
-    "footer.address": "17 route du Moulin 74 160 Présilly, France",
-    "footer.newsletter.title": "Subscribe to the newsletter",
-    "footer.newsletter.text":
-      "Sign up for our newsletter to follow Pachatopia's projects",
-    "footer.newsletter.placeholder": "Your email",
-    "footer.newsletter.button": "Subscribe",
+    "footer.description": "Association for ecological regeneration and protection of life.",
+    "footer.location": "San Carlos – Antioquia – Colombia",
+    "footer.links.discover": "Discover",
+    "footer.links.participate": "Participate",
+    "footer.links.support": "Support",
+    "footer.links.contact": "Contact",
+    "footer.linksTitle": "Links",
     "footer.rights": "All rights reserved",
-    "footer.project": "Created as part of the WACADEMY.ES project",
-    "footer.quicklinks": "Quick Links",
-
-    // CTA
-    "cta.title": "Get Involved Today",
-    "cta.text":
-      "Together, let's cultivate life and inspire humanity. Join our community of passionate volunteers.",
-    "cta.button": "Contact",
   },
 } as const;
 

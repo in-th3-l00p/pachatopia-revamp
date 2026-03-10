@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "en";
+---
+
+<Layout
+  title="Coffee and Cacao - Pachatopia"
+  description="Growing by learning from nature: Pachatopia coffee and cacao in transition toward regenerative agroforestry."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/production-cafe.webp" alt="Pachatopia Coffee" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">☕ Pachatopia Coffee and Cacao</h1>
+        <p class="text-xl md:text-2xl text-white/90">Growing by learning from nature</p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>In the mountains of San Carlos, Colombia, coffee and cacao are among the traditional crops that shape the landscape and rural life. At Pachatopia, these crops are at the heart of our transition toward more nature-friendly agriculture.</p>
+        <p>Today, our plots include several thousand coffee trees, which constitute our main production, as well as a few dozen cacao trees cultivated in certain areas of the project. Some plantations were recently established, while others existed before our arrival.</p>
+      </div>
+    </section>
+
+    <!-- Transition & Learning -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌱 A transition toward more natural practices</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">When we took over certain plots, the crops had been managed for many years with chemical inputs. We chose to gradually stop these practices, eliminating biocides and heavy chemical products.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Instead, we are developing more natural approaches: compost and organic matter, natural liquid preparations, tree planting, and crop diversification.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">This transition takes time. Like soils, trees also need to gradually readjust to a more natural system after years of chemical agriculture.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌳 Learning through observation</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Alongside the plots in transition, we planted a small cacao plot under an already-wooded area, on a former meadow. This cacao, grown under the protection of trees, today seems to develop more harmoniously than that planted in open fields.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">This observation confirms what many farmers and researchers have found: coffee and cacao are forest plants that naturally thrive within diversified ecosystems.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌿 Toward agroforestry systems</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">These experiences encourage us to gradually transform our crops into regenerative agroforestry systems, where coffee and cacao trees grow within a rich and balanced ecosystem.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">We are working specifically on planting shade and biomass trees, covering soils with mulch and protective plants, and promoting biodiversity and natural soil fertility. Step by step, these plots evolve toward an agricultural model that seeks to produce while regenerating the land.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Coffee & Cacao Today -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-8">
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">☕ Our coffee today</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Coffee is currently Pachatopia's main production. By choosing our coffee, you directly support the transition to agroforestry, tree planting and soil regeneration, as well as the development of the project and local communities.</p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🍫 Cacao: a developing crop</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Cacao is also among the crops we are gradually developing in our agroforestry system. Some plots are in transition toward more natural practices, and others were recently planted under forest cover.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Our goal is to produce in the future a cacao grown within a living ecosystem, in harmony with the forest. The first productions will be available in the coming years.</p>
+        </div>
+
+        <div class="bg-cream rounded-2xl p-8">
+          <h3 class="text-2xl font-heading font-bold text-primary mb-4">📷 Nature is our best teacher</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">☕ coffee trees · 🌳 cacao under forest · 🌱 agroforestry plot</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsor -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">🌳 Sponsor a coffee tree</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">By sponsoring a coffee tree, you directly contribute to supporting the transition toward agroforestry, planting trees and enriching biodiversity, and accompanying the development of the project and local communities.</p>
+        <a href="/en/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Learn more about sponsorship</a>
+      </div>
+    </section>
+
+    <!-- Charter -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-8">
+        <h2 class="text-3xl font-heading font-bold text-primary">🌿 The Pachatopia Charter</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">🌱 Regenerate the Earth — We work to restore soils, forests, and ecosystems.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🤝 Cultivate cooperation — Sustainable projects are built collectively.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🕊 Work for peace — Caring for the Earth and working together contributes to building more peaceful societies.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🌍 Respect the living world — The Earth, water, air, and all forms of life deserve our respect.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🌳 Pass on to future generations — Preserving the beauty and richness of the world for tomorrow.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">Together, let's bring life back.</p>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

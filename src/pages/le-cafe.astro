@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const lang = "fr";
+---
+
+<Layout
+  title="Le café et le cacao - Pachatopia"
+  description="Cultiver en apprenant de la nature : café et cacao de Pachatopia en transition vers l'agroforesterie régénérative."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/production-cafe.webp" alt="Café Pachatopia" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">☕ Le café et le cacao de Pachatopia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Cultiver en apprenant de la nature</p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>Dans les montagnes de San Carlos, en Colombie, le café et le cacao font partie des cultures traditionnelles qui façonnent le paysage et la vie rurale. À Pachatopia, ces cultures sont au cœur de notre démarche de transition vers une agriculture plus respectueuse du vivant.</p>
+        <p>Aujourd'hui, nos parcelles comptent plusieurs milliers de caféiers, qui constituent notre principale production, ainsi que quelques dizaines de cacaoyers cultivés dans certaines zones du projet. Certaines plantations ont été mises en place récemment, tandis que d'autres existaient déjà avant notre arrivée.</p>
+      </div>
+    </section>
+
+    <!-- Transition & Learning -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌱 Une transition vers des pratiques plus naturelles</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Lorsque nous avons repris certaines parcelles, les cultures avaient été conduites pendant de nombreuses années avec des intrants chimiques. Nous avons choisi d'arrêter progressivement ces pratiques, en supprimant les biocides et les produits chimiques lourds.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">À la place, nous développons des approches plus naturelles : compost et matières organiques, préparations liquides naturelles, plantation d'arbres et diversification des cultures.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Cette transition demande du temps. Comme les sols, les arbres doivent eux aussi se réhabituer progressivement à un système plus naturel après des années d'agriculture chimique.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌳 L'apprentissage par l'observation</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">En parallèle des parcelles en transition, nous avons planté une petite parcelle de cacao sous une zone déjà boisée, sur une ancienne prairie. Ce cacao, cultivé sous la protection des arbres, semble aujourd'hui se développer plus harmonieusement que celui planté en plein champ.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Cette observation confirme ce que de nombreux agriculteurs et chercheurs constatent : le café et le cacao sont des plantes de forêt, qui s'épanouissent naturellement au sein d'écosystèmes diversifiés.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🌿 Vers des systèmes agroforestiers</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Ces expériences nous encouragent à transformer progressivement nos cultures en systèmes agroforestiers régénératifs, où les caféiers et les cacaoyers poussent au sein d'un écosystème riche et équilibré.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Nous travaillons notamment à planter des arbres d'ombrage et de biomasse, couvrir les sols avec du paillage et des plantes protectrices, favoriser la biodiversité et la fertilité naturelle des sols. Petit à petit, ces parcelles évoluent vers un modèle agricole qui cherche à produire tout en régénérant la terre.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Coffee & Cacao Today -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-8">
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">☕ Notre café aujourd'hui</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Le café est aujourd'hui la principale production de Pachatopia. En choisissant notre café, vous soutenez directement la transition vers l'agroforesterie, la plantation d'arbres et la régénération des sols, ainsi que le développement du projet et des communautés locales.</p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">🍫 Le cacao : une culture en développement</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">Le cacao fait également partie des cultures que nous développons progressivement dans notre système agroforestier. Certaines parcelles sont en transition vers des pratiques plus naturelles et d'autres ont été récemment plantées sous couvert forestier.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Notre objectif est de produire à l'avenir un cacao cultivé au sein d'un écosystème vivant, en harmonie avec la forêt. Les premières productions seront disponibles dans les prochaines années.</p>
+        </div>
+
+        <div class="bg-cream rounded-2xl p-8">
+          <h3 class="text-2xl font-heading font-bold text-primary mb-4">📷 La nature est notre meilleur professeur</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">☕ caféiers · 🌳 cacao sous forêt · 🌱 parcelle agroforestière</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsor -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">🌳 Parrainer un caféier</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">En parrainant un caféier, vous contribuez directement à soutenir la transition vers l'agroforesterie, planter des arbres et enrichir la biodiversité, accompagner le développement du projet et des communautés locales.</p>
+        <a href="/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">En savoir plus sur le parrainage</a>
+      </div>
+    </section>
+
+    <!-- Charter -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-8">
+        <h2 class="text-3xl font-heading font-bold text-primary">🌿 La charte Pachatopia</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">🌱 Régénérer la Terre — Nous travaillons à restaurer les sols, les forêts et les écosystèmes.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🤝 Cultiver la coopération — Les projets durables se construisent collectivement.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🕊 Œuvrer pour la paix — Prendre soin de la Terre et travailler ensemble contribue à construire des sociétés plus pacifiques.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🌍 Respecter le vivant — La Terre, l'eau, l'air et toutes les formes de vie méritent notre respect.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">🌳 Transmettre aux générations futures — Préserver la beauté et la richesse du monde pour demain.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">Ensemble, faisons repousser la vie.</p>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

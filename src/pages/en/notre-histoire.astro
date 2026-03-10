@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "en";
+---
+
+<Layout
+  title="Our History - Pachatopia"
+  description="From war to regeneration: the story of Pachatopia in San Carlos, Colombia."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/farm-hero.jpg" alt="Our history" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Our History</h1>
+        <p class="text-xl md:text-2xl text-white/90">From war to regeneration</p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Story -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>In the heart of the lush mountains of San Carlos, in the department of Antioquia, Colombia, nature is exceptionally rich. Yet this territory was also deeply marked by the history of Colombia's armed conflict in the late 1990s and early 2000s.</p>
+        <p>For several years, the region's inhabitants lived through violence, displacement, and division. Many families had to leave their lands, and both landscapes and communities bore the scars of this difficult period.</p>
+        <p>Today, San Carlos is engaged in a process of reconstruction. Inhabitants are returning, villages are rebuilding, and little by little, life is reclaiming its place.</p>
+        <p>It is in this context that Pachatopia was born.</p>
+        <p>Our project was born from a simple conviction: by regenerating the Earth, we can also help regenerate human relationships.</p>
+        <p>On these lands, we work with local inhabitants – some who lived through the war firsthand, others who endured it – to transform a territory marked by conflict into a space of cooperation, biodiversity, and hope.</p>
+        <p>Through agroforestry, soil restoration, and the creation of natural reserves, we seek to revive living ecosystems. Trees are growing back, soils are regenerating, biodiversity is returning.</p>
+        <p>But this transformation is also a human one.</p>
+        <p>Working the land together, planting trees, growing coffee, and caring for the forest become ways to rebuild trust and imagine a shared future.</p>
+        <p>At Pachatopia, we believe that peace can also be cultivated, like a garden. It is born from simple gestures: planting, protecting, cooperating, and passing on.</p>
+        <p>Our ambition is to help make these lands a place where nature regenerates and where communities can move together toward a more harmonious future.</p>
+      </div>
+    </section>
+
+    <!-- Invitation -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">An invitation to participate</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is a collective project. Everyone can contribute to this regeneration:</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• by supporting tree planting</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• by sponsoring a coffee tree</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">• by discovering our agroforestry coffee</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">• or by coming to share this experience on-site.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Together, we can transform these lands into a space of biodiversity, resilience, and peace.</p>
+        <p class="text-xl text-primary font-semibold italic">Where the forest grows back, hope grows back too.</p>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

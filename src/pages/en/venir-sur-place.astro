@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "en";
+---
+
+<Layout
+  title="Experience - Visit Pachatopia"
+  description="Stay at Pachatopia: nature immersion, pre-sale stays, volunteering, agroforestry activities, and discovering the region."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/contacts-hero.webp" alt="Stay at Pachatopia" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Stay at Pachatopia</h1>
+        <p class="text-xl md:text-2xl text-white/90">An experience at the heart of nature</p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>In the heart of the mountains of San Carlos, Colombia, Pachatopia aims to become a welcoming place for travelers, volunteers, and all those who wish to discover a way of life closer to nature.</p>
+        <p>Our project is evolving rapidly. We are currently working on creating a reception area that will allow us to share this adventure with visitors from around the world.</p>
+        <p>Eventually, Pachatopia will offer different types of accommodation: 🌿 a hostel · 🏕 a camping area · 🏡 eco-lodge or Airbnb-style lodging.</p>
+      </div>
+    </section>
+
+    <!-- Details -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-5xl mx-auto px-6 space-y-14">
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Pre-sale stays</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">To help us develop these facilities, we are already offering pre-sales of stays at Pachatopia. By booking your stay in advance, you directly contribute to the project's development: construction of accommodations, improvement of infrastructure, and tree planting.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">These pre-sales help support the creation of a place that will welcome visitors who want to discover the forest and natural reserves, coffee plantations, agroforestry systems, and the exceptional biodiversity of the region.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Experiences offered</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">🌱 tree planting · ☕ discovering coffee and its processing · 🌳 introduction to agroforestry · 🚶 hikes through the forest and mountains · 🍽 discovering local cuisine.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">Each stay is an opportunity to reconnect with nature and contribute to a meaningful project.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Restaurant and local products</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">We are also working on opening a restaurant at Pachatopia, where dishes will be prepared with products grown on-site and from local farmers in the region.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">This place will help showcase local agricultural products, the project's coffee, and simple, healthy cuisine inspired by the territory.</p>
+        </article>
+
+        <article>
+          <h2 class="text-3xl font-heading font-bold text-primary mb-4">Support the project by visiting</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">By booking a stay at Pachatopia, you are not just spending a few days in an exceptional location. You are participating in the creation of a project that seeks to regenerate ecosystems, support local communities, and promote a more harmonious relationship with nature.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Volunteering -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6" id="volontariat">
+        <h2 class="text-3xl font-heading font-bold text-primary mb-6">Participate / Volunteering</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">Pre-sale stay ideas:</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌿 Discovery Stay (3 days) — project visit, forest, coffee.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌱 Agroforestry Immersion (1 week) — participation in planting and workshops.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">☕ Coffee Experience (3–5 days) — coffee harvesting and processing.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌍 Nature Retreat (1 week) — nature connection, hiking, permaculture.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">Visitors become financial supporters, project ambassadors, and future coffee customers.</p>
+        <a href="/en/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Participate in the project</a>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>
