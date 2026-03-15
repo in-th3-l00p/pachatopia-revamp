@@ -10,7 +10,7 @@ const { lang = "fr" } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section data-testid="cta-section" class="relative py-24 md:py-32 overflow-hidden">
+<section data-testid="cta-section" data-motion="skip" class="relative py-24 md:py-32 overflow-hidden">
   <!-- Background image with gradient overlay -->
   <div class="absolute inset-0">
     <img

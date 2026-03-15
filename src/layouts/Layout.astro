@@ -152,5 +152,91 @@ const webPageSchema = {
   </head>
   <body class="min-h-screen text-gray-800 font-sans antialiased">
     <slot />
+    <script is:inline>
+      function initSiteMotion() {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const main = document.querySelector("main");
+
+        if (!main) {
+          return;
+        }
+
+        const setReveal = (elements, baseDelay = 0, step = 55) => {
+          elements.forEach((element, index) => {
+            if (!(element instanceof HTMLElement) || element.dataset.motion === "skip") {
+              return;
+            }
+
+            if (!element.hasAttribute("data-reveal")) {
+              element.setAttribute("data-reveal", "fade-up");
+            }
+
+            element.style.setProperty("--reveal-delay", `${baseDelay + index * step}ms`);
+          });
+        };
+
+        const sections = Array.from(main.querySelectorAll(":scope > section")).filter(
+          (section) => section instanceof HTMLElement && section.dataset.motion !== "skip",
+        );
+        setReveal(sections, 0, 80);
+
+        const staggerContainers = Array.from(
+          main.querySelectorAll(".grid, .space-y-5, .space-y-6, .space-y-8, .space-y-10, .space-y-12"),
+        );
+
+        staggerContainers.forEach((container) => {
+          if (!(container instanceof HTMLElement) || container.closest("[data-motion='skip']")) {
+            return;
+          }
+
+          const children = Array.from(container.children).filter((child) => {
+            return child instanceof HTMLElement && child.dataset.motion !== "skip";
+          });
+
+          if (children.length < 2) {
+            return;
+          }
+
+          setReveal(children, 35, 45);
+        });
+
+        if (prefersReducedMotion.matches) {
+          document.querySelectorAll("[data-reveal]").forEach((element) => {
+            element.classList.add("is-visible");
+          });
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            rootMargin: "0px 0px -2% 0px",
+            threshold: 0.02,
+          },
+        );
+
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          if (element instanceof HTMLElement) {
+            observer.observe(element);
+          }
+        });
+      }
+
+      document.addEventListener("astro:page-load", initSiteMotion);
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initSiteMotion);
+      } else {
+        initSiteMotion();
+      }
+    </script>
   </body>
 </html>
