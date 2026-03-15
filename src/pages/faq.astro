@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
+import LucideIcon from "../components/LucideIcon.astro";
 
 const lang = "fr";
 
@@ -50,14 +51,24 @@ const faqItems = [
   <Header lang={lang} />
   <main>
     <!-- Hero Banner -->
-    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+    <section class="relative isolate overflow-hidden py-24 text-white md:py-32">
       <div class="absolute inset-0">
         <img src="/images/community.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
-        <div class="absolute inset-0 bg-primary/80"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(8,74,61,0.92),rgba(10,91,75,0.78))]"></div>
       </div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-[10%] top-12 h-44 w-44 rounded-full bg-white/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[12%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+      </div>
+      <div class="site-container relative z-10">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+            <LucideIcon name="CircleHelp" class="h-4 w-4 text-golden" />
+            FAQ
+          </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">FAQ – Questions fréquentes</h1>
         <p class="text-lg md:text-xl text-white/85">Les réponses essentielles sur le projet Pachatopia</p>
+        </div>
       </div>
       <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="#f8f6f0"/>
@@ -65,36 +76,43 @@ const faqItems = [
     </section>
 
     <!-- FAQ Accordion -->
-    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
+    <section class="relative isolate overflow-hidden bg-cream py-20 md:py-28">
       <div class="absolute top-10 left-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
       <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="space-y-4">
+      <div class="site-container relative z-10">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div>
+            <div class="section-kicker w-fit">
+              <LucideIcon name="MessagesSquare" class="h-4 w-4 text-accent" />
+              Questions frequentes
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Tout ce que l'on nous demande le plus souvent</h2>
+            <p class="mt-6 max-w-md text-lg leading-8 text-gray-700">Que vous souhaitiez comprendre le projet, soutenir les actions, venir sur place ou acheter le cafe, cette page rassemble les reponses essentielles pour vous orienter rapidement.</p>
+          </div>
+
+          <div class="space-y-5">
           {faqItems.map((item, i) => (
-            <details class="group bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
-              <summary class="flex items-center justify-between cursor-pointer px-6 py-5 md:px-8 md:py-6 list-none [&::-webkit-details-marker]:hidden">
+            <details class:list={[
+              "group pt-5",
+              i === 0 ? "" : "border-t border-primary/10",
+            ]}>
+              <summary class="flex items-start justify-between cursor-pointer gap-6 py-2 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-4">
                   <span class="flex-shrink-0 w-8 h-8 rounded-full bg-golden/15 text-golden-dark flex items-center justify-center text-sm font-semibold">{i + 1}</span>
                   <h3 class="text-primary font-semibold text-base md:text-lg text-left leading-snug pr-4">{item.q}</h3>
                 </div>
-                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-cream flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
-                  <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                  </svg>
+                <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-white text-primary transition-transform duration-300 group-open:rotate-45">
+                  <LucideIcon name="Plus" class="h-4 w-4" strokeWidth={2.25} />
                 </span>
               </summary>
-              <div class="px-6 pb-6 md:px-8 md:pb-8">
-                <div class="pl-12 border-l-2 border-golden/30">
+              <div class="pb-6 pl-12 pt-3">
+                <div class="border-l border-golden/35 pl-6">
                   <p class="text-gray-600 leading-relaxed" style="white-space: pre-line;">{item.a}</p>
                 </div>
               </div>
             </details>
           ))}
-        </div>
-
-        <div class="mt-12 text-center bg-white rounded-2xl p-8" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
-          <p class="text-lg text-gray-700 mb-6">Vous ne trouvez pas la réponse à votre question ? N'hésitez pas à nous contacter.</p>
-          <a href="/contacts/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Nous contacter</a>
+          </div>
         </div>
       </div>
     </section>
