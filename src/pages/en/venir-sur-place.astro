@@ -1,0 +1,312 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "en";
+---
+
+<Layout
+  title="Experience - Visit Pachatopia"
+  description="Stay at Pachatopia: nature immersion, pre-sale stays, volunteering, agroforestry activities, and discovering the region."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative isolate overflow-hidden py-24 text-white md:py-32">
+      <div class="absolute inset-0">
+        <img src="/images/contacts-hero.webp" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(8,74,61,0.94),rgba(10,91,75,0.76))]"></div>
+      </div>
+      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute -left-14 top-8 h-64 w-64 rounded-full bg-white/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[8%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 800" fill="none">
+          <defs>
+            <pattern id="visit-hero-grid-en" width="52" height="52" patternUnits="userSpaceOnUse">
+              <path d="M52 0H0V52" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="800" fill="url(#visit-hero-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container relative z-10">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+            <LucideIcon name="TentTree" class="h-4 w-4 text-golden" />
+            Visit on site
+          </div>
+          <h1 class="text-4xl font-heading font-bold tracking-tight md:text-5xl lg:text-6xl">Stay at Pachatopia</h1>
+          <p class="mx-auto mt-6 max-w-3xl text-xl leading-8 text-white/85 md:text-2xl">
+            An experience at the heart of nature.
+          </p>
+        </div>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"></path>
+      </svg>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-white py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-[6%] top-0 h-56 w-56 rounded-full bg-accent/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[10%] h-72 w-72 rounded-full bg-primary/8 blur-3xl"></div>
+      </div>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-16">
+          <div>
+            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
+              <LucideIcon name="Mountain" class="h-4 w-4 text-accent" />
+              San Carlos, Colombia
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl lg:text-5xl">
+              A place of hospitality taking shape
+            </h2>
+            <div class="mt-8 max-w-2xl space-y-6 text-lg leading-8 text-gray-700">
+              <p>In the mountains of San Carlos, Colombia, Pachatopia aims to become a welcoming place for travelers, volunteers, and all those who want to discover a way of life closer to nature.</p>
+              <p>Our project is still evolving. We are currently working on creating a reception area that will allow us to share this adventure with visitors from around the world.</p>
+            </div>
+          </div>
+
+          <div class="lg:pt-3">
+            <div class="relative overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
+              <img src="/images/community.jpg" alt="Pachatopia community" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="mt-6 max-w-md">
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Hospitality vision</p>
+              <p class="mt-3 text-base leading-7 text-gray-700">Welcoming people here is not only about accommodation. It is about inviting them into a living territory, at its own pace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-20 md:py-28">
+      <div class="site-container">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-4 w-fit">
+            <LucideIcon name="Home" class="h-4 w-4 text-accent" />
+            Accommodation types
+          </div>
+          <h2 class="section-title text-3xl md:text-4xl lg:text-5xl">Different ways to stay close to nature</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="surface-card p-8">
+            <div class="icon-chip h-12 w-12">
+              <LucideIcon name="Building2" class="h-6 w-6 text-primary" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Hostel</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">A convivial place for travelers who want to share in the life of the project.</p>
+          </article>
+          <article class="surface-card p-8">
+            <div class="icon-chip h-12 w-12 bg-accent/10">
+              <LucideIcon name="Tent" class="h-6 w-6 text-accent" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Camping area</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">A more direct immersion in nature, close to the landscapes and rhythms of the territory.</p>
+          </article>
+          <article class="surface-card p-8">
+            <div class="icon-chip h-12 w-12 bg-earth/10">
+              <LucideIcon name="House" class="h-6 w-6 text-earth" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Eco-lodges</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">More comfortable stays designed to remain consistent with the spirit of the project.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-primary py-20 text-white md:py-28">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,197,90,0.18),transparent_26%)]"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 900" fill="none">
+          <defs>
+            <pattern id="visit-presale-grid-en" width="44" height="44" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="900" fill="url(#visit-presale-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div>
+            <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+              <LucideIcon name="Ticket" class="h-4 w-4 text-golden" />
+              Pre-sale stays
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+              Booking ahead already helps build the place
+            </h2>
+            <div class="mt-6 max-w-2xl space-y-5 text-lg leading-8 text-white/80">
+              <p>To help us develop these facilities, we offer pre-sale stays at Pachatopia. By booking in advance, you directly contribute to the project's development: building accommodation, improving infrastructure, and planting trees.</p>
+              <p>These pre-sales support the creation of a place that will welcome visitors who want to discover the forest, natural reserves, coffee plantations, agroforestry systems, and the region's exceptional biodiversity.</p>
+            </div>
+          </div>
+
+          <aside class="lg:border-l lg:border-white/15 lg:pl-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">What your booking supports</p>
+            <div class="mt-6 space-y-5 text-base leading-7 text-white/78">
+              <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10"><LucideIcon name="Hammer" class="h-5 w-5 text-primary" /></span><span>The construction of accommodation and hospitality spaces</span></p>
+              <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent/10"><LucideIcon name="Wrench" class="h-5 w-5 text-accent" /></span><span>The gradual improvement of on-site infrastructure</span></p>
+              <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-golden/10"><LucideIcon name="Trees" class="h-5 w-5 text-golden-dark" /></span><span>Tree planting and landscape regeneration</span></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-white py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute left-[max(50%,28rem)] top-0 h-[54rem] w-[54rem] -translate-x-1/2 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="visit-experiences-grid-en" width="160" height="160" patternUnits="userSpaceOnUse">
+              <path d="M160 0H0V160" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#visit-experiences-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-4 w-fit">
+            <LucideIcon name="Compass" class="h-4 w-4 text-accent" />
+            Experiences offered
+          </div>
+          <h2 class="section-title text-3xl md:text-4xl lg:text-5xl">Ways to reconnect, learn, and contribute</h2>
+          <div class="section-divider"></div>
+          <p class="section-copy mx-auto mt-6 max-w-3xl">Each stay is an opportunity to reconnect with nature and contribute to a meaningful project.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12"><LucideIcon name="Trees" class="h-6 w-6 text-primary" /></div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Tree planting</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Participate directly in ecosystem regeneration.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12 bg-earth/10"><LucideIcon name="Coffee" class="h-6 w-6 text-earth" /></div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Coffee discovery</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Follow agroforestry coffee from harvest to cup.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12 bg-accent/10"><LucideIcon name="Sprout" class="h-6 w-6 text-accent" /></div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Agroforestry introduction</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Learn about regenerative cultivation systems in practice.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12"><LucideIcon name="MapPinned" class="h-6 w-6 text-primary" /></div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Hikes</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Explore the forest, the mountains, and the wider territory.</p>
+          </article>
+          <article class="surface-card p-7 sm:col-span-2 lg:col-span-1">
+            <div class="icon-chip h-12 w-12 bg-earth/10"><LucideIcon name="Utensils" class="h-6 w-6 text-earth" /></div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Local cuisine</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Discover the flavors of the region and the products of the territory.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-20 md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-16">
+          <div class="overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
+            <img src="/images/agriculture-durable.webp" alt="Local products" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+          </div>
+
+          <div>
+            <div class="section-kicker w-fit">
+              <LucideIcon name="UtensilsCrossed" class="h-4 w-4 text-accent" />
+              Restaurant and local products
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">
+              Make the place a simple and living showcase of the territory
+            </h2>
+            <div class="mt-6 space-y-5 text-lg leading-8 text-gray-700">
+              <p>We are also working on opening a restaurant at Pachatopia, where dishes will be prepared with products grown on-site and from local farmers in the region.</p>
+              <p>This place will help showcase local agricultural products, the project's coffee, and simple, healthy cuisine inspired by the territory.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-20">
+      <div class="site-container-compact">
+        <div class="surface-card-muted p-8 md:p-12">
+          <div class="section-kicker mb-4 w-fit">
+            <LucideIcon name="Leaf" class="h-4 w-4 text-accent" />
+            Why come
+          </div>
+          <p class="text-lg leading-8 text-gray-700 italic md:text-xl">By booking a stay at Pachatopia, you are not only spending a few days in a special place. You are participating in the creation of a project that seeks to regenerate ecosystems, support local communities, and promote a more harmonious relationship with nature.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 md:py-28" id="volontariat">
+      <div class="site-container">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-4 w-fit">
+            <LucideIcon name="Backpack" class="h-4 w-4 text-accent" />
+            Stays and volunteering
+          </div>
+          <h2 class="section-title text-3xl md:text-4xl lg:text-5xl">Formats to discover, help, and return differently</h2>
+          <div class="section-divider"></div>
+          <p class="section-copy mx-auto mt-6 max-w-3xl">Visitors become financial supporters, project ambassadors, and future coffee customers.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <article class="surface-card p-7">
+            <div class="flex items-center gap-4">
+              <div class="icon-chip h-11 w-11"><LucideIcon name="Binoculars" class="h-5 w-5 text-primary" /></div>
+              <h3 class="text-xl font-heading font-bold text-primary">Discovery stay</h3>
+            </div>
+            <p class="mt-4 text-base leading-7 text-gray-700">3 days: project visit, forest, and coffee.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="flex items-center gap-4">
+              <div class="icon-chip h-11 w-11 bg-accent/10"><LucideIcon name="Sprout" class="h-5 w-5 text-accent" /></div>
+              <h3 class="text-xl font-heading font-bold text-primary">Agroforestry immersion</h3>
+            </div>
+            <p class="mt-4 text-base leading-7 text-gray-700">1 week: participation in planting and workshops.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="flex items-center gap-4">
+              <div class="icon-chip h-11 w-11 bg-earth/10"><LucideIcon name="Coffee" class="h-5 w-5 text-earth" /></div>
+              <h3 class="text-xl font-heading font-bold text-primary">Coffee experience</h3>
+            </div>
+            <p class="mt-4 text-base leading-7 text-gray-700">3 to 5 days: coffee harvesting and processing.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="flex items-center gap-4">
+              <div class="icon-chip h-11 w-11"><LucideIcon name="Trees" class="h-5 w-5 text-primary" /></div>
+              <h3 class="text-xl font-heading font-bold text-primary">Nature retreat</h3>
+            </div>
+            <p class="mt-4 text-base leading-7 text-gray-700">1 week: connection to nature, walking, and permaculture.</p>
+          </article>
+        </div>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="/en/comment-participer/" class="button-primary group">
+            Participate in the project
+            <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
+          <a href="/en/contacts/" class="button-secondary">
+            Contact us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

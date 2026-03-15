@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from '../i18n/translations';
+import LucideIcon from './LucideIcon.astro';
 
 interface Props {
   lang?: "fr" | "en";
@@ -12,44 +13,22 @@ const metrics = [
   {
     value: "9+",
     label: t("metrics.projects"),
-    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <rect x="3" y="10" width="5" height="11" rx="0.5"/>
-      <rect x="9.5" y="6" width="5" height="15" rx="0.5"/>
-      <rect x="16" y="3" width="5" height="18" rx="0.5"/>
-      <line x1="1" y1="21" x2="23" y2="21"/>
-    </svg>`,
+    icon: "ChartColumnBig",
   },
   {
     value: "3+",
     label: t("metrics.countries"),
-    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10"/>
-      <ellipse cx="12" cy="12" rx="4" ry="10"/>
-      <path d="M2 12h20"/>
-      <path d="M4.5 6.5h15"/>
-      <path d="M4.5 17.5h15"/>
-    </svg>`,
+    icon: "Globe",
   },
   {
     value: "25+",
     label: t("metrics.volunteers"),
-    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
-      <circle cx="9" cy="7" r="4"/>
-      <path d="M20.5 14.5l-2 2.5L17 15.5"/>
-      <path d="M22 21v-2a4 4 0 00-3-3.87"/>
-      <path d="M16 3.13a4 4 0 010 7.75"/>
-    </svg>`,
+    icon: "Users",
   },
   {
     value: "7+",
     label: t("metrics.jobs"),
-    icon: `<svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <rect x="2" y="7" width="20" height="14" rx="2"/>
-      <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
-      <line x1="12" y1="12" x2="12" y2="12.01"/>
-      <path d="M2 12h20"/>
-    </svg>`,
+    icon: "BriefcaseBusiness",
   },
 ];
 ---
@@ -68,13 +47,13 @@ const metrics = [
     <div class="absolute inset-0 bg-primary/85"></div>
   </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="site-container relative z-10">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
       {metrics.map((metric) => (
         <div class="group flex flex-col items-center text-center p-6 md:p-8 rounded-2xl transition-all duration-300 hover:bg-white/[0.08]">
           <!-- Icon container -->
           <div class="mb-4 md:mb-5 text-white/70 group-hover:text-accent transition-colors duration-300">
-            <Fragment set:html={metric.icon} />
+            <LucideIcon name={metric.icon} class="w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
           </div>
 
           <!-- Metric value -->

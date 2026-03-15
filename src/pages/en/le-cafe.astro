@@ -1,0 +1,311 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "en";
+---
+
+<Layout
+  title="Coffee and Cacao - Pachatopia"
+  description="Growing by learning from nature: Pachatopia coffee and cacao in transition toward regenerative agroforestry."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative isolate overflow-hidden py-24 text-white md:py-32">
+      <div class="absolute inset-0">
+        <img src="/images/production-cafe.webp" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(8,74,61,0.92),rgba(10,91,75,0.76))]"></div>
+      </div>
+      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute -left-16 top-10 h-64 w-64 rounded-full bg-white/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[8%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 800" fill="none">
+          <defs>
+            <pattern id="coffee-hero-grid-en" width="52" height="52" patternUnits="userSpaceOnUse">
+              <path d="M52 0H0V52" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="800" fill="url(#coffee-hero-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container relative z-10">
+        <div class="site-container-narrow max-w-4xl px-0 text-center">
+          <div class="section-kicker mx-auto mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+            <LucideIcon name="Coffee" class="h-4 w-4 text-golden" />
+            Crops in transition
+          </div>
+          <h1 class="text-4xl font-heading font-bold tracking-tight md:text-5xl lg:text-6xl">
+            Pachatopia Coffee and Cacao
+          </h1>
+          <p class="mx-auto mt-6 max-w-3xl text-xl leading-8 text-white/85 md:text-2xl">
+            Growing by learning from nature.
+          </p>
+        </div>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"></path>
+      </svg>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-white py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-[6%] top-0 h-56 w-56 rounded-full bg-accent/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[10%] h-72 w-72 rounded-full bg-primary/8 blur-3xl"></div>
+      </div>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-16">
+          <div>
+            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
+              <LucideIcon name="Mountain" class="h-4 w-4 text-accent" />
+              San Carlos, Colombia
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl lg:text-5xl">
+              In the mountains, production is changing its logic
+            </h2>
+            <div class="mt-8 max-w-2xl space-y-6 text-lg leading-8 text-gray-700">
+              <p>In the mountains of San Carlos, Colombia, coffee and cacao are traditional crops that shape the landscape and rural life. At Pachatopia, they are central to our transition toward more nature-friendly agriculture.</p>
+              <p>Today, our plots include several thousand coffee trees, which form our main production, as well as a few dozen cacao trees cultivated in certain areas of the project. Some plantations were recently established, while others existed before our arrival.</p>
+            </div>
+          </div>
+
+          <div class="lg:pt-3">
+            <div class="relative overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
+              <img src="/images/production-cafe.webp" alt="Coffee growing at Pachatopia" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="mt-6 max-w-md">
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Starting point</p>
+              <p class="mt-3 text-base leading-7 text-gray-700">Produce coffee and cacao, yes, but gradually let the forest become a partner again rather than just a backdrop.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-cream py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute left-[max(50%,28rem)] top-0 h-[54rem] w-[54rem] -translate-x-1/2 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="coffee-learning-grid-en" width="160" height="160" patternUnits="userSpaceOnUse">
+              <path d="M160 0H0V160" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#coffee-learning-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+          <div class="lg:sticky lg:top-12">
+            <div class="section-kicker w-fit">
+              <LucideIcon name="Leaf" class="h-4 w-4 text-accent" />
+              What the land is teaching us
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">
+              A transition built through observation, adjustment, and patience
+            </h2>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-gray-700">
+              We are not trying to impose an ideal formula. We observe what the plots are telling us, stop what depletes them, and strengthen what restores fertility, shade, and resilience.
+            </p>
+            <div class="mt-10 overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(10,91,75,0.12)]">
+              <img src="/images/agriculture-durable.webp" alt="Sustainable agriculture at Pachatopia" class="aspect-[5/6] w-full object-cover" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="space-y-10">
+            <article class="border-t border-primary/10 pt-8">
+              <div class="flex items-center gap-4">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-sm font-semibold text-primary">01</span>
+                <h3 class="text-2xl font-heading font-bold text-primary">A transition toward more natural practices</h3>
+              </div>
+              <div class="mt-5 space-y-4 text-lg leading-8 text-gray-700">
+                <p>When we took over certain plots, the crops had been managed for many years with chemical inputs. We chose to gradually stop these practices, eliminating biocides and heavy chemical products.</p>
+                <p>Instead, we are developing more natural approaches: compost and organic matter, natural liquid preparations, tree planting, and crop diversification.</p>
+                <p>This transition takes time. Like soils, trees also need to gradually readjust to a more natural system after years of chemical agriculture.</p>
+              </div>
+            </article>
+
+            <article class="border-t border-primary/10 pt-8">
+              <div class="flex items-center gap-4">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10 text-sm font-semibold text-accent">02</span>
+                <h3 class="text-2xl font-heading font-bold text-primary">Learning through observation</h3>
+              </div>
+              <div class="mt-5 space-y-4 text-lg leading-8 text-gray-700">
+                <p>Alongside the plots in transition, we planted a small cacao plot under an already wooded area, on a former meadow. This cacao, grown under the protection of trees, seems to develop more harmoniously than cacao planted in open fields.</p>
+                <p>This observation confirms what many farmers and researchers have found: coffee and cacao are forest plants that naturally thrive within diversified ecosystems.</p>
+              </div>
+            </article>
+
+            <article class="border-t border-primary/10 pt-8">
+              <div class="flex items-center gap-4">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-golden/15 text-sm font-semibold text-golden-dark">03</span>
+                <h3 class="text-2xl font-heading font-bold text-primary">Toward agroforestry systems</h3>
+              </div>
+              <div class="mt-5 space-y-4 text-lg leading-8 text-gray-700">
+                <p>These experiences encourage us to gradually transform our crops into regenerative agroforestry systems, where coffee and cacao trees grow within a rich and balanced ecosystem.</p>
+                <p>We are working specifically on planting shade and biomass trees, covering soils with mulch and protective plants, and promoting biodiversity and natural soil fertility. Step by step, these plots evolve toward an agricultural model that seeks to produce while regenerating the land.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-primary py-20 text-white md:py-28">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(255,197,90,0.18),transparent_26%)]"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 900" fill="none">
+          <defs>
+            <pattern id="coffee-dark-grid-en" width="44" height="44" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="900" fill="url(#coffee-dark-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+            <LucideIcon name="Bean" class="h-4 w-4 text-golden" />
+            Crops today
+          </div>
+          <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+            Coffee and cacao within a living ecosystem
+          </h2>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1fr_0.8fr] lg:items-start">
+          <article class="border-t border-white/15 pt-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+              <LucideIcon name="Coffee" class="h-6 w-6 text-golden" />
+            </div>
+            <h3 class="mt-5 text-2xl font-heading font-bold text-white">Our coffee today</h3>
+            <div class="mt-4 space-y-4 text-base leading-7 text-white/78">
+              <p>Coffee is currently Pachatopia's main production. By choosing our coffee, you directly support the transition to agroforestry, tree planting and soil regeneration, as well as the development of the project and local communities.</p>
+              <p>Every cup of coffee contributes to building a more nature-friendly agricultural model.</p>
+            </div>
+          </article>
+
+          <article class="border-t border-white/15 pt-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+              <LucideIcon name="Leaf" class="h-6 w-6 text-golden" />
+            </div>
+            <h3 class="mt-5 text-2xl font-heading font-bold text-white">Cacao: a crop in development</h3>
+            <div class="mt-4 space-y-4 text-base leading-7 text-white/78">
+              <p>Cacao is also among the crops we are gradually developing in our agroforestry system. Some plots are moving toward more natural practices, while others were recently planted under forest cover.</p>
+              <p>Our goal is to produce cacao in the future within a living ecosystem, in harmony with the forest. The first productions will be available in the coming years.</p>
+            </div>
+          </article>
+
+          <aside class="border-l border-white/15 pl-0 lg:pl-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Key insight</p>
+            <p class="mt-4 text-2xl font-heading font-bold leading-tight text-white">Nature is our best teacher.</p>
+            <p class="mt-5 text-base leading-7 text-white/78">Coffee and cacao are forest plants. The more we cultivate with shade, biodiversity, and living soils, the more coherent and resilient the system becomes.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+          <div class="overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
+            <img src="/images/community.jpg" alt="Pachatopia community" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+          </div>
+
+          <div>
+            <div class="section-kicker w-fit">
+              <LucideIcon name="HeartHandshake" class="h-4 w-4 text-accent" />
+              Sponsor a coffee tree
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">
+              Support a concrete agricultural transition
+            </h2>
+            <div class="mt-6 space-y-5 text-lg leading-8 text-gray-700">
+              <p>At the heart of Pachatopia, coffee trees are part of a living ecosystem that we seek to regenerate.</p>
+              <p>By sponsoring a coffee tree, you directly contribute to supporting the transition toward agroforestry, planting trees and enriching biodiversity, and accompanying the development of the project and local communities.</p>
+              <p>Each sponsorship contributes to the gradual transformation of our plots into more balanced and more nature-friendly agricultural systems.</p>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="/en/comment-participer/" class="button-primary group">
+                Learn more about sponsorship
+                <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-20 md:py-28">
+      <div class="site-container">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-4 w-fit">
+            <LucideIcon name="Sparkles" class="h-4 w-4 text-golden-dark" />
+            Why choose our coffee
+          </div>
+          <h2 class="section-title text-3xl md:text-4xl lg:text-5xl">A cup that carries more than taste</h2>
+          <div class="section-divider"></div>
+          <p class="section-copy mx-auto mt-6 max-w-3xl">
+            Our coffee is not just an agricultural product. It is the result of a project that seeks to regenerate the land and build a more durable future.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12">
+              <LucideIcon name="Sprout" class="h-6 w-6 text-primary" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">Agriculture in transition</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">We are gradually transforming our plots into systems inspired by natural ecosystems, where coffee trees grow among trees, plants, and biodiversity.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12 bg-accent/10">
+              <LucideIcon name="Trees" class="h-6 w-6 text-accent" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">A regeneration project</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Every bag of coffee contributes to planting trees, restoring soils, and developing a more nature-friendly agricultural model.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12 bg-golden/10">
+              <LucideIcon name="Users" class="h-6 w-6 text-golden-dark" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">A human project</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">Pachatopia grows in collaboration with the people of the San Carlos region, a territory shaped by history and now engaged in a process of reconstruction.</p>
+          </article>
+          <article class="surface-card p-7">
+            <div class="icon-chip h-12 w-12 bg-earth/10">
+              <LucideIcon name="Globe" class="h-6 w-6 text-earth" />
+            </div>
+            <h3 class="mt-5 text-xl font-heading font-bold text-primary">A meaningful cup</h3>
+            <p class="mt-3 text-base leading-7 text-gray-700">By choosing Pachatopia coffee, you support a project that seeks to produce while regenerating the Earth.</p>
+          </article>
+        </div>
+
+        <div class="mt-14 rounded-[2rem] bg-primary px-8 py-10 text-white shadow-[0_24px_60px_rgba(10,91,75,0.16)] md:px-10">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-white/50">The Pachatopia charter</p>
+              <h3 class="mt-4 text-3xl font-heading font-bold">Principles that guide both production and the wider project</h3>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <p class="border-t border-white/12 pt-4 text-sm leading-6 text-white/78"><strong class="text-white">Regenerate the Earth.</strong> Restore soils, forests, and ecosystems.</p>
+              <p class="border-t border-white/12 pt-4 text-sm leading-6 text-white/78"><strong class="text-white">Cultivate cooperation.</strong> Durable projects are built collectively.</p>
+              <p class="border-t border-white/12 pt-4 text-sm leading-6 text-white/78"><strong class="text-white">Work for peace.</strong> Caring for the Earth and working together contributes to more peaceful societies.</p>
+              <p class="border-t border-white/12 pt-4 text-sm leading-6 text-white/78"><strong class="text-white">Respect the living world.</strong> The Earth, water, air, and all forms of life deserve our respect.</p>
+              <p class="border-t border-white/12 pt-4 text-sm leading-6 text-white/78 sm:col-span-2"><strong class="text-white">Pass on to future generations.</strong> Preserve the beauty and richness of the world for tomorrow. Together, let life grow back.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

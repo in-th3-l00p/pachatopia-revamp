@@ -4,15 +4,14 @@ import Header from "../../components/Header.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
-import { useTranslations } from "../../i18n/translations";
+import LucideIcon from "../../components/LucideIcon.astro";
 
 const lang = "en";
-const t = useTranslations(lang);
 ---
 
 <Layout
-  title={`${t("aboutPage.title")} - Pachatopia`}
-  description="Discover Pachatopia: our vision, values of love, benevolence, and altruism, and our mission for a sustainable future in harmony with nature."
+  title="Vision - Pachatopia"
+  description="The Pachatopia vision: regenerating the Earth to cultivate peace, cooperation, and lasting abundance."
   lang={lang}
 >
   <Header lang={lang} />
@@ -23,147 +22,206 @@ const t = useTranslations(lang);
         <img src="/images/community.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-      <div class="container mx-auto px-6 text-center relative z-10">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-          {t("aboutPage.title")}
-        </h1>
-        <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-          {t("aboutPage.tagline")}
-        </p>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">The Pachatopia Vision</h1>
+        <p class="text-xl md:text-2xl text-white/90">Relearning to inhabit the Earth with respect, responsibility, and hope.</p>
       </div>
-      <!-- Wave divider -->
       <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
       </svg>
     </section>
 
-    <!-- Vision Section -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
-            {t("aboutPage.vision.title")}
-          </h2>
-          <!-- Decorative leaf divider -->
-          <svg class="mx-auto mb-8 w-16 h-16 text-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 8C32 8 16 20 16 36C16 52 32 56 32 56C32 56 48 52 48 36C48 20 32 8 32 8Z" fill="currentColor" opacity="0.2"/>
-            <path d="M32 8C32 8 16 20 16 36C16 52 32 56 32 56C32 56 48 52 48 36C48 20 32 8 32 8Z" stroke="currentColor" stroke-width="2"/>
-            <path d="M32 16V48" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M32 24L24 32" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M32 32L40 26" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M32 40L22 36" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <p class="text-lg text-gray-700 leading-relaxed">
-            {t("aboutPage.vision.intro")}
-          </p>
+    <!-- Decorative leaf divider -->
+    <div class="flex justify-center py-6 bg-white">
+      <svg class="w-12 h-12 text-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 8C32 8 16 20 16 36C16 52 32 56 32 56C32 56 48 52 48 36C48 20 32 8 32 8Z" fill="currentColor" opacity="0.2"/>
+        <path d="M32 8C32 8 16 20 16 36C16 52 32 56 32 56C32 56 48 52 48 36C48 20 32 8 32 8Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M32 16V48" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M32 24L24 32" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M32 32L40 26" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- Vision Text with image -->
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <svg class="absolute -top-6 right-0 w-64 h-64 opacity-[0.06]" viewBox="0 0 200 200" fill="none">
+          <path d="M140 20C140 20 180 60 170 110C160 160 120 180 80 170C40 160 20 120 30 80C40 40 80 20 140 20Z" fill="#0A5B4B"/>
+        </svg>
+        <svg class="absolute -bottom-10 -left-10 w-48 h-48 opacity-[0.05]" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="90" stroke="#0A5B4B" stroke-width="2"/>
+          <circle cx="100" cy="100" r="70" stroke="#0A5B4B" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="50" stroke="#2d9b83" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>A question has always lived within us: how can we build a fairer, more peaceful, and more abundant world for all?</p>
+            <p>Even as children, some of us dreamed of a world where human beings could live in peace, where poverty and conflict would give way to cooperation and respect for life.</p>
+            <p>Growing up, we understood that this dream was not easy to achieve. The world is complex, economic and social systems can be conflicting, and finding one's place to act positively is not always obvious.</p>
+            <p>Yet a conviction remained deeply rooted: change always starts somewhere.</p>
+            <p>At Pachatopia, we chose to start with what connects us all: the Earth.</p>
+            <p>Inspired by the wisdom of Indigenous peoples and their respect for Pachamama, Mother Earth, we believe that caring for the living world is one of the most powerful paths toward building a sustainable and harmonious future.</p>
+          </div>
+          <div class="relative flex items-center justify-center">
+            <div class="relative w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+              <img src="/images/farm-hero.jpg" alt="Pachatopia - regeneration" class="w-full h-auto object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+            </div>
+            <svg class="absolute top-2 right-2 w-12 h-12 text-accent opacity-20" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="M25 5C25 5 45 15 42 32C39 49 25 48 25 48C25 48 11 49 8 32C5 15 25 5 25 5Z"/></svg>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Values Cards Grid -->
-    <section class="py-20 bg-cream">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <!-- Love Card -->
-          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
-            <!-- Decorative circle -->
-            <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
-            <div class="relative z-10">
-              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
+    <!-- Mission statement -->
+    <section class="relative isolate overflow-hidden bg-cream px-6 py-20 md:py-28 lg:px-0">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute top-0 left-[max(50%,24rem)] h-[52rem] w-[64rem] -translate-x-1/2 text-primary/10 [mask-image:radial-gradient(36rem_36rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="about-mission-grid-en" width="120" height="120" patternUnits="userSpaceOnUse">
+              <path d="M120 0H0V120" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#about-mission-grid-en)" />
+        </svg>
+      </div>
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-14 lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-x-16">
+        <div class="lg:pt-8">
+          <div class="max-w-xl">
+            <div class="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-white/80 px-4 py-2 text-sm font-medium text-primary shadow-sm shadow-primary/5 backdrop-blur">
+              <LucideIcon name="Sprout" class="h-4 w-4 text-accent" />
+              Our mission
+            </div>
+            <h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary">Regenerating places so a different model can emerge</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-700">In San Carlos, we work with living systems, but also with the memory of a territory. The goal is not only to produce differently, but to show how repaired land can become a foundation for trust, autonomy, and a shared future.</p>
+          </div>
+        </div>
+        <div class="relative lg:sticky lg:top-8">
+          <div class="overflow-hidden rounded-[2rem] bg-primary p-1 shadow-2xl shadow-primary/15">
+            <img src="/images/farm-hero.jpg" alt="Regenerative landscape in San Carlos" class="aspect-[5/4] w-full rounded-[1.75rem] object-cover" loading="lazy" />
+          </div>
+          <div class="absolute -bottom-6 left-6 max-w-sm rounded-2xl border border-white/70 bg-white/95 p-5 shadow-xl shadow-primary/10 backdrop-blur">
+            <div class="flex items-start gap-4">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10">
+                <LucideIcon name="Trees" class="h-5 w-5 text-accent" />
               </div>
-              <h3 class="text-xl font-heading font-bold text-primary mb-4">
-                {t("aboutPage.values.love.title")}
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                {t("aboutPage.values.love.desc")}
-              </p>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary/60">Local grounding</p>
+                <p class="mt-2 text-sm leading-6 text-gray-600">Agroforestry, nature reserves, and shared knowledge to bring living landscapes back to life and help communities look forward again.</p>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-x-16">
+          <div class="lg:pr-6">
+            <div class="max-w-2xl space-y-5 text-lg leading-8 text-gray-700">
+              <p>Regenerating soils, planting trees, restoring ecosystems, and producing agriculture that respects nature are all simple acts that can transform a territory… and sometimes much more.</p>
+              <p>Because when the earth regenerates, human relationships can also be transformed.</p>
+              <p>In the San Carlos region of Colombia, a territory marked by the wounds of the past, we work with local communities to bring back living landscapes and forward-looking communities.</p>
+              <p>Through agroforestry, the creation of nature reserves, and knowledge sharing, we aim to demonstrate that another model is possible: one where nature is respected, where the economy supports life, and where cooperation replaces competition.</p>
+              <p class="font-medium italic text-primary">Pachatopia is not just an agricultural project. It is an invitation to relearn how to inhabit the Earth with respect, responsibility, and hope.</p>
+              <p>Every tree planted, every regenerated soil, and every act of cooperation are seeds sown for the future.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Benevolence Card -->
-          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+    <!-- Values cards -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Our vision</h2>
+          <div class="flex items-center justify-center gap-2 mb-6">
+            <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+            <LucideIcon name="Leaf" class="w-5 h-5 text-accent" />
+            <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl">
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-full"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <LucideIcon name="Globe" class="w-8 h-8 text-primary" strokeWidth={1.75} />
+              </div>
+              <h3 class="text-xl font-heading font-bold text-primary mb-3">Harmony with the Earth</h3>
+              <p class="text-gray-600 leading-relaxed">A world where human beings live in harmony with the Earth, the waters, the air, and all forms of life.</p>
+            </div>
+          </div>
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl">
             <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
             <div class="relative z-10">
               <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
+                <LucideIcon name="Sprout" class="w-8 h-8 text-accent" strokeWidth={1.75} />
               </div>
-              <h3 class="text-xl font-heading font-bold text-primary mb-4">
-                {t("aboutPage.values.benevolence.title")}
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                {t("aboutPage.values.benevolence.desc")}
-              </p>
+              <h3 class="text-xl font-heading font-bold text-primary mb-3">Natural abundance</h3>
+              <p class="text-gray-600 leading-relaxed">Abundance born from balance with nature, where each generation becomes a guardian of the living world.</p>
             </div>
           </div>
-
-          <!-- Altruism Card -->
-          <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
-            <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl">
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-golden/10 rounded-full"></div>
             <div class="relative z-10">
-              <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-                </svg>
+              <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <LucideIcon name="Handshake" class="w-8 h-8 text-golden-dark" strokeWidth={1.75} />
               </div>
-              <h3 class="text-xl font-heading font-bold text-primary mb-4">
-                {t("aboutPage.values.altruism.title")}
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                {t("aboutPage.values.altruism.desc")}
-              </p>
+              <h3 class="text-xl font-heading font-bold text-primary mb-3">Cooperation</h3>
+              <p class="text-gray-600 leading-relaxed">Nature respected, economy supporting life, and cooperation replacing competition.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mission Statement -->
-    <section class="py-20 bg-white relative overflow-hidden">
-      <!-- Decorative leaves background -->
-      <svg class="absolute top-10 left-10 w-32 h-32 text-accent/5" viewBox="0 0 120 120" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60 10C60 10 30 30 20 60C10 90 30 110 60 110C90 110 110 90 100 60C90 30 60 10 60 10Z"/>
-      </svg>
-      <svg class="absolute bottom-10 right-10 w-40 h-40 text-primary/5" viewBox="0 0 120 120" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M90 10C90 10 110 50 90 80C70 110 30 110 20 80C10 50 40 20 90 10Z"/>
-      </svg>
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-cream rounded-2xl p-10 md:p-14 border-l-4 border-accent">
-            <svg class="w-10 h-10 text-accent mb-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
-            </svg>
-            <p class="text-lg md:text-xl text-gray-700 leading-relaxed italic">
-              {t("aboutPage.mission")}
-            </p>
+    <!-- Our conviction -->
+    <section class="relative isolate overflow-hidden bg-white px-6 py-20 md:py-28 lg:px-0">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute top-0 right-[max(50%,25rem)] h-[56rem] w-[60rem] translate-x-1/3 text-golden/10 [mask-image:radial-gradient(32rem_32rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="about-conviction-grid-en" width="140" height="140" patternUnits="userSpaceOnUse">
+              <path d="M140 0H0V140" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#about-conviction-grid-en)" />
+        </svg>
+      </div>
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 lg:max-w-7xl lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-x-16">
+        <div class="rounded-[2rem] bg-cream p-8 md:p-10 shadow-lg shadow-primary/5 ring-1 ring-primary/8">
+          <div class="inline-flex items-center gap-3 rounded-full bg-white px-4 py-2 text-sm font-medium text-primary shadow-sm">
+            <LucideIcon name="Sparkles" class="h-4 w-4 text-golden-dark" />
+            Our conviction
+          </div>
+          <h2 class="mt-6 text-3xl md:text-4xl font-heading font-bold text-primary">We deeply believe that caring for life also transforms human relationships</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-700">Regeneration is not only ecological. It also reshapes how we produce, share, cooperate, and imagine a common future. That wider vision is what gives Pachatopia its meaning.</p>
+        </div>
+        <div class="rounded-[2rem] border border-primary/10 bg-white p-8 md:p-10 shadow-2xl shadow-primary/10">
+          <div class="space-y-5 text-lg leading-8 text-gray-700">
+            <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10"><LucideIcon name="HeartHandshake" class="h-5 w-5 text-primary" /></span><span>Regenerating the Earth can help regenerate human relationships</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent/10"><LucideIcon name="Trees" class="h-5 w-5 text-accent" /></span><span>Planting trees is already a way of building peace</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-golden/10"><LucideIcon name="Sparkles" class="h-5 w-5 text-golden-dark" /></span><span>Every positive action can inspire wider change</span></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Association Description with Image -->
-    <section class="py-20 bg-cream">
-      <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div class="overflow-hidden rounded-2xl shadow-lg">
-            <img src="/images/about-market.webp" alt="Victor, Jenny and family at the San Carlos market" class="w-full h-auto object-cover" loading="lazy" />
-          </div>
-          <div>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              {t("about.association")}
-            </p>
-            <div class="flex flex-wrap gap-4 mt-8">
-              <a href={lang === "en" ? "/en/contacts/" : "/contacts/"} class="inline-flex items-center gap-2 px-6 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">
-                Contact
-              </a>
-              <a href={lang === "en" ? "/en/comment-participer/" : "/comment-participer/"} class="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors">
-                {t("nav.participate")}
-              </a>
+    <!-- A collective adventure -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-5 flex justify-center">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/about-market.webp" alt="Pachatopia community" class="w-full h-auto object-cover" loading="lazy" />
             </div>
+          </div>
+          <div class="md:col-span-7">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">A collective adventure</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">Pachatopia is an open adventure. Farmers, residents, visitors, volunteers, and supporters from around the world can take part in this regeneration movement. Because the future is not built alone. It is cultivated, like a garden.</p>
+            <a href="/en/comment-participer/" class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5">
+              <span>Support Pachatopia</span>
+              <LucideIcon name="ArrowRight" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,57 @@
+---
+import { icons } from "lucide";
+
+interface Props {
+  name: string;
+  class?: string;
+  size?: number | string;
+  strokeWidth?: number | string;
+  title?: string;
+}
+
+const {
+  name,
+  class: className = "",
+  size = 24,
+  strokeWidth = 2,
+  title,
+} = Astro.props;
+
+const iconNode = icons[name as keyof typeof icons];
+
+if (!iconNode) {
+  throw new Error(`Unknown Lucide icon: ${name}`);
+}
+
+const escapeHtml = (value: string) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+
+const inner = iconNode
+  .map(([tag, attrs]) => {
+    const attrString = Object.entries(attrs)
+      .map(([key, value]) => `${key}="${escapeHtml(String(value))}"`)
+      .join(" ");
+
+    return `<${tag} ${attrString}></${tag}>`;
+  })
+  .join("");
+
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${escapeHtml(
+  String(size),
+)}" height="${escapeHtml(
+  String(size),
+)}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${escapeHtml(
+  String(strokeWidth),
+)}" stroke-linecap="round" stroke-linejoin="round" class="${escapeHtml(
+  className,
+)}" ${title ? 'role="img"' : 'aria-hidden="true"'}>${
+  title ? `<title>${escapeHtml(title)}</title>` : ""
+}${inner}</svg>`;
+---
+
+<Fragment set:html={svg} />
