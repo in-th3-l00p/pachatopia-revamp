@@ -122,27 +122,81 @@ const lang = "en";
     </section>
 
     <!-- Participate call-out -->
-    <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div class="overflow-hidden rounded-2xl shadow-lg">
-            <img src="/images/community.jpg" alt="Pachatopia community" class="w-full h-auto object-cover" loading="lazy" />
+    <section class="relative isolate overflow-hidden bg-primary py-20 text-white md:py-28">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,197,90,0.18),transparent_26%)]"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 900" fill="none">
+          <defs>
+            <pattern id="actions-participate-grid-en" width="44" height="44" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="900" fill="url(#actions-participate-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div>
+            <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+              <LucideIcon name="Compass" class="h-4 w-4 text-golden" />
+              Join the adventure
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+              A living project to support, inhabit, and help grow
+            </h2>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+              Pachatopia is a collective project. Everyone can contribute, not only through one-off support, but by taking part in a regenerative dynamic that connects nature, territory, and community.
+            </p>
+
+            <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <article class="rounded-[1.6rem] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+                  <LucideIcon name="Trees" class="h-5 w-5 text-golden" />
+                </div>
+                <h3 class="mt-4 text-xl font-heading font-bold text-white">Plant</h3>
+                <p class="mt-3 text-sm leading-6 text-white/75">Support tree planting and ecosystem restoration.</p>
+              </article>
+              <article class="rounded-[1.6rem] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+                  <LucideIcon name="Coffee" class="h-5 w-5 text-golden" />
+                </div>
+                <h3 class="mt-4 text-xl font-heading font-bold text-white">Discover</h3>
+                <p class="mt-3 text-sm leading-6 text-white/75">Choose our coffee and support a local value chain in transition.</p>
+              </article>
+              <article class="rounded-[1.6rem] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+                  <LucideIcon name="Shovel" class="h-5 w-5 text-golden" />
+                </div>
+                <h3 class="mt-4 text-xl font-heading font-bold text-white">Participate</h3>
+                <p class="mt-3 text-sm leading-6 text-white/75">Take part in field activities and in the life of the project.</p>
+              </article>
+              <article class="rounded-[1.6rem] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+                  <LucideIcon name="HeartHandshake" class="h-5 w-5 text-golden" />
+                </div>
+                <h3 class="mt-4 text-xl font-heading font-bold text-white">Support</h3>
+                <p class="mt-3 text-sm leading-6 text-white/75">Financially back the actions that give depth and continuity to the project.</p>
+              </article>
+            </div>
           </div>
-          <div class="bg-cream rounded-2xl p-10 md:p-14 border-t-4 border-golden">
-            <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">Join the adventure</h2>
-            <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is a collective project. Everyone can contribute:</p>
-            <ul class="space-y-3 text-gray-700 mb-8">
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By supporting tree planting</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By discovering our coffee</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By participating in field activities</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By financially supporting our actions</li>
-            </ul>
-            <p class="text-primary font-medium italic mb-6">Together, we can regenerate the Earth and build a more harmonious future.</p>
-            <a href="/en/comment-participer/" class="group inline-flex items-center gap-2 bg-golden text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25">
-              <span>Support Pachatopia</span>
-              <LucideIcon name="ArrowRight" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-          </div>
+
+          <aside class="rounded-[2rem] bg-white p-8 text-primary shadow-2xl shadow-black/10 md:p-10">
+            <div class="overflow-hidden rounded-[1.5rem]">
+              <img src="/images/community.jpg" alt="Pachatopia community" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            </div>
+            <p class="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Why join</p>
+            <p class="mt-4 text-2xl font-heading font-bold leading-tight">Together, we can regenerate the Earth and build a more harmonious future.</p>
+            <p class="mt-5 text-base leading-7 text-gray-700">Every gesture matters: supporting an action, choosing a product, coming on-site, or helping the project grow. It is the accumulation of these commitments that makes regeneration tangible.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="/en/comment-participer/" class="button-primary group">
+                Support Pachatopia
+                <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+              <a href="/en/contacts/" class="button-secondary">
+                Contact us
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
