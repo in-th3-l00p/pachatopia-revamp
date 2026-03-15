@@ -4,6 +4,7 @@ import Header from "../../components/Header.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
 
 const lang = "en";
 ---
@@ -15,111 +16,230 @@ const lang = "en";
 >
   <Header lang={lang} />
   <main>
-    <!-- Hero Banner -->
-    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+    <section class="relative isolate overflow-hidden py-24 text-white md:py-32">
       <div class="absolute inset-0">
-        <img src="/images/farm-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
-        <div class="absolute inset-0 bg-primary/80"></div>
+        <img src="/images/farm-hero.jpg" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(8,74,61,0.94),rgba(10,91,75,0.76))]"></div>
       </div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Our History</h1>
-        <p class="text-xl md:text-2xl text-white/90">From war to regeneration</p>
+      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute -left-14 top-8 h-64 w-64 rounded-full bg-white/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[8%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 800" fill="none">
+          <defs>
+            <pattern id="history-hero-grid-en" width="52" height="52" patternUnits="userSpaceOnUse">
+              <path d="M52 0H0V52" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="800" fill="url(#history-hero-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container relative z-10">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+            <LucideIcon name="Landmark" class="h-4 w-4 text-golden" />
+            San Carlos, Colombia
+          </div>
+          <h1 class="text-4xl font-heading font-bold tracking-tight md:text-5xl lg:text-6xl">Our History</h1>
+          <p class="mx-auto mt-6 max-w-3xl text-xl leading-8 text-white/85 md:text-2xl">
+            From war to regeneration.
+          </p>
+        </div>
       </div>
       <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"></path>
       </svg>
     </section>
 
-    <!-- Story with image -->
-    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <svg class="absolute -top-6 right-0 w-64 h-64 opacity-[0.06]" viewBox="0 0 200 200" fill="none">
-          <path d="M140 20C140 20 180 60 170 110C160 160 120 180 80 170C40 160 20 120 30 80C40 40 80 20 140 20Z" fill="#0A5B4B"/>
+    <section class="relative isolate overflow-hidden bg-white py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-[6%] top-0 h-56 w-56 rounded-full bg-accent/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[10%] h-72 w-72 rounded-full bg-primary/8 blur-3xl"></div>
+      </div>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-16">
+          <div>
+            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
+              <LucideIcon name="MapPinned" class="h-4 w-4 text-accent" />
+              A territory marked by history
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl lg:text-5xl">
+              A land of great richness, but also deep memory
+            </h2>
+            <div class="mt-8 max-w-2xl space-y-6 text-lg leading-8 text-gray-700">
+              <p>In the heart of the lush mountains of San Carlos, in Antioquia, Colombia, nature is exceptionally rich. Yet this territory was also deeply marked by the history of Colombia's armed conflict in the late 1990s and early 2000s.</p>
+              <p>For several years, the region's inhabitants lived through violence, displacement, and division. Many families had to leave their lands, and both landscapes and communities bore the scars of this difficult period.</p>
+              <p>Today, San Carlos is engaged in a process of reconstruction. Inhabitants are returning, villages are rebuilding, and little by little, life is reclaiming its place.</p>
+              <p class="font-semibold italic text-primary">It is in this context that Pachatopia was born.</p>
+            </div>
+          </div>
+
+          <div class="lg:pt-3">
+            <div class="relative overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
+              <img src="/images/reserve-naturelle.webp" alt="Mountains of San Carlos" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent"></div>
+            </div>
+            <div class="mt-6 max-w-md">
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Turning point</p>
+              <p class="mt-3 text-base leading-7 text-gray-700">The reconstruction of a territory is not only about buildings or economics, but also about restoring the ability to let trust circulate again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-primary py-20 text-white md:py-28">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,197,90,0.18),transparent_26%)]"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 900" fill="none">
+          <defs>
+            <pattern id="history-dark-grid-en" width="44" height="44" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="900" fill="url(#history-dark-grid-en)" />
         </svg>
       </div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
-            <p>In the heart of the lush mountains of San Carlos, in the department of Antioquia, Colombia, nature is exceptionally rich. Yet this territory was also deeply marked by the history of Colombia's armed conflict in the late 1990s and early 2000s.</p>
-            <p>For several years, the region's inhabitants lived through violence, displacement, and division. Many families had to leave their lands, and both landscapes and communities bore the scars of this difficult period.</p>
-            <p>Today, San Carlos is engaged in a process of reconstruction. Inhabitants are returning, villages are rebuilding, and little by little, life is reclaiming its place.</p>
-            <p class="text-primary font-semibold text-xl italic">It is in this context that Pachatopia was born.</p>
+      <div class="site-container">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+            <LucideIcon name="Sprout" class="h-4 w-4 text-golden" />
+            What gave birth to the project
           </div>
-          <div class="relative flex items-center justify-center">
-            <div class="relative w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
-              <img src="/images/reserve-naturelle.webp" alt="Mountains of San Carlos" class="w-full h-auto object-cover" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
-            </div>
-            <svg class="absolute top-2 right-2 w-12 h-12 text-accent opacity-20" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="M25 5C25 5 45 15 42 32C39 49 25 48 25 48C25 48 11 49 8 32C5 15 25 5 25 5Z"/></svg>
+          <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+            Regenerating the Earth to help regenerate human relationships
+          </h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+            Our project was born from a simple conviction: by regenerating the Earth, we can also help regenerate human relationships.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:items-start">
+            <article class="min-h-[16rem] rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                <LucideIcon name="Users" class="h-6 w-6 text-golden" />
+              </div>
+              <h3 class="mt-5 text-xl font-heading font-bold text-white">Work with the territory</h3>
+              <p class="mt-3 text-sm leading-6 text-white/75">On these lands, we work with local inhabitants, some who lived through the war firsthand, others who endured it.</p>
+            </article>
+            <article class="min-h-[16rem] rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                <LucideIcon name="Trees" class="h-6 w-6 text-golden" />
+              </div>
+              <h3 class="mt-5 text-xl font-heading font-bold text-white">Bring life back</h3>
+              <p class="mt-3 text-sm leading-6 text-white/75">Through agroforestry, soil restoration, and the creation of natural reserves, we seek to bring living ecosystems back to life.</p>
+            </article>
+            <article class="min-h-[16rem] rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                <LucideIcon name="Sparkles" class="h-6 w-6 text-golden" />
+              </div>
+              <h3 class="mt-5 text-xl font-heading font-bold text-white">Shift the horizon</h3>
+              <p class="mt-3 text-sm leading-6 text-white/75">Transform a territory marked by conflict into a space of cooperation, biodiversity, and hope.</p>
+            </article>
           </div>
+
+          <aside class="rounded-[2rem] bg-white p-8 text-primary shadow-2xl shadow-black/10">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">On the ground</p>
+            <p class="mt-4 text-2xl font-heading font-bold leading-tight">Trees are growing back, soils are regenerating, biodiversity is returning.</p>
+            <div class="mt-6 h-px w-full bg-primary/10"></div>
+            <p class="mt-6 text-base leading-7 text-gray-700">The transformation is not abstract. It is visible in the landscapes, in everyday gestures, and in the way a shared project can reopen possibilities.</p>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- Mission statement -->
-    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <svg class="absolute top-1/3 -left-4 w-32 h-32 opacity-[0.05] rotate-45" viewBox="0 0 100 100" fill="none">
-          <path d="M50 5C50 5 90 25 85 60C80 95 50 95 50 95C50 95 20 95 15 60C10 25 50 5 50 5Z" fill="#0A5B4B"/>
+    <section class="relative isolate overflow-hidden bg-cream py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute left-[max(50%,28rem)] top-0 h-[54rem] w-[54rem] -translate-x-1/2 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="history-steps-grid-en" width="160" height="160" patternUnits="userSpaceOnUse">
+              <path d="M160 0H0V160" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#history-steps-grid-en)" />
         </svg>
       </div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl p-10 md:p-14 border-l-4 border-accent relative">
-          <svg class="absolute top-6 right-8 w-20 h-20 text-accent/10" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-            <path d="M50 5C50 5 85 25 85 60C85 80 70 95 50 95C30 95 15 80 15 60C15 25 50 5 50 5Z"/>
-          </svg>
-          <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
-            <p>Our project was born from a simple conviction: by regenerating the Earth, we can also help regenerate human relationships.</p>
-            <p>On these lands, we work with local inhabitants – some who lived through the war firsthand, others who endured it – to transform a territory marked by conflict into a space of cooperation, biodiversity, and hope.</p>
-            <p>Through agroforestry, soil restoration, and the creation of natural reserves, we seek to revive living ecosystems. Trees are growing back, soils are regenerating, biodiversity is returning.</p>
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-16">
+          <div class="lg:sticky lg:top-12">
+            <div class="section-kicker w-fit">
+              <LucideIcon name="HeartHandshake" class="h-4 w-4 text-accent" />
+              A human transformation too
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">
+              Peace can also be cultivated, like a garden
+            </h2>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-gray-700">
+              Working the land together, planting, protecting, and passing on become concrete ways of rebuilding trust and imagining a shared future.
+            </p>
+            <div class="mt-10 overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(10,91,75,0.12)]">
+              <img src="/images/community.jpg" alt="Pachatopia community" class="aspect-[5/6] w-full object-cover" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="space-y-10">
+            <article class="border-t border-primary/10 pt-8">
+              <div class="flex items-center gap-4">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-sm font-semibold text-primary">01</span>
+                <h3 class="text-2xl font-heading font-bold text-primary">Rebuild trust</h3>
+              </div>
+              <p class="mt-5 text-lg leading-8 text-gray-700">Working the land together, planting trees, growing coffee, and caring for the forest become ways to rebuild trust and imagine a shared future.</p>
+            </article>
+
+            <article class="border-t border-primary/10 pt-8">
+              <div class="flex items-center gap-4">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10 text-sm font-semibold text-accent">02</span>
+                <h3 class="text-2xl font-heading font-bold text-primary">Cultivate simple gestures</h3>
+              </div>
+              <p class="mt-5 text-lg leading-8 text-gray-700">At Pachatopia, we believe that peace can also be cultivated, like a garden. It is born from simple gestures: planting, protecting, cooperating, and passing on.</p>
+            </article>
+
+            <article class="border-t border-primary/10 pt-8">
+              <div class="flex items-center gap-4">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-golden/15 text-sm font-semibold text-golden-dark">03</span>
+                <h3 class="text-2xl font-heading font-bold text-primary">Open another future</h3>
+              </div>
+              <p class="mt-5 text-lg leading-8 text-gray-700">Our ambition is to help make these lands a place where nature regenerates and where communities can move together toward a more harmonious future.</p>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Transformation with image -->
-    <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-5 md:order-2">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/images/community.jpg" alt="Pachatopia community" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
+    <section class="bg-white py-20 md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+          <div class="overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
+            <img src="/images/agriculture-durable.webp" alt="Pachatopia agriculture" class="aspect-[4/5] w-full object-cover" loading="lazy" />
           </div>
-          <div class="md:col-span-7 md:order-1">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">A human transformation too</h2>
-            <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
-              <p>Working the land together, planting trees, growing coffee, and caring for the forest become ways to rebuild trust and imagine a shared future.</p>
-              <p>At Pachatopia, we believe that peace can also be cultivated, like a garden. It is born from simple gestures: planting, protecting, cooperating, and passing on.</p>
-              <p>Our ambition is to help make these lands a place where nature regenerates and where communities can move together toward a more harmonious future.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Invitation -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div class="overflow-hidden rounded-2xl shadow-lg">
-            <img src="/images/agriculture-durable.webp" alt="Pachatopia agriculture" class="w-full h-auto object-cover" loading="lazy" />
-          </div>
-          <div class="bg-white rounded-2xl p-10 md:p-14 border-t-4 border-golden">
-            <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">An invitation to participate</h2>
-            <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is a collective project. Everyone can contribute to this regeneration:</p>
-            <ul class="space-y-3 text-gray-700 mb-8">
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By supporting tree planting</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By sponsoring a coffee tree</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By discovering our agroforestry coffee</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By coming to share this experience on-site</li>
-            </ul>
-            <p class="text-lg text-gray-700 leading-relaxed mb-4">Together, we can transform these lands into a space of biodiversity, resilience, and peace.</p>
-            <p class="text-lg text-primary font-semibold italic mb-6">Where the forest grows back, hope grows back too.</p>
-            <a href="/en/comment-participer/" class="group inline-flex items-center gap-2 bg-golden text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25">
-              <span>Join the project</span>
-              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+          <div>
+            <div class="section-kicker w-fit">
+              <LucideIcon name="ArrowUpRight" class="h-4 w-4 text-accent" />
+              An invitation to take part
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">
+              Everyone can take part in this regeneration
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-700">
+              Pachatopia is a collective project. Everyone can contribute to this regeneration:
+            </p>
+            <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <p class="flex items-start gap-3 text-base leading-7 text-gray-700"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/10"><LucideIcon name="Trees" class="h-4 w-4 text-primary" /></span><span>By supporting tree planting</span></p>
+              <p class="flex items-start gap-3 text-base leading-7 text-gray-700"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/10"><LucideIcon name="Coffee" class="h-4 w-4 text-primary" /></span><span>By sponsoring a coffee tree</span></p>
+              <p class="flex items-start gap-3 text-base leading-7 text-gray-700"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/10"><LucideIcon name="Leaf" class="h-4 w-4 text-primary" /></span><span>By discovering our agroforestry coffee</span></p>
+              <p class="flex items-start gap-3 text-base leading-7 text-gray-700"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/10"><LucideIcon name="Map" class="h-4 w-4 text-primary" /></span><span>By coming to share the experience on-site</span></p>
+            </div>
+            <div class="mt-8 space-y-3">
+              <p class="text-lg font-semibold italic text-primary">Together, we can transform these lands into a space of biodiversity, resilience, and peace.</p>
+              <p class="text-lg font-semibold italic text-primary">Where the forest grows back, hope grows back too.</p>
+            </div>
+            <div class="mt-8">
+              <a href="/en/comment-participer/" class="button-primary group">
+                Join the project
+                <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
