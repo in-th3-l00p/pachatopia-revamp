@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
+import LucideIcon from "../components/LucideIcon.astro";
 
 const lang = "fr";
 ---
@@ -52,9 +53,7 @@ const lang = "fr";
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Nos actions</h2>
           <div class="flex items-center justify-center gap-2 mb-6">
             <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
-            <svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 4-4 8-4s4 4 8 4a4.49 4.49 0 001.29-.34L17 8z"/>
-            </svg>
+            <LucideIcon name="Leaf" class="w-5 h-5 text-accent" />
             <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
           </div>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">À Pachatopia, nous développons plusieurs initiatives complémentaires pour restaurer les écosystèmes et soutenir les communautés locales.</p>
@@ -62,28 +61,28 @@ const lang = "fr";
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10"/></svg>
+              <LucideIcon name="Trees" class="w-8 h-8 text-primary" strokeWidth={1.75} />
             </div>
             <h3 class="text-lg font-heading font-bold text-primary mb-3">Régénération des forêts</h3>
             <p class="text-gray-600 text-sm leading-relaxed">Création de réserves naturelles et programmes de reforestation pour protéger la biodiversité et les sources d'eau.</p>
           </div>
           <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+              <LucideIcon name="Sprout" class="w-8 h-8 text-accent" strokeWidth={1.75} />
             </div>
             <h3 class="text-lg font-heading font-bold text-primary mb-3">Agriculture agroforestière</h3>
             <p class="text-gray-600 text-sm leading-relaxed">Développement de systèmes agricoles inspirés de la nature pour produire des aliments tout en régénérant les sols.</p>
           </div>
           <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="w-16 h-16 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 4C12 4 10 8 10 12C10 16 12 20 12 20"/><path stroke-linecap="round" stroke-linejoin="round" d="M17 12C19 12 21 10 21 8C21 6 19 4 17 4"/></svg>
+              <LucideIcon name="Coffee" class="w-8 h-8 text-earth" strokeWidth={1.75} />
             </div>
             <h3 class="text-lg font-heading font-bold text-primary mb-3">Café Pachatopia</h3>
             <p class="text-gray-600 text-sm leading-relaxed">Un café cultivé dans un écosystème vivant, en transition vers l'agroforesterie régénérative.</p>
           </div>
           <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg>
+              <LucideIcon name="Handshake" class="w-8 h-8 text-golden-dark" strokeWidth={1.75} />
             </div>
             <h3 class="text-lg font-heading font-bold text-primary mb-3">Accueil et partage</h3>
             <p class="text-gray-600 text-sm leading-relaxed">Un lieu d'échange et de rencontre où visiteurs et volontaires peuvent découvrir la nature et participer au projet.</p>
@@ -92,7 +91,7 @@ const lang = "fr";
         <div class="text-center mt-12">
           <a href="/nos-actions/" class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5">
             <span>Découvrir nos actions</span>
-            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            <LucideIcon name="ArrowRight" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>
       </div>
@@ -118,9 +117,7 @@ const lang = "fr";
 
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm mb-8">
-          <svg class="w-8 h-8 text-golden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/>
-          </svg>
+          <LucideIcon name="Sprout" class="w-8 h-8 text-golden" strokeWidth={1.75} />
         </div>
 
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-10">Un projet vivant</h2>
@@ -132,9 +129,7 @@ const lang = "fr";
 
         <div class="flex items-center justify-center gap-3 my-10">
           <span class="block w-12 h-[1px] bg-golden/40"></span>
-          <svg class="w-5 h-5 text-golden/70" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 4-4 8-4s4 4 8 4a4.49 4.49 0 001.29-.34L17 8z"/>
-          </svg>
+          <LucideIcon name="Leaf" class="w-5 h-5 text-golden/70" />
           <span class="block w-12 h-[1px] bg-golden/40"></span>
         </div>
 
@@ -157,31 +152,31 @@ const lang = "fr";
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10"/></svg>
+              <LucideIcon name="Trees" class="w-6 h-6 text-primary" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary text-sm">Réserve naturelle</h3>
           </div>
           <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12"/></svg>
+              <LucideIcon name="Coffee" class="w-6 h-6 text-earth" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary text-sm">Café et cacao</h3>
           </div>
           <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+              <LucideIcon name="Sprout" class="w-6 h-6 text-accent" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary text-sm">Pépinière d'arbres</h3>
           </div>
           <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"/></svg>
+              <LucideIcon name="House" class="w-6 h-6 text-golden-dark" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary text-sm">Espace d'accueil</h3>
           </div>
           <div class="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300 col-span-2 sm:col-span-1">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.126-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265z"/></svg>
+              <LucideIcon name="Utensils" class="w-6 h-6 text-primary" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary text-sm">Cuisine locale</h3>
           </div>
@@ -201,25 +196,25 @@ const lang = "fr";
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+              <LucideIcon name="Trees" class="w-6 h-6 text-primary" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary mb-2">Planter des arbres</h3>
           </div>
           <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8C17 8 15 4 12 4C9 4 7 8 7 12C7 16 9 20 12 20C15 20 17 16 17 12"/></svg>
+              <LucideIcon name="Coffee" class="w-6 h-6 text-earth" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary mb-2">Découvrir le café</h3>
           </div>
           <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              <LucideIcon name="Handshake" class="w-6 h-6 text-accent" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary mb-2">Participer comme volontaire</h3>
           </div>
           <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3"/></svg>
+              <LucideIcon name="BadgeDollarSign" class="w-6 h-6 text-golden-dark" strokeWidth={1.75} />
             </div>
             <h3 class="font-heading font-bold text-primary mb-2">Soutenir le développement</h3>
           </div>
@@ -228,7 +223,7 @@ const lang = "fr";
           <p class="text-lg text-primary font-medium italic mb-8">Chaque geste compte.</p>
           <a href="/comment-participer/" class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5">
             <span>Participer au projet</span>
-            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            <LucideIcon name="ArrowRight" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>
       </div>
@@ -256,9 +251,7 @@ const lang = "fr";
           <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);" onmouseenter="this.style.boxShadow='0 12px 32px rgba(11,91,75,0.12)'" onmouseleave="this.style.boxShadow='0 2px 12px rgba(11,91,75,0.06)'">
             <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary to-accent"></div>
             <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/15 transition-colors duration-300">
-              <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
-              </svg>
+              <LucideIcon name="HeartHandshake" class="w-8 h-8 text-primary" strokeWidth={1.75} />
             </div>
             <p class="text-lg font-medium text-gray-800 leading-relaxed">Régénérer la Terre peut aider à régénérer les relations humaines</p>
           </div>
@@ -266,10 +259,7 @@ const lang = "fr";
           <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);" onmouseenter="this.style.boxShadow='0 12px 32px rgba(11,91,75,0.12)'" onmouseleave="this.style.boxShadow='0 2px 12px rgba(11,91,75,0.06)'">
             <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-accent to-golden"></div>
             <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/15 transition-colors duration-300">
-              <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10"/>
-              </svg>
+              <LucideIcon name="Trees" class="w-8 h-8 text-accent" strokeWidth={1.75} />
             </div>
             <p class="text-lg font-medium text-gray-800 leading-relaxed">Planter des arbres est un acte d’espoir</p>
           </div>
@@ -277,9 +267,7 @@ const lang = "fr";
           <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);" onmouseenter="this.style.boxShadow='0 12px 32px rgba(11,91,75,0.12)'" onmouseleave="this.style.boxShadow='0 2px 12px rgba(11,91,75,0.06)'">
             <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-golden to-earth"></div>
             <div class="w-16 h-16 rounded-full bg-golden/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-golden/15 transition-colors duration-300">
-              <svg class="w-8 h-8 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/>
-              </svg>
+              <LucideIcon name="Sparkles" class="w-8 h-8 text-golden-dark" strokeWidth={1.75} />
             </div>
             <p class="text-lg font-medium text-gray-800 leading-relaxed">Chaque action positive peut inspirer un changement plus vaste</p>
           </div>
