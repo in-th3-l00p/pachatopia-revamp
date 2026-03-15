@@ -1,0 +1,192 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "en";
+---
+
+<Layout
+  title="Participate / Volunteer - Pachatopia"
+  description="Join Pachatopia as a volunteer: immersive stays, living work sessions, support for the territory, and direct contribution to a regeneration project."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative isolate overflow-hidden py-24 text-white md:py-32">
+      <div class="absolute inset-0">
+        <img src="/images/community.jpg" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(14,39,35,0.94),rgba(10,91,75,0.78))]"></div>
+      </div>
+      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-[8%] top-10 h-48 w-48 rounded-full bg-white/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[10%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+      </div>
+      <div class="site-container relative z-10">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+          <div class="max-w-3xl">
+            <div class="section-kicker mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+              <LucideIcon name="Backpack" class="h-4 w-4 text-golden" />
+              Participate / Volunteer
+            </div>
+            <h1 class="text-4xl font-heading font-bold tracking-tight md:text-5xl lg:text-6xl">Take part in a living adventure</h1>
+            <p class="mt-6 max-w-2xl text-xl leading-8 text-white/85 md:text-2xl">
+              Coming as a volunteer means experiencing the project from the inside and contributing directly to the regeneration of the place.
+            </p>
+          </div>
+
+          <div class="lg:justify-self-end">
+            <div class="grid grid-cols-3 gap-4 border-t border-white/15 pt-6 text-sm text-white/75">
+              <div>
+                <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Share</p>
+                <p class="mt-2 leading-6">A simple, collective, grounded daily rhythm.</p>
+              </div>
+              <div>
+                <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Learn</p>
+                <p class="mt-2 leading-6">Discover practical gestures tied to the living world.</p>
+              </div>
+              <div>
+                <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Contribute</p>
+                <p class="mt-2 leading-6">Support the momentum of the place through useful work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"></path>
+      </svg>
+    </section>
+
+    <section class="bg-white py-20 md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:gap-18">
+          <div>
+            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
+              <LucideIcon name="HeartHandshake" class="h-4 w-4 text-accent" />
+              The spirit of volunteering
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">
+              This is not only a place to visit. It is a place to get involved.
+            </h2>
+            <div class="mt-8 space-y-6 text-lg leading-8 text-gray-700">
+              <p>Volunteering at Pachatopia is for people who want a more engaged experience than a simple stay. It is not only about discovering a place, but about taking part in its evolution.</p>
+              <p>Depending on the season and the needs of the project, volunteers may contribute to planting efforts, plot maintenance, place-based daily life, hospitality, or actions linked to agroforestry and soil regeneration.</p>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="border-t border-primary/10 pt-6">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary/45">01</p>
+              <h3 class="mt-3 text-2xl font-heading font-bold text-primary">Contribute to practical work</h3>
+              <p class="mt-3 text-lg leading-8 text-gray-700">Planting, mulching, observing, maintaining, preparing, supporting. Volunteering takes the shape of simple but essential tasks that move the project forward.</p>
+            </div>
+            <div class="border-t border-primary/10 pt-6">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary/45">02</p>
+              <h3 class="mt-3 text-2xl font-heading font-bold text-primary">Discover a slower, simpler way of living</h3>
+              <p class="mt-3 text-lg leading-8 text-gray-700">Volunteering is also an invitation to slow down, reconnect with the rhythm of the territory, and experience a way of inhabiting the place that is closer to the living world.</p>
+            </div>
+            <div class="border-t border-primary/10 pt-6">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary/45">03</p>
+              <h3 class="mt-3 text-2xl font-heading font-bold text-primary">Support a collective movement</h3>
+              <p class="mt-3 text-lg leading-8 text-gray-700">Every presence matters. Volunteers bring time, energy, ideas, and human support that are precious during the project’s different building stages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-cream py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute left-[max(50%,28rem)] top-0 h-[54rem] w-[54rem] -translate-x-1/2 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="volunteer-rhythm-grid-en" width="160" height="160" patternUnits="userSpaceOnUse">
+              <path d="M160 0H0V160" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#volunteer-rhythm-grid-en)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="site-container-compact px-0 text-center">
+          <div class="section-kicker mx-auto mb-4 w-fit">
+            <LucideIcon name="TentTree" class="h-4 w-4 text-accent" />
+            Engagement formats
+          </div>
+          <h2 class="section-title text-3xl md:text-4xl lg:text-5xl">Different rhythms of participation depending on your availability</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <article class="self-start border-t border-primary/10 pt-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
+              <LucideIcon name="Binoculars" class="h-6 w-6 text-primary" />
+            </div>
+            <h3 class="mt-5 text-2xl font-heading font-bold text-primary">Short helping stay</h3>
+            <p class="mt-4 text-lg leading-8 text-gray-700">For people passing through who want to discover the place while offering practical help over a short period.</p>
+          </article>
+          <article class="self-start border-t border-primary/10 pt-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10">
+              <LucideIcon name="Sprout" class="h-6 w-6 text-accent" />
+            </div>
+            <h3 class="mt-5 text-2xl font-heading font-bold text-primary">Agroforestry immersion</h3>
+            <p class="mt-4 text-lg leading-8 text-gray-700">For those who want to stay longer, learn on the ground, and get more deeply involved in the regeneration of the plots.</p>
+          </article>
+          <article class="self-start border-t border-primary/10 pt-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-golden/10">
+              <LucideIcon name="Hammer" class="h-6 w-6 text-golden-dark" />
+            </div>
+            <h3 class="mt-5 text-2xl font-heading font-bold text-primary">Support work sessions</h3>
+            <p class="mt-4 text-lg leading-8 text-gray-700">At certain times, volunteering may be tied to planting periods, place-making work, or concrete development needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary py-20 text-white md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div>
+            <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+              <LucideIcon name="ListChecks" class="h-4 w-4 text-golden" />
+              What it involves
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+              A simple, useful, place-based form of participation
+            </h2>
+          </div>
+
+          <div class="space-y-5 text-base leading-7 text-white/78">
+            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="SunMedium" class="h-4 w-4 text-golden" /></span><span>Sharing days shaped by the real needs of the place and the territory.</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="Shovel" class="h-4 w-4 text-golden" /></span><span>Contributing to practical tasks linked to planting, soils, maintenance, or the daily life of the project.</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="Users" class="h-4 w-4 text-golden" /></span><span>Living a collective experience grounded in cooperation and respect for the living world.</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="MessageCircleMore" class="h-4 w-4 text-golden" /></span><span>Getting in touch beforehand to confirm periods, current needs, and hospitality conditions.</span></p>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-white/12 pt-8">
+          <div class="space-y-2">
+            <p class="text-lg font-semibold italic text-white">Volunteering is not a separate tourism product.</p>
+            <p class="text-lg font-semibold italic text-white/85">It is a way to build a relationship with the place, help it, and learn with it.</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="/en/contacts/" class="button-primary group">
+              Contact us
+              <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+            <a href="/en/venir-sur-place/" class="button-secondary">
+              Discover the stays
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>
