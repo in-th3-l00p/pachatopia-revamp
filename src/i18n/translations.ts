@@ -17,7 +17,7 @@ export const translations = {
     "nav.experience": "Expérience",
     "nav.volunteer": "Participer / volontariat",
     "nav.faq": "FAQ",
-    "nav.contact": "Contacts",
+    "nav.contact": "Contact",
 
     // Hero
     "hero.welcome": "Pachatopia",
@@ -242,7 +242,7 @@ export const translations = {
     "infoPage.documents.3": "Compte Parrainage Café",
 
     // Contact Page
-    "contactPage.title": "Contacts",
+    "contactPage.title": "Contact",
     "contactPage.tagline": "Rêvons, agissons, transformons.",
     "contactPage.form.title": "Envoie moi un message",
     "contactPage.form.name": "Nom",
