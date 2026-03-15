@@ -44,33 +44,49 @@ const lang = "fr";
     </div>
 
     <!-- Vision Text with image -->
-    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <svg class="absolute -top-6 right-0 w-64 h-64 opacity-[0.06]" viewBox="0 0 200 200" fill="none">
-          <path d="M140 20C140 20 180 60 170 110C160 160 120 180 80 170C40 160 20 120 30 80C40 40 80 20 140 20Z" fill="#0A5B4B"/>
-        </svg>
-        <svg class="absolute -bottom-10 -left-10 w-48 h-48 opacity-[0.05]" viewBox="0 0 200 200" fill="none">
-          <circle cx="100" cy="100" r="90" stroke="#0A5B4B" stroke-width="2"/>
-          <circle cx="100" cy="100" r="70" stroke="#0A5B4B" stroke-width="1.5"/>
-          <circle cx="100" cy="100" r="50" stroke="#2d9b83" stroke-width="1"/>
+    <section class="relative isolate overflow-hidden bg-white px-6 py-20 md:py-28 lg:px-0">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute -top-12 left-[8%] h-56 w-56 rounded-full bg-accent/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[6%] h-72 w-72 rounded-full bg-primary/8 blur-3xl"></div>
+        <svg class="absolute -right-10 top-0 h-[32rem] w-[32rem] text-primary/8" viewBox="0 0 400 400" fill="none">
+          <defs>
+            <pattern id="about-intro-grid" width="56" height="56" patternUnits="userSpaceOnUse">
+              <path d="M56 0H0V56" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="400" height="400" fill="url(#about-intro-grid)" />
         </svg>
       </div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
-            <p>Depuis toujours, une question nous habite : comment construire un monde plus juste, plus paisible et plus abondant pour tous ?</p>
-            <p>Enfants déjà, certains d'entre nous rêvaient d'un monde où les êtres humains pourraient vivre en paix, où la misère et les conflits laisseraient place à la coopération et au respect de la vie.</p>
-            <p>En grandissant, nous avons compris que ce rêve n'était pas simple à réaliser. Le monde est complexe, les systèmes économiques et sociaux peuvent être conflictuels, et trouver sa place pour agir positivement n'est pas toujours évident.</p>
-            <p>Pourtant, une conviction est restée profondément ancrée : le changement commence toujours quelque part.</p>
-            <p>Chez Pachatopia, nous avons choisi de commencer par ce qui nous relie tous : la Terre.</p>
-            <p>Inspirés par la sagesse des peuples amérindiens et leur respect pour la Pachamama, la Terre mère, nous croyons que prendre soin du vivant est l'une des voies les plus puissantes pour construire un futur durable et harmonieux.</p>
-          </div>
-          <div class="relative flex items-center justify-center">
-            <div class="relative w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
-              <img src="/images/farm-hero.jpg" alt="Pachatopia - régénération" class="w-full h-auto object-cover" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+      <div class="site-container relative z-10">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
+          <div>
+            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
+              <LucideIcon name="Leaf" class="h-4 w-4 text-accent" />
+              D'où part notre vision
             </div>
-            <svg class="absolute top-2 right-2 w-12 h-12 text-accent opacity-20" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="M25 5C25 5 45 15 42 32C39 49 25 48 25 48C25 48 11 49 8 32C5 15 25 5 25 5Z"/></svg>
+            <h2 class="mt-6 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-primary">
+              Une question simple, portée depuis longtemps
+            </h2>
+            <div class="mt-8 space-y-6 text-lg leading-8 text-gray-700">
+              <p>Depuis toujours, une question nous habite : comment construire un monde plus juste, plus paisible et plus abondant pour tous ?</p>
+              <p>Enfants déjà, certains d'entre nous rêvaient d'un monde où les êtres humains pourraient vivre en paix, où la misère et les conflits laisseraient place à la coopération et au respect de la vie.</p>
+              <p>En grandissant, nous avons compris que ce rêve n'était pas simple à réaliser. Le monde est complexe, les systèmes économiques et sociaux peuvent être conflictuels, et trouver sa place pour agir positivement n'est pas toujours évident.</p>
+              <p>Pourtant, une conviction est restée profondément ancrée : le changement commence toujours quelque part.</p>
+              <p>Chez Pachatopia, nous avons choisi de commencer par ce qui nous relie tous : la Terre.</p>
+              <p>Inspirés par la sagesse des peuples amérindiens et leur respect pour la Pachamama, la Terre mère, nous croyons que prendre soin du vivant est l'une des voies les plus puissantes pour construire un futur durable et harmonieux.</p>
+            </div>
+          </div>
+
+          <div class="lg:pt-3">
+            <div class="relative overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(10,91,75,0.14)]">
+              <img src="/images/farm-hero.jpg" alt="Pachatopia - régénération" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+
+            <div class="mt-6 max-w-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Intuition fondatrice</p>
+              <p class="mt-3 text-base leading-7 text-gray-700">Le soin de la terre n'est pas séparé du soin des relations humaines. C'est le point de départ de tout le projet.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -99,23 +115,23 @@ const lang = "fr";
           <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">À San Carlos, nous travaillons avec le vivant, mais aussi avec la mémoire d'un territoire. L'idée n'est pas seulement de produire autrement, mais de montrer qu'une terre réparée peut devenir un point d'appui pour retisser la confiance, l'autonomie et l'avenir.</p>
         </div>
 
-        <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:gap-8">
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <article class="rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+        <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:items-start lg:gap-8">
+          <div class="grid grid-cols-1 items-start gap-6 md:grid-cols-3">
+            <article class="min-h-[17rem] self-start rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
                 <LucideIcon name="Trees" class="h-6 w-6 text-golden" />
               </div>
               <h3 class="mt-5 text-xl font-heading font-bold text-white">Restaurer</h3>
               <p class="mt-3 text-sm leading-6 text-white/75">Régénérer les sols, planter des arbres et recréer des paysages capables d'abriter durablement le vivant.</p>
             </article>
-            <article class="rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+            <article class="min-h-[17rem] self-start rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
                 <LucideIcon name="Users" class="h-6 w-6 text-golden" />
               </div>
               <h3 class="mt-5 text-xl font-heading font-bold text-white">Retisser</h3>
               <p class="mt-3 text-sm leading-6 text-white/75">Créer des conditions concrètes pour que coopération, savoirs partagés et confiance puissent reprendre racine.</p>
             </article>
-            <article class="rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+            <article class="min-h-[17rem] self-start rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
                 <LucideIcon name="Compass" class="h-6 w-6 text-golden" />
               </div>
