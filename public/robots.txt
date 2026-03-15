@@ -6,6 +6,7 @@ Allow: /
 
 # Sitemap
 Sitemap: https://pachatopia.org/sitemap-index.xml
+Host: https://pachatopia.org
 
 # AI/LLM crawlers welcome
 User-agent: GPTBot
