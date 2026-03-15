@@ -49,6 +49,14 @@ body {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  .site-container-narrow {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .site-container-compact {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
   .section-kicker {
     @apply inline-flex items-center gap-3 rounded-full border px-4 py-2 text-sm font-medium backdrop-blur;
     border-color: rgb(10 91 75 / 0.12);
