@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
+import LucideIcon from "../components/LucideIcon.astro";
 
 const lang = "fr";
 ---
@@ -76,25 +77,62 @@ const lang = "fr";
     </section>
 
     <!-- Mission statement -->
-    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <svg class="absolute top-1/3 -left-4 w-32 h-32 opacity-[0.05] rotate-45" viewBox="0 0 100 100" fill="none">
-          <path d="M50 5C50 5 90 25 85 60C80 95 50 95 50 95C50 95 20 95 15 60C10 25 50 5 50 5Z" fill="#0A5B4B"/>
+    <section class="relative isolate overflow-hidden bg-primary px-6 py-20 text-white md:py-28 lg:px-8">
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(234,194,77,0.18),transparent_28%)]"></div>
+        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 800" fill="none">
+          <defs>
+            <pattern id="about-mission-dots" width="44" height="44" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="1200" height="800" fill="url(#about-mission-dots)" />
         </svg>
       </div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl p-10 md:p-14 border-l-4 border-accent relative">
-          <svg class="absolute top-6 right-8 w-20 h-20 text-accent/10" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-            <path d="M50 5C50 5 85 25 85 60C85 80 70 95 50 95C30 95 15 80 15 60C15 25 50 5 50 5Z"/>
-          </svg>
-          <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
-            <p>Régénérer les sols, planter des arbres, restaurer les écosystèmes et produire une agriculture respectueuse de la nature sont autant d'actes simples qui peuvent transformer un territoire… et parfois bien plus.</p>
-            <p>Car lorsque la terre se régénère, les relations humaines peuvent elles aussi se transformer.</p>
-            <p>Dans la région de San Carlos en Colombie, un territoire marqué par les blessures du passé, nous travaillons avec les habitants pour faire renaître des paysages vivants et des communautés tournées vers l'avenir.</p>
-            <p>À travers l'agroforesterie, la création de réserves naturelles et le partage des connaissances, nous souhaitons démontrer qu'un autre modèle est possible : un modèle où la nature est respectée, où l'économie soutient la vie, et où la coopération remplace la compétition.</p>
-            <p class="text-primary font-medium italic">Pachatopia n'est pas seulement un projet agricole. C'est une invitation à réapprendre à habiter la Terre avec respect, responsabilité et espoir.</p>
-            <p>Chaque arbre planté, chaque sol régénéré et chaque geste de coopération sont des graines semées pour l'avenir.</p>
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+            <LucideIcon name="Sprout" class="h-4 w-4 text-golden" />
+            Notre mission
           </div>
+          <h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white">Régénérer les territoires pour faire émerger un autre modèle</h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">À San Carlos, nous travaillons avec le vivant, mais aussi avec la mémoire d'un territoire. L'idée n'est pas seulement de produire autrement, mais de montrer qu'une terre réparée peut devenir un point d'appui pour retisser la confiance, l'autonomie et l'avenir.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:gap-8">
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <article class="rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                <LucideIcon name="Trees" class="h-6 w-6 text-golden" />
+              </div>
+              <h3 class="mt-5 text-xl font-heading font-bold text-white">Restaurer</h3>
+              <p class="mt-3 text-sm leading-6 text-white/75">Régénérer les sols, planter des arbres et recréer des paysages capables d'abriter durablement le vivant.</p>
+            </article>
+            <article class="rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                <LucideIcon name="Users" class="h-6 w-6 text-golden" />
+              </div>
+              <h3 class="mt-5 text-xl font-heading font-bold text-white">Retisser</h3>
+              <p class="mt-3 text-sm leading-6 text-white/75">Créer des conditions concrètes pour que coopération, savoirs partagés et confiance puissent reprendre racine.</p>
+            </article>
+            <article class="rounded-[1.75rem] border border-white/12 bg-white/8 p-7 backdrop-blur-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                <LucideIcon name="Compass" class="h-6 w-6 text-golden" />
+              </div>
+              <h3 class="mt-5 text-xl font-heading font-bold text-white">Démontrer</h3>
+              <p class="mt-3 text-sm leading-6 text-white/75">Prouver, à l'échelle d'un lieu, qu'un modèle où la nature, l'économie et les relations humaines se renforcent mutuellement est possible.</p>
+            </article>
+          </div>
+
+          <aside class="rounded-[2rem] bg-white p-8 text-primary shadow-2xl shadow-black/10">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-primary/50">Depuis San Carlos</p>
+            <p class="mt-4 text-2xl font-heading font-bold leading-tight">Un territoire blessé peut aussi devenir un laboratoire de réparation.</p>
+            <div class="mt-6 h-px w-full bg-primary/10"></div>
+            <div class="mt-6 space-y-4 text-base leading-7 text-gray-700">
+              <p>À travers l'agroforesterie, la création de réserves naturelles et le partage des connaissances, nous cherchons à faire émerger une manière d'habiter la terre plus juste, plus fertile et plus apaisée.</p>
+              <p class="font-medium italic text-primary">Pachatopia n'est pas seulement un projet agricole. C'est une invitation à réapprendre à habiter la Terre avec respect, responsabilité et espoir.</p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -106,9 +144,7 @@ const lang = "fr";
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Notre vision</h2>
           <div class="flex items-center justify-center gap-2 mb-6">
             <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
-            <svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 4-4 8-4s4 4 8 4a4.49 4.49 0 001.29-.34L17 8z"/>
-            </svg>
+            <LucideIcon name="Leaf" class="w-5 h-5 text-accent" />
             <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
           </div>
         </div>
@@ -117,7 +153,7 @@ const lang = "fr";
             <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-full"></div>
             <div class="relative z-10">
               <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg>
+                <LucideIcon name="Globe" class="w-8 h-8 text-primary" strokeWidth={1.75} />
               </div>
               <h3 class="text-xl font-heading font-bold text-primary mb-3">Harmonie avec la Terre</h3>
               <p class="text-gray-600 leading-relaxed">Un monde où les êtres humains vivent en harmonie avec la Terre, les eaux, l'air et toutes les formes de vie.</p>
@@ -127,7 +163,7 @@ const lang = "fr";
             <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full"></div>
             <div class="relative z-10">
               <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg>
+                <LucideIcon name="Sprout" class="w-8 h-8 text-accent" strokeWidth={1.75} />
               </div>
               <h3 class="text-xl font-heading font-bold text-primary mb-3">Abondance naturelle</h3>
               <p class="text-gray-600 leading-relaxed">L'abondance naît de l'équilibre avec la nature, où chaque génération devient gardienne du vivant.</p>
@@ -137,7 +173,7 @@ const lang = "fr";
             <div class="absolute -top-6 -right-6 w-24 h-24 bg-golden/10 rounded-full"></div>
             <div class="relative z-10">
               <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-golden-dark" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <LucideIcon name="Handshake" class="w-8 h-8 text-golden-dark" strokeWidth={1.75} />
               </div>
               <h3 class="text-xl font-heading font-bold text-primary mb-3">Coopération</h3>
               <p class="text-gray-600 leading-relaxed">Nature respectée, économie qui soutient la vie, et coopération qui remplace la compétition.</p>
@@ -148,18 +184,31 @@ const lang = "fr";
     </section>
 
     <!-- Notre conviction -->
-    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl p-10 md:p-14 border-l-4 border-golden relative">
-          <div class="absolute -top-3 -left-3 w-8 h-8 bg-golden/15 rounded-full flex items-center justify-center">
-            <svg class="w-4 h-4 text-golden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+    <section class="relative isolate overflow-hidden bg-white px-6 py-20 md:py-28 lg:px-0">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute top-0 right-[max(50%,25rem)] h-[56rem] w-[60rem] translate-x-1/3 text-golden/10 [mask-image:radial-gradient(32rem_32rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="about-conviction-grid" width="140" height="140" patternUnits="userSpaceOnUse">
+              <path d="M140 0H0V140" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#about-conviction-grid)" />
+        </svg>
+      </div>
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 lg:max-w-7xl lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-x-16">
+        <div class="rounded-[2rem] bg-cream p-8 md:p-10 shadow-lg shadow-primary/5 ring-1 ring-primary/8">
+          <div class="inline-flex items-center gap-3 rounded-full bg-white px-4 py-2 text-sm font-medium text-primary shadow-sm">
+            <LucideIcon name="Sparkles" class="h-4 w-4 text-golden-dark" />
+            Notre conviction
           </div>
-          <h2 class="text-3xl font-heading font-bold text-primary mb-6">Notre conviction</h2>
-          <p class="text-lg text-gray-600 mb-6">Nous croyons profondément que :</p>
-          <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
-            <p class="flex items-start gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg></span>Régénérer la Terre peut aider à régénérer les relations humaines</p>
-            <p class="flex items-start gap-3"><span class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8m0 0c-2.5-3-5-5-5-8a5 5 0 0110 0c0 3-2.5 5-5 8z"/></svg></span>Planter des arbres, c'est déjà construire la paix</p>
-            <p class="flex items-start gap-3"><span class="w-8 h-8 rounded-full bg-golden/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-golden-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747"/></svg></span>Chaque action positive peut inspirer un changement plus vaste</p>
+          <h2 class="mt-6 text-3xl md:text-4xl font-heading font-bold text-primary">Nous croyons profondément que le soin du vivant transforme aussi les liens humains</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-700">La régénération n'est pas uniquement écologique. Elle touche la manière de produire, de partager, de coopérer et d'imaginer un avenir commun. C'est cette vision élargie qui donne son sens à Pachatopia.</p>
+        </div>
+        <div class="rounded-[2rem] border border-primary/10 bg-white p-8 md:p-10 shadow-2xl shadow-primary/10">
+          <div class="space-y-5 text-lg leading-8 text-gray-700">
+            <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10"><LucideIcon name="HeartHandshake" class="h-5 w-5 text-primary" /></span><span>Régénérer la Terre peut aider à régénérer les relations humaines</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent/10"><LucideIcon name="Trees" class="h-5 w-5 text-accent" /></span><span>Planter des arbres, c'est déjà construire la paix</span></p>
+            <p class="flex items-start gap-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-golden/10"><LucideIcon name="Sparkles" class="h-5 w-5 text-golden-dark" /></span><span>Chaque action positive peut inspirer un changement plus vaste</span></p>
           </div>
         </div>
       </div>
@@ -179,7 +228,7 @@ const lang = "fr";
             <p class="text-lg text-gray-700 leading-relaxed mb-8">Pachatopia est une aventure ouverte. Agriculteurs, habitants, visiteurs, volontaires et soutiens du monde entier peuvent participer à cette dynamique de régénération. Car le futur ne se construit pas seul. Il se cultive, comme un jardin.</p>
             <a href="/comment-participer/" class="group inline-flex items-center gap-3 bg-golden text-primary font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25 hover:-translate-y-0.5">
               <span>Soutenir Pachatopia</span>
-              <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <LucideIcon name="ArrowRight" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>

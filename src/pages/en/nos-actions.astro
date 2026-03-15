@@ -4,6 +4,7 @@ import Header from "../../components/Header.astro";
 import Testimonials from "../../components/Testimonials.astro";
 import CallToAction from "../../components/CallToAction.astro";
 import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
 
 const lang = "en";
 ---
@@ -53,7 +54,7 @@ const lang = "en";
             <p class="text-gray-600 leading-relaxed">Our ambition is to transform these lands into refuges for biodiversity and learning spaces for future generations.</p>
             <a href="/en/contacts/" class="inline-flex items-center gap-2 mt-6 text-golden-dark font-semibold hover:text-primary transition-colors">
               Learn more
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <LucideIcon name="ArrowRight" class="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -95,7 +96,7 @@ const lang = "en";
             <p class="text-gray-600 leading-relaxed">The goal is to develop a circular economy, where every resource is used intelligently and sustainably.</p>
             <a href="/en/le-cafe/" class="inline-flex items-center gap-2 mt-6 text-golden-dark font-semibold hover:text-primary transition-colors">
               Discover our coffee
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <LucideIcon name="ArrowRight" class="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -131,15 +132,15 @@ const lang = "en";
             <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">Join the adventure</h2>
             <p class="text-lg text-gray-700 leading-relaxed mb-4">Pachatopia is a collective project. Everyone can contribute:</p>
             <ul class="space-y-3 text-gray-700 mb-8">
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By supporting tree planting</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By discovering our coffee</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By participating in field activities</li>
-              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>By financially supporting our actions</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By supporting tree planting</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By discovering our coffee</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By participating in field activities</li>
+              <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5"><LucideIcon name="Check" class="w-3 h-3 text-primary" strokeWidth={2.5} /></span>By financially supporting our actions</li>
             </ul>
             <p class="text-primary font-medium italic mb-6">Together, we can regenerate the Earth and build a more harmonious future.</p>
             <a href="/en/comment-participer/" class="group inline-flex items-center gap-2 bg-golden text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-golden-dark hover:shadow-lg hover:shadow-golden/25">
               <span>Support Pachatopia</span>
-              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <LucideIcon name="ArrowRight" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>
