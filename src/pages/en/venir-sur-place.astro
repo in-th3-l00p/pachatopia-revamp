@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
 
 const lang = "en";
 ---
@@ -33,7 +34,9 @@ const lang = "en";
       <div class="max-w-5xl mx-auto px-6 space-y-6 text-lg text-gray-700 leading-relaxed">
         <p>In the heart of the mountains of San Carlos, Colombia, Pachatopia aims to become a welcoming place for travelers, volunteers, and all those who wish to discover a way of life closer to nature.</p>
         <p>Our project is evolving rapidly. We are currently working on creating a reception area that will allow us to share this adventure with visitors from around the world.</p>
-        <p>Eventually, Pachatopia will offer different types of accommodation: 🌿 a hostel · 🏕 a camping area · 🏡 eco-lodge or Airbnb-style lodging.</p>
+        <div class="surface-card-muted p-6">
+          <p>Eventually, Pachatopia will offer different types of accommodation: a hostel, a camping area, and eco-lodge style stays designed for immersion in nature.</p>
+        </div>
       </div>
     </section>
 
@@ -48,7 +51,9 @@ const lang = "en";
 
         <article>
           <h2 class="text-3xl font-heading font-bold text-primary mb-4">Experiences offered</h2>
-          <p class="text-lg text-gray-700 leading-relaxed">🌱 tree planting · ☕ discovering coffee and its processing · 🌳 introduction to agroforestry · 🚶 hikes through the forest and mountains · 🍽 discovering local cuisine.</p>
+          <div class="surface-card p-6">
+            <p class="text-lg text-gray-700 leading-relaxed">Tree planting, coffee discovery and processing, introduction to agroforestry, hikes through the forest and mountains, and local cuisine experiences.</p>
+          </div>
           <p class="text-lg text-gray-700 leading-relaxed mt-4">Each stay is an opportunity to reconnect with nature and contribute to a meaningful project.</p>
         </article>
 
@@ -70,12 +75,17 @@ const lang = "en";
       <div class="max-w-5xl mx-auto px-6" id="volontariat">
         <h2 class="text-3xl font-heading font-bold text-primary mb-6">Participate / Volunteering</h2>
         <p class="text-lg text-gray-700 leading-relaxed mb-6">Pre-sale stay ideas:</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌿 Discovery Stay (3 days) — project visit, forest, coffee.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">🌱 Agroforestry Immersion (1 week) — participation in planting and workshops.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-3">☕ Coffee Experience (3–5 days) — coffee harvesting and processing.</p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">🌍 Nature Retreat (1 week) — nature connection, hiking, permaculture.</p>
+        <div class="grid gap-4 mb-8 md:grid-cols-2">
+          <div class="surface-card p-5"><p class="text-lg text-gray-700 leading-relaxed"><strong class="text-primary">Discovery Stay</strong> (3 days) — project visit, forest, coffee.</p></div>
+          <div class="surface-card p-5"><p class="text-lg text-gray-700 leading-relaxed"><strong class="text-primary">Agroforestry Immersion</strong> (1 week) — participation in planting and workshops.</p></div>
+          <div class="surface-card p-5"><p class="text-lg text-gray-700 leading-relaxed"><strong class="text-primary">Coffee Experience</strong> (3-5 days) — coffee harvesting and processing.</p></div>
+          <div class="surface-card p-5"><p class="text-lg text-gray-700 leading-relaxed"><strong class="text-primary">Nature Retreat</strong> (1 week) — nature connection, hiking, permaculture.</p></div>
+        </div>
         <p class="text-lg text-gray-700 leading-relaxed mb-6">Visitors become financial supporters, project ambassadors, and future coffee customers.</p>
-        <a href="/en/comment-participer/" class="inline-flex items-center gap-2 px-8 py-3 bg-golden text-primary font-semibold rounded-full hover:bg-golden-dark transition-colors">Participate in the project</a>
+        <a href="/en/comment-participer/" class="button-primary">
+          Participate in the project
+          <LucideIcon name="ArrowRight" class="w-4 h-4" />
+        </a>
       </div>
     </section>
   </main>
